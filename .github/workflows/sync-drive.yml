@@ -1,0 +1,40 @@
+name: Sync Google Drive documents
+
+on:
+  # Kör en gång om dygnet, kl 05:00 UTC (07:00 svensk sommartid)
+  schedule:
+    - cron: '0 5 * * *'
+  # Kan köras manuellt från Actions-fliken
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Drive sync
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        run: node scripts/sync-drive.mjs
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "barafiber-bot"
+          git config user.email "bot@barafiber.se"
+          git add data/documents.json
+          if git diff --staged --quiet; then
+            echo "Inga förändringar att committa."
+          else
+            git commit -m "chore: sync Drive documents ($(date -u +%Y-%m-%d))"
+            git push
+          fi

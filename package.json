@@ -1,0 +1,14 @@
+{
+  "name": "barafiber",
+  "version": "1.0.0",
+  "description": "Hemsida för Samfällighetsföreningen Bara Fiber",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync": "node scripts/sync-drive.mjs",
+    "serve": "python3 -m http.server 8080"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
