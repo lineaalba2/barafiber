@@ -1,27 +1,65 @@
 {
-  "lastUpdated": "Årsstämma 2024-03-24",
-  "source": "Punkt 12 i Protokoll årsstämma 2024",
-  "note": "Uppdatera denna fil efter varje årsstämma. Hämta uppgifterna från punkt 'Val av styrelse, ordförande och suppleanter' i protokollet.",
+  "lastUpdated": "2026-05-19T20:04:56.766Z",
+  "sourceSheet": "Styrelse",
+  "sourceUrl": "https://docs.google.com/spreadsheets/d/1YSwFUIuNb5sduxuV0tkCm3EVH0FdvaprdBt0CMDSkoE/edit",
   "ordforande": [
-    { "name": "Daniel Fröler", "term": "1 år (2024)" }
+    {
+      "name": "Daniel Fröler",
+      "term": "1 år (2026)"
+    }
   ],
   "ledamoter": [
-    { "name": "Martin Neckmar", "term": "2024–2025" },
-    { "name": "Jonas Nordström", "term": "2024–2025" },
-    { "name": "Cliff Odervall", "term": "2024" }
+    {
+      "name": "NAMN",
+      "term": "2026-2027"
+    },
+    {
+      "name": "NAMN",
+      "term": "2026-2027"
+    },
+    {
+      "name": "NAMN",
+      "term": "2026"
+    }
   ],
   "suppleanter": [
-    { "name": "Helene Lindell-Quelhas", "term": "2024–2025" },
-    { "name": "Sulejamn Topalovic", "term": "2024" },
-    { "name": "Filippa Jakobsson", "term": "2024" },
-    { "name": "Abdel Ajouz", "term": "2024–2025" }
+    {
+      "name": "NAMN",
+      "term": "2026-2027"
+    },
+    {
+      "name": "NAMN",
+      "term": "2026"
+    },
+    {
+      "name": "NAMN",
+      "term": "2026"
+    },
+    {
+      "name": "NAMN",
+      "term": "2026-2027"
+    }
   ],
   "revisorer": [
-    { "name": "Lena Arndt", "role": "Lekmannarevisor", "term": "2024" },
-    { "name": "Bengt R Andersson", "role": "Auktoriserad revisor", "term": "2024" }
+    {
+      "name": "NAMN",
+      "role": "Lekmannarevisor",
+      "term": "2026"
+    },
+    {
+      "name": "NAMN",
+      "role": "Auktoriserad revisor",
+      "term": "2026"
+    }
   ],
   "valberedning": [
-    { "name": "Robert Oldén", "term": "2024" },
-    { "name": "Anto Novacic", "term": "2024" }
+    {
+      "name": "NAMN",
+      "term": "2026"
+    },
+    {
+      "name": "NAMN",
+      "term": "2026"
+    }
   ]
 }
