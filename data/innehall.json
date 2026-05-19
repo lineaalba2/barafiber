@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-05-19T20:44:11.990Z",
+  "lastUpdated": "2026-05-19T20:45:24.393Z",
   "sourceSheet": "Innehåll",
   "sourceUrl": "https://docs.google.com/spreadsheets/d/1xPp7gD68CHgoZrO-MxpxRsQBp-4GwNnfKUOXPcoCdSQ/edit",
   "values": {
     "antal_hushåll": "723",
-    "gratiskanaler": "SVT1, SVT2, TV4, TV6, Barnkanalen, Kunskapskanalen",
+    "gratiskanaler": "SVT1, SVT2, TV4, TV6, TV67, Barnkanalen, Kunskapskanalen",
     "basutbud_antal_kanaler": "ca 20",
     "internet_hastighet": "1000/1000",
     "support_ownit_vardagar": "08–22",
