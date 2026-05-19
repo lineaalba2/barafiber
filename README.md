@@ -37,28 +37,63 @@ python3 -m http.server 8080
 
 ## Drive-sync — så fungerar det
 
-`scripts/sync-drive.mjs` läser tre delade Drive-mappar:
+`scripts/sync-drive.mjs` läser **en enda publik rot-mapp** i Google Drive och
+upptäcker automatiskt vad som ligger där. Mapp-ID:t hårdkodat i scriptet:
 
-| Kategori | Mapp-ID | Format |
+```
+ROOT_FOLDER_ID = '1sZ0YY0VrI3Db1PMjavwMtj6IELgKdk7l'
+```
+
+(byt här om ni flyttar mappen).
+
+### Hur mappstrukturen tolkas
+
+Scriptet kollar varje undermapp i rot-mappen och **kategoriserar baserat på namn**:
+
+| Mappnamn innehåller | Hamnar under | Visas hur |
 | --- | --- | --- |
-| Styrelsemöten | `1pq8waIbTCp8DGmXCiOlCQjgygof7pbyq` | Undermappar per år |
-| Årsmöten | `1Ui1LI3jZXGYHdzFZRNIZ_zsvNeptIjz0` | Undermappar per år |
-| Stadgar | `1_dF2UwerSVCUpS8jC97LPM_YRoxbrJ-e` | Platt mapp |
+| `2024`, `2025`, `2026` (rena år eller börjar med år) | **Styrelseprotokoll** | Grupperad per år |
+| `årsstämma`, `årsmöte`, `stämma` | **Årsstämma** | Egen sektion |
+| `stadgar` | **Stadgar** | Egen sektion |
+| Annat | **Övriga dokument** | Med mappnamnet som etikett |
 
-Resultatet skrivs till `data/documents.json`, och `js/documents.js` renderar listan på `om-oss.html`.
+**Endast PDF-filer visas** — Excel, Google Docs och annat ignoreras automatiskt
+även om de ligger i en synkad mapp.
+
+### Att lägga till nya år / dokument
+
+Skapa bara nya mappar i Drive — t.ex. `2027` för nästa års protokoll, eller
+`Årsstämma 2027` för nästa årsstämma. **Inga kodändringar behövs.** Sektionerna
+dyker upp på sajten nästa gång synken körs.
 
 ### Förutsättningar för att synken ska fungera
 
-1. **Mapparna måste vara delade som "Anyone with the link can view"** — annars får API-nyckeln inget se. Öppna varje mapp i Drive → Dela → Allmän åtkomst → "Alla med länken" (visningsbehörighet).
-2. **En Google Cloud API-nyckel** för Drive API:
-   - Gå till [console.cloud.google.com](https://console.cloud.google.com/).
-   - Skapa ett projekt (t.ex. "Bara Fiber").
-   - Aktivera **Google Drive API** (APIs & Services → Library → sök "Drive").
-   - Skapa en API-nyckel (APIs & Services → Credentials → Create credentials → API key).
-   - Begränsa nyckeln till enbart Drive API (rekommenderat) under "API restrictions".
-3. **Lägg in nyckeln som GitHub Secret** i barafiber-repot:
-   - Settings → Secrets and variables → Actions → New repository secret.
-   - Name: `GOOGLE_API_KEY`. Value: nyckeln från Google Cloud.
+**1. Rot-mappen måste vara publikt delad**
+
+Öppna [rot-mappen i Drive](https://drive.google.com/drive/folders/1sZ0YY0VrI3Db1PMjavwMtj6IELgKdk7l)
+→ Dela → Allmän åtkomst → välj **"Alla med länken"** (Visningsbehörighet).
+
+Den här inställningen ärvs automatiskt av alla undermappar.
+
+**2. Skapa en Google Drive API-nyckel** (ca 5 minuter, gratis)
+
+1. Gå till [console.cloud.google.com](https://console.cloud.google.com/).
+2. Längst upp — välj projekt → **Nytt projekt** → namn "Bara Fiber" → Skapa.
+3. När projektet är valt: gå till **APIs & Services → Library**.
+4. Sök "Google Drive API" → klicka in → **Enable**.
+5. Gå till **APIs & Services → Credentials** → **Create credentials** → **API key**.
+6. Kopiera nyckeln. Klicka **Restrict key** och under **API restrictions** välj
+   "Restrict key" → bocka i bara "Google Drive API" → Save. *(rekommenderat för säkerhet)*
+
+**3. Lägg in nyckeln som GitHub Secret**
+
+I [barafiber-repot på GitHub](https://github.com/lineaalba2/barafiber):
+- Settings → Secrets and variables → Actions → **New repository secret**.
+- Name: `GOOGLE_API_KEY`
+- Secret: klistra in nyckeln från steg 2.
+
+Klart. Kör workflow:n manuellt första gången för att verifiera att det funkar:
+Actions → "Sync Google Drive documents" → **Run workflow**.
 
 ### Köra sync lokalt
 
