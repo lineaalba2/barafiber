@@ -1,10 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0a3d62"/>
-      <stop offset="100%" stop-color="#00b8a9"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="12" fill="url(#g)"/>
-  <text x="32" y="42" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="800" fill="white" text-anchor="middle">BF</text>
+  <rect width="64" height="64" rx="14" fill="#0a3d62"/>
+
+  <!-- Anslutningslinjer från central hub till noder -->
+  <g stroke="#00b8a9" stroke-width="2.5" stroke-linecap="round" fill="none">
+    <line x1="32" y1="32" x2="18" y2="18"/>
+    <line x1="32" y1="32" x2="46" y2="18"/>
+    <line x1="32" y1="32" x2="18" y2="46"/>
+    <line x1="32" y1="32" x2="46" y2="46"/>
+  </g>
+
+  <!-- Yttre noder (hushåll) -->
+  <g fill="#00b8a9">
+    <circle cx="18" cy="18" r="4"/>
+    <circle cx="46" cy="18" r="4"/>
+    <circle cx="18" cy="46" r="4"/>
+    <circle cx="46" cy="46" r="4"/>
+  </g>
+
+  <!-- Central hub -->
+  <circle cx="32" cy="32" r="6.5" fill="white"/>
 </svg>

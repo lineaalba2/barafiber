@@ -4,7 +4,6 @@
  * Förväntar sig följande struktur (genereras av scripts/sync-drive.mjs):
  * {
  *   "lastUpdated": "2026-05-19T...",
- *   "sourceFolder": "https://drive.google.com/...",
  *   "sections": [
  *     {
  *       "key": "styrelseprotokoll",
@@ -17,6 +16,9 @@
  *     }
  *   ]
  * }
+ *
+ * Varje grupp (år) renderas som en <details>-sektion som kan fällas ut/ihop.
+ * Senaste året är öppet som default.
  */
 
 (async function () {
@@ -51,7 +53,6 @@
 
   container.innerHTML = '';
 
-  // Header: senast uppdaterad
   if (data.lastUpdated) {
     const info = document.createElement('p');
     info.className = 'text-muted';
@@ -68,7 +69,7 @@
       <div class="doc-empty">
         <strong>Inga dokument hittades.</strong><br>
         <span class="text-muted">
-          Dokumentlistan synkas dagligen från föreningens Google Drive.
+          Dokumentlistan synkas regelbundet från föreningens Google Drive.
           Saknas en mapp eller fil? Kontrollera att den ligger i rätt mapp och är PDF-format.
         </span>
       </div>`);
@@ -83,18 +84,31 @@
     heading.innerHTML = `<span>${section.icon || '📁'}</span> ${section.label}`;
     sectionEl.appendChild(heading);
 
-    section.groups.forEach((group) => {
+    section.groups.forEach((group, idx) => {
       if (!group.files || group.files.length === 0) return;
 
       if (group.label) {
-        const yearWrap = document.createElement('div');
-        yearWrap.className = 'doc-year';
-        const yearLabel = document.createElement('div');
-        yearLabel.className = 'doc-year-label';
-        yearLabel.textContent = group.label;
-        yearWrap.appendChild(yearLabel);
-        yearWrap.appendChild(renderFileList(group.files));
-        sectionEl.appendChild(yearWrap);
+        // Fällbar år-grupp
+        const details = document.createElement('details');
+        details.className = 'doc-year';
+        if (idx === 0) details.open = true; // senaste året öppet som default
+
+        const summary = document.createElement('summary');
+        summary.className = 'doc-year-summary';
+
+        const left = document.createElement('span');
+        left.className = 'doc-year-label';
+        left.textContent = group.label;
+
+        const count = document.createElement('span');
+        count.className = 'doc-year-count';
+        count.textContent = `${group.files.length} dokument`;
+
+        summary.appendChild(left);
+        summary.appendChild(count);
+        details.appendChild(summary);
+        details.appendChild(renderFileList(group.files));
+        sectionEl.appendChild(details);
       } else {
         sectionEl.appendChild(renderFileList(group.files));
       }
@@ -129,26 +143,27 @@
         a.target = '_blank';
         a.rel = 'noopener';
 
-        const icon = document.createElement('span');
+        // Använd <div> istället för <span> så att flex-layouten alltid funkar
+        const icon = document.createElement('div');
         icon.className = 'doc-icon';
         icon.textContent = '📄';
 
-        const info = document.createElement('span');
+        const info = document.createElement('div');
         info.className = 'doc-info';
-        const name = document.createElement('span');
+        const name = document.createElement('div');
         name.className = 'doc-name';
         // Strip .pdf-ändelse för renare visning
         name.textContent = f.name.replace(/\.pdf$/i, '');
         info.appendChild(name);
 
         if (f.modifiedTime) {
-          const meta = document.createElement('span');
+          const meta = document.createElement('div');
           meta.className = 'doc-meta';
           meta.textContent = formatDate(f.modifiedTime);
           info.appendChild(meta);
         }
 
-        const arrow = document.createElement('span');
+        const arrow = document.createElement('div');
         arrow.className = 'doc-arrow';
         arrow.textContent = '↗';
 
