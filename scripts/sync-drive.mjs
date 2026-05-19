@@ -2,29 +2,28 @@
  * sync-drive.mjs
  *
  * Hämtar fil-listan från Bara Fibers publika rot-mapp i Google Drive och
- * skriver resultatet till data/documents.json. Hemsidan renderar listan
- * statiskt — så här fungerar synken:
+ * skriver resultatet till data/documents.json.
  *
  *   ROOT-MAPP (publik)
- *   ├── 2024/                      → Styrelseprotokoll → år 2024
- *   ├── 2025/                      → Styrelseprotokoll → år 2025
- *   ├── Årsstämma 2026/            → Årsstämma (egen sektion)
- *   ├── Stadgar/                   → Stadgar (egen sektion)
- *   └── <annat namn>/              → Övriga dokument
+ *   ├── 2024/                          → Styrelseprotokoll 2024 (plana PDF:er)
+ *   │   └── Årsstämma/                 → Årsstämma 2024 (egen sektion)
+ *   │       └── kallelse.pdf, etc.
+ *   ├── 2025/
+ *   │   ├── protokoll-jan.pdf          → Styrelseprotokoll 2025
+ *   │   └── Årsstämma/                 → Årsstämma 2025
+ *   ├── Stadgar/                       → Stadgar (egen sektion)
+ *   └── <annat>/                       → Övriga dokument
  *
- * Endast PDF-filer visas på hemsidan. Andra filtyper (Excel, Google Docs etc.)
- * ignoreras automatiskt.
+ * Logik:
+ *   - Plana PDF:er i en år-mapp ("2024") → Styrelseprotokoll → [år]
+ *   - Undermappar i en år-mapp kategoriseras (Årsstämma, Stadgar, Övrigt)
+ *     och hamnar under sin egen sektion grupperade per år
+ *   - Toppnivåmappar i rot-mappen kategoriseras likadant
+ *   - Endast PDF visas; andra filtyper ignoreras
  *
- * Lägger du till en ny mapp i Drive (t.ex. "2027") behövs ingen kodändring —
- * sektionen dyker upp på sajten nästa gång synken körs.
+ * Lägga till nytt år: skapa bara mappen i Drive — ingen kodändring behövs.
  *
- * Kräver miljövariabel:
- *   GOOGLE_API_KEY  – Google Drive API-nyckel
- *
- * Körs lokalt med:
- *   GOOGLE_API_KEY=xxx npm run sync
- *
- * Körs automatiskt varje dygn via .github/workflows/sync-drive.yml
+ * Kräver miljövariabel GOOGLE_API_KEY (Google Drive API-nyckel).
  */
 
 import { writeFile, mkdir } from 'node:fs/promises';
@@ -34,14 +33,9 @@ import { fileURLToPath } from 'node:url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUTPUT_PATH = resolve(__dirname, '..', 'data', 'documents.json');
 
-// Rot-mappen i Google Drive (publik). Byt här om mappen flyttas.
 const ROOT_FOLDER_ID = '1sZ0YY0VrI3Db1PMjavwMtj6IELgKdk7l';
 
-// Filtyper som visas på hemsidan
-const ALLOWED_MIME_TYPES = new Set([
-  'application/pdf',
-]);
-
+const ALLOWED_MIME_TYPES = new Set(['application/pdf']);
 const FOLDER_MIME = 'application/vnd.google-apps.folder';
 const FIELDS = 'files(id,name,mimeType,modifiedTime,webViewLink,webContentLink)';
 
@@ -52,32 +46,28 @@ if (!API_KEY) {
   process.exit(1);
 }
 
-// ---------------------------------------------------------------------------
-// Sektions-definitioner (ordning + ikoner) — namn-detektion bestämmer mappning
-// ---------------------------------------------------------------------------
-
-const SECTIONS = [
+// Sektioner — ordningen här bestämmer ordningen på sajten
+const SECTION_DEFS = [
   { key: 'styrelseprotokoll', label: 'Styrelseprotokoll', icon: '🗒️' },
-  { key: 'arsstamma',         label: 'Årsstämma',          icon: '📋' },
-  { key: 'stadgar',           label: 'Stadgar',            icon: '📜' },
-  { key: 'ovriga',            label: 'Övriga dokument',    icon: '📎' },
+  { key: 'arsstamma',         label: 'Årsstämma',         icon: '📋' },
+  { key: 'stadgar',           label: 'Stadgar',           icon: '📜' },
+  { key: 'ovriga',            label: 'Övriga dokument',   icon: '📎' },
 ];
 
-function categorize(folderName) {
-  const name = folderName.trim();
-  // Årsstämma/årsmöte (kolla detta FÖRST eftersom namnet ofta innehåller ett år)
-  if (/årsstäm|årsmöt|\bstämm/i.test(name)) return 'arsstamma';
-  if (/stadg/i.test(name))                  return 'stadgar';
-  // Rena år-mappar (t.ex. "2024", "2025")
-  if (/^20\d{2}$/.test(name))               return 'styrelseprotokoll';
-  // Mappar som börjar med ett år (t.ex. "2024 – protokoll")
-  if (/^20\d{2}\b/.test(name))              return 'styrelseprotokoll';
+function categorizeName(name) {
+  const n = name.trim();
+  if (/årsstäm|årsmöt|\bstämm/i.test(n))   return 'arsstamma';
+  if (/stadg/i.test(n))                    return 'stadgar';
   return 'ovriga';
 }
 
+function isYearFolder(name) {
+  return /^20\d{2}$/.test(name.trim());
+}
+
 function extractYear(name) {
-  const match = name.match(/(20\d{2})/);
-  return match ? match[1] : null;
+  const m = name.match(/(20\d{2})/);
+  return m ? m[1] : null;
 }
 
 // ---------------------------------------------------------------------------
@@ -112,94 +102,121 @@ function toDoc(f) {
   };
 }
 
-async function listPdfsRecursive(folderId) {
-  // Letar PDF:er på första nivån + en nivå ner (om mappen råkar ha undermappar)
+// Plana PDF:er i en mapp (inte rekursivt)
+async function listPdfsFlat(folderId) {
   const entries = await listFolder(folderId);
-  const pdfs = entries
-    .filter((f) => ALLOWED_MIME_TYPES.has(f.mimeType))
-    .map(toDoc);
-  const subfolders = entries.filter((f) => f.mimeType === FOLDER_MIME);
-  for (const sub of subfolders) {
-    const nested = await listFolder(sub.id);
-    for (const f of nested) {
-      if (ALLOWED_MIME_TYPES.has(f.mimeType)) pdfs.push(toDoc(f));
-    }
-  }
-  return pdfs;
+  return entries.filter((f) => ALLOWED_MIME_TYPES.has(f.mimeType)).map(toDoc);
 }
 
 // ---------------------------------------------------------------------------
 // Huvudflöde
 // ---------------------------------------------------------------------------
 
+// Grupper indexeras per sektion → label, så att vi kan slå ihop t.ex. flera
+// olika år-mappar som ger samma "Årsstämma → 2024"
+const groupsBySection = {
+  styrelseprotokoll: new Map(),
+  arsstamma:         new Map(),
+  stadgar:           new Map(),
+  ovriga:            new Map(),
+};
+
+function addToGroup(sectionKey, label, sortKey, files) {
+  if (!files || files.length === 0) return;
+  const groups = groupsBySection[sectionKey];
+  const existing = groups.get(label);
+  if (existing) {
+    existing.files.push(...files);
+  } else {
+    groups.set(label, { label, sortKey, files: [...files] });
+  }
+}
+
+async function processYearFolder(yearFolder) {
+  const year = yearFolder.name;
+  console.log(`  📅 ${year}`);
+  const entries = await listFolder(yearFolder.id);
+
+  // Plana PDF:er → styrelseprotokoll under detta år
+  const flatPdfs = entries
+    .filter((f) => ALLOWED_MIME_TYPES.has(f.mimeType))
+    .map(toDoc);
+  if (flatPdfs.length > 0) {
+    console.log(`     ${flatPdfs.length} styrelseprotokoll`);
+    addToGroup('styrelseprotokoll', year, year, flatPdfs);
+  }
+
+  // Undermappar i året
+  const subfolders = entries.filter((f) => f.mimeType === FOLDER_MIME);
+  for (const sub of subfolders) {
+    const subPdfs = await listPdfsFlat(sub.id);
+    if (subPdfs.length === 0) continue;
+
+    const cat = categorizeName(sub.name);
+    console.log(`     → ${sub.name} (${subPdfs.length} st → ${cat})`);
+
+    if (cat === 'arsstamma') {
+      addToGroup('arsstamma', year, year, subPdfs);
+    } else if (cat === 'stadgar') {
+      addToGroup('stadgar', null, '', subPdfs);
+    } else {
+      addToGroup('ovriga', `${sub.name} (${year})`, `${year}-${sub.name}`, subPdfs);
+    }
+  }
+}
+
+async function processTopLevelFolder(folder) {
+  const cat = categorizeName(folder.name);
+  console.log(`  📁 ${folder.name}  →  ${cat}`);
+  const pdfs = await listPdfsFlat(folder.id);
+  if (pdfs.length === 0) return;
+
+  if (cat === 'arsstamma') {
+    const year = extractYear(folder.name) || String(new Date().getFullYear());
+    addToGroup('arsstamma', year, year, pdfs);
+  } else if (cat === 'stadgar') {
+    addToGroup('stadgar', null, '', pdfs);
+  } else {
+    addToGroup('ovriga', folder.name, folder.name, pdfs);
+  }
+}
+
 async function main() {
   console.log(`🔄  Synkar rot-mapp ${ROOT_FOLDER_ID}...`);
 
   const rootEntries = await listFolder(ROOT_FOLDER_ID);
   const rootFolders = rootEntries.filter((e) => e.mimeType === FOLDER_MIME);
-  const rootFiles   = rootEntries.filter((e) => ALLOWED_MIME_TYPES.has(e.mimeType));
+  const rootPdfs    = rootEntries.filter((e) => ALLOWED_MIME_TYPES.has(e.mimeType)).map(toDoc);
 
-  // Bygg sektions-trädet
-  const sectionMap = Object.fromEntries(
-    SECTIONS.map((s) => [s.key, { ...s, groups: [] }])
-  );
-
-  // Lösa PDF:er som ligger direkt i rot-mappen → läggs i "Övriga"
-  if (rootFiles.length > 0) {
-    sectionMap.ovriga.groups.push({
-      label: null,
-      files: rootFiles.map(toDoc),
-    });
+  // Plana PDF:er direkt i rot-mappen → övriga
+  if (rootPdfs.length > 0) {
+    addToGroup('ovriga', null, '', rootPdfs);
   }
 
-  // Varje undermapp i rotnivån → en grupp i sin sektion
   for (const folder of rootFolders) {
-    const sectionKey = categorize(folder.name);
-    const section = sectionMap[sectionKey];
-
-    console.log(`  → ${folder.name}  (→ ${section.label})`);
-
-    let pdfs;
     try {
-      pdfs = await listPdfsRecursive(folder.id);
+      if (isYearFolder(folder.name)) {
+        await processYearFolder(folder);
+      } else {
+        await processTopLevelFolder(folder);
+      }
     } catch (err) {
-      console.error(`     ❌  Misslyckades: ${err.message}`);
-      continue;
+      console.error(`  ❌  Fel på ${folder.name}: ${err.message}`);
     }
-
-    if (pdfs.length === 0) {
-      console.log(`     (inga PDF:er)`);
-      continue;
-    }
-
-    const year = extractYear(folder.name);
-    section.groups.push({
-      // För styrelseprotokoll använder vi året som etikett, annars hela mappnamnet
-      label: sectionKey === 'styrelseprotokoll' && year ? year : folder.name,
-      sortKey: year || folder.name,
-      files: pdfs,
-    });
-    console.log(`     ${pdfs.length} PDF${pdfs.length === 1 ? '' : ':er'}`);
   }
 
-  // Sortera grupper inom varje sektion (nyast överst)
-  for (const section of Object.values(sectionMap)) {
-    section.groups.sort((a, b) => {
-      const aKey = a.sortKey || '';
-      const bKey = b.sortKey || '';
-      return bKey.localeCompare(aKey, 'sv');
-    });
-    section.groups.forEach((g) => delete g.sortKey);
-  }
-
-  // Filtrera bort tomma sektioner
-  const sections = SECTIONS
-    .map((s) => sectionMap[s.key])
-    .filter((s) => s.groups.length > 0);
+  // Bygg slutgiltig struktur
+  const sections = SECTION_DEFS
+    .map((def) => {
+      const groups = Array.from(groupsBySection[def.key].values())
+        .sort((a, b) => (b.sortKey || '').localeCompare(a.sortKey || '', 'sv'))
+        .map(({ sortKey, ...rest }) => rest);
+      return groups.length > 0 ? { ...def, groups } : null;
+    })
+    .filter(Boolean);
 
   const result = {
     lastUpdated: new Date().toISOString(),
-    sourceFolder: `https://drive.google.com/drive/folders/${ROOT_FOLDER_ID}`,
     sections,
   };
 

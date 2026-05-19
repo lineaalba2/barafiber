@@ -51,20 +51,13 @@
 
   container.innerHTML = '';
 
-  // Header: senast uppdaterad + länk till Drive
-  if (data.lastUpdated || data.sourceFolder) {
+  // Header: senast uppdaterad
+  if (data.lastUpdated) {
     const info = document.createElement('p');
     info.className = 'text-muted';
     info.style.fontSize = '0.875rem';
     info.style.marginBottom = '1.5rem';
-    const parts = [];
-    if (data.lastUpdated) {
-      parts.push(`Senast uppdaterad från Google Drive: <strong>${formatDate(data.lastUpdated)}</strong>`);
-    }
-    if (data.sourceFolder) {
-      parts.push(`<a href="${data.sourceFolder}" target="_blank" rel="noopener">Öppna mappen i Drive ↗</a>`);
-    }
-    info.innerHTML = parts.join(' &nbsp;·&nbsp; ');
+    info.innerHTML = `Senast uppdaterad: <strong>${formatDate(data.lastUpdated)}</strong>`;
     container.appendChild(info);
   }
 
