@@ -1,19 +1,12 @@
 {
-  "lastUpdated": "2026-05-19T20:16:46.148Z",
+  "lastUpdated": "2026-05-19T20:41:27.352Z",
   "sourceSheet": "Avgifter",
   "sourceUrl": "https://docs.google.com/spreadsheets/d/1tMJTzCL7ghbZzN1UCNKdgGWXJExJWmZzhTJWRDxo_ug/edit",
   "items": [
     {
-      "avgift": "Halvårsavgift (vår 2026)",
-      "belopp": "1 320 kr",
-      "notering": "Faktureras i mars (220 kr/mån × 6)",
-      "kategori": "Medlemsavgift",
-      "ordinariePris": ""
-    },
-    {
-      "avgift": "Halvårsavgift (höst 2026)",
-      "belopp": "1 260 kr",
-      "notering": "Faktureras i september (210 kr/mån × 6) — sänkt avgift",
+      "avgift": "Halvårsavgift",
+      "belopp": "1 290 kr",
+      "notering": "Faktureras i mars och september (215 kr/mån × 6, sänkt från 220 kr/mån 2025)",
       "kategori": "Medlemsavgift",
       "ordinariePris": ""
     },

@@ -1,4 +1,10 @@
 {
-  "lastUpdated": null,
-  "values": {}
+  "lastUpdated": "2026-05-19T20:41:28.009Z",
+  "sourceSheet": "Innehåll",
+  "sourceUrl": "https://docs.google.com/spreadsheets/d/1xPp7gD68CHgoZrO-MxpxRsQBp-4GwNnfKUOXPcoCdSQ/edit",
+  "values": {
+    "antal_hushåll": "723",
+    "gratiskanaler": "SVT1, SVT2, TV4, TV6, Barnkanalen, Kunskapskanalen",
+    "basutbud_antal_kanaler": "ca 20"
+  }
 }
