@@ -133,18 +133,31 @@ function addToGroup(sectionKey, label, sortKey, files) {
   }
 }
 
+// Filer med "årsstämma"/"årsmöte"/"stämma" i namnet ska hamna under
+// Årsstämma-sektionen även om de råkar ligga platt i en år-mapp.
+function isArsstammaFilename(filename) {
+  return /årsstäm|årsmöt|\bstämma\b|protokoll.*stamma/i.test(filename);
+}
+
 async function processYearFolder(yearFolder) {
   const year = yearFolder.name;
   console.log(`  📅 ${year}`);
   const entries = await listFolder(yearFolder.id);
 
-  // Plana PDF:er → styrelseprotokoll under detta år
-  const flatPdfs = entries
-    .filter((f) => ALLOWED_MIME_TYPES.has(f.mimeType))
-    .map(toDoc);
-  if (flatPdfs.length > 0) {
-    console.log(`     ${flatPdfs.length} styrelseprotokoll`);
-    addToGroup('styrelseprotokoll', year, year, flatPdfs);
+  // Plana PDF:er i år-mappen → dela upp: styrelseprotokoll vs årsstämma (per filnamn)
+  const flatPdfs = entries.filter((f) => ALLOWED_MIME_TYPES.has(f.mimeType));
+  const styrelseProtokoll = [];
+  const arsstammaFiles = [];
+  for (const f of flatPdfs) {
+    (isArsstammaFilename(f.name) ? arsstammaFiles : styrelseProtokoll).push(toDoc(f));
+  }
+  if (styrelseProtokoll.length > 0) {
+    console.log(`     ${styrelseProtokoll.length} styrelseprotokoll`);
+    addToGroup('styrelseprotokoll', year, year, styrelseProtokoll);
+  }
+  if (arsstammaFiles.length > 0) {
+    console.log(`     ${arsstammaFiles.length} årsstämma-fil(er) (per filnamn)`);
+    addToGroup('arsstamma', year, year, arsstammaFiles);
   }
 
   // Undermappar i året
@@ -182,12 +195,99 @@ async function processTopLevelFolder(folder) {
   }
 }
 
+// ---------------------------------------------------------------------------
+// Avgifter — synkas separat från en Google Sheet i rot-mappen
+// ---------------------------------------------------------------------------
+
+const SHEET_MIME = 'application/vnd.google-apps.spreadsheet';
+const AVGIFTER_OUTPUT = resolve(__dirname, '..', 'data', 'avgifter.json');
+
+async function fetchSheetValues(spreadsheetId) {
+  // Hämtar alla värden från första bladet (Sheet1 / Blad1).
+  // A1-notation utan blad-namn = första bladet.
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/A1:Z1000?key=${API_KEY}`;
+  const res = await fetch(url);
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`Sheets API ${res.status}: ${body}`);
+  }
+  const data = await res.json();
+  return data.values || [];
+}
+
+function normalizeHeader(h) {
+  return (h || '').toLowerCase().trim()
+    .replace(/[åä]/g, 'a').replace(/ö/g, 'o')
+    .replace(/[^a-z0-9]/g, '');
+}
+
+function parseAvgifterSheet(rows) {
+  if (!rows || rows.length === 0) return [];
+  const headers = rows[0].map(normalizeHeader);
+  // Hitta kolumnindex baserat på olika möjliga rubriker
+  const findCol = (...candidates) => {
+    for (const c of candidates) {
+      const i = headers.indexOf(c);
+      if (i !== -1) return i;
+    }
+    return -1;
+  };
+  const avgiftCol  = findCol('avgift', 'avgiftstyp', 'typ', 'namn', 'beskrivning');
+  const beloppCol  = findCol('belopp', 'pris', 'kostnad', 'summa');
+  const noteringCol = findCol('notering', 'kommentar', 'info', 'anmarkning');
+
+  if (avgiftCol === -1 || beloppCol === -1) {
+    console.warn('  ⚠️  Kunde inte hitta kolumnerna "Avgift" och "Belopp" i Sheeten.');
+    console.warn('     Hittade kolumner:', headers);
+    return [];
+  }
+
+  return rows.slice(1)
+    .map((row) => ({
+      avgift:  (row[avgiftCol]  || '').trim(),
+      belopp:  (row[beloppCol]  || '').trim(),
+      notering: noteringCol !== -1 ? (row[noteringCol] || '').trim() : '',
+    }))
+    .filter((r) => r.avgift && r.belopp);
+}
+
+async function syncAvgifter(rootEntries) {
+  // Leta efter en Google Sheet i rot-mappen med "avgift" i namnet
+  const sheet = rootEntries.find(
+    (f) => f.mimeType === SHEET_MIME && /avgift/i.test(f.name)
+  );
+  if (!sheet) {
+    console.log('  (ingen Avgifter-sheet hittades i rot-mappen)');
+    return;
+  }
+  console.log(`💰  Hittade avgifter-sheet: "${sheet.name}"`);
+  try {
+    const rows = await fetchSheetValues(sheet.id);
+    const items = parseAvgifterSheet(rows);
+    console.log(`     ${items.length} avgift(er) parsade`);
+    const output = {
+      lastUpdated: new Date().toISOString(),
+      sourceSheet: sheet.name,
+      sourceUrl: `https://docs.google.com/spreadsheets/d/${sheet.id}/edit`,
+      items,
+    };
+    await mkdir(dirname(AVGIFTER_OUTPUT), { recursive: true });
+    await writeFile(AVGIFTER_OUTPUT, JSON.stringify(output, null, 2) + '\n', 'utf8');
+    console.log(`     Skrev ${AVGIFTER_OUTPUT}`);
+  } catch (err) {
+    console.error(`  ❌  Avgifter-sync misslyckades: ${err.message}`);
+  }
+}
+
 async function main() {
   console.log(`🔄  Synkar rot-mapp ${ROOT_FOLDER_ID}...`);
 
   const rootEntries = await listFolder(ROOT_FOLDER_ID);
   const rootFolders = rootEntries.filter((e) => e.mimeType === FOLDER_MIME);
   const rootPdfs    = rootEntries.filter((e) => ALLOWED_MIME_TYPES.has(e.mimeType)).map(toDoc);
+
+  // Avgifter-sync körs parallellt med dokument-sync
+  await syncAvgifter(rootEntries);
 
   // Plana PDF:er direkt i rot-mappen → övriga
   if (rootPdfs.length > 0) {

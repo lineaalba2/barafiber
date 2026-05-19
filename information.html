@@ -60,44 +60,13 @@
       <h2 id="avgifter">Avgifter</h2>
       <p>
         Medlemsavgiften betalas <strong>halvårsvis</strong> i mars och september. Avgiften gäller oavsett om du
-        utnyttjar det kollektiva tjänsteutbudet helt eller delvis.
+        utnyttjar det kollektiva tjänsteutbudet helt eller delvis. Aktuella avgifter underhålls av styrelsen i
+        ett Google Sheet och uppdateras automatiskt här.
       </p>
 
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Avgift</th>
-              <th>Belopp</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Halvårsavgift</strong> (medlemsavgift)</td>
-              <td>1 320 kr</td>
-            </tr>
-            <tr>
-              <td>Förseningsavgift vid sen betalning</td>
-              <td>60 kr</td>
-            </tr>
-            <tr>
-              <td>Påminnelseavgift</td>
-              <td>60 kr</td>
-            </tr>
-            <tr>
-              <td>Administrationsavgift vid felaktig inbetalning</td>
-              <td>150 kr</td>
-            </tr>
-            <tr>
-              <td>Återanslutningsavgift för fiberkoppling</td>
-              <td>500 kr</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <div id="avgifter-table"></div>
 
       <p class="text-muted">
-        Halvårsavgiften (1 320 kr × 2 = <strong>2 640 kr/år</strong>) täcker både drift och tjänsteleverans.
         Eventuella personliga uppgraderingar (utökade TV-paket etc.) faktureras separat av tjänsteleverantörerna.
       </p>
 
@@ -208,6 +177,7 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+<script src="js/avgifter.js"></script>
 
 </body>
 </html>

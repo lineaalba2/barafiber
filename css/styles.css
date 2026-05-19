@@ -636,19 +636,26 @@ tbody tr:hover { background: var(--color-bg-alt); }
 .doc-info {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
 }
 
 .doc-name {
+  display: block;
   font-weight: 500;
   font-size: 0.9375rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  line-height: 1.4;
 }
 
 .doc-meta {
+  display: block;
   font-size: 0.8125rem;
   color: var(--color-text-muted);
+  line-height: 1.4;
 }
 
 .doc-arrow {

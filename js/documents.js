@@ -103,12 +103,24 @@
     container.appendChild(sectionEl);
   });
 
+  // Hämtar datum YYYY-MM-DD ur filnamn för stabil sortering
+  function dateKey(name) {
+    const m = name.match(/(20\d{2})[-_ .]?(\d{2})[-_ .]?(\d{2})/);
+    return m ? `${m[1]}-${m[2]}-${m[3]}` : '';
+  }
+
   function renderFileList(files) {
     const ul = document.createElement('ul');
     ul.className = 'doc-list';
     files
       .slice()
-      .sort((a, b) => (b.modifiedTime || '').localeCompare(a.modifiedTime || ''))
+      .sort((a, b) => {
+        // Sortera i åldersordning (äldst först) baserat på datum i filnamnet,
+        // fallback till modifiedTime om filnamnet saknar datum.
+        const ka = dateKey(a.name) || a.modifiedTime || '';
+        const kb = dateKey(b.name) || b.modifiedTime || '';
+        return ka.localeCompare(kb);
+      })
       .forEach((f) => {
         const li = document.createElement('li');
         const a = document.createElement('a');
