@@ -201,6 +201,7 @@ async function processTopLevelFolder(folder) {
 
 const SHEET_MIME = 'application/vnd.google-apps.spreadsheet';
 const AVGIFTER_OUTPUT = resolve(__dirname, '..', 'data', 'avgifter.json');
+const STYRELSE_OUTPUT = resolve(__dirname, '..', 'data', 'styrelse.json');
 
 async function fetchSheetValues(spreadsheetId) {
   // Hämtar alla värden från första bladet (Sheet1 / Blad1).
@@ -255,6 +256,87 @@ function parseAvgifterSheet(rows) {
     .filter((r) => r.avgift && r.belopp);
 }
 
+function parseStyrelseSheet(rows) {
+  if (!rows || rows.length === 0) return null;
+  const headers = rows[0].map(normalizeHeader);
+  const findCol = (...candidates) => {
+    for (const c of candidates) {
+      const i = headers.indexOf(c);
+      if (i !== -1) return i;
+    }
+    return -1;
+  };
+  const rollCol   = findCol('roll', 'befattning', 'position', 'typ');
+  const namnCol   = findCol('namn', 'name');
+  const mandatCol = findCol('mandat', 'period', 'mandattid', 'term', 'mandatperiod');
+
+  if (rollCol === -1 || namnCol === -1) {
+    console.warn('  ⚠️  Kunde inte hitta kolumnerna "Roll" och "Namn" i Styrelse-Sheeten.');
+    console.warn('     Hittade kolumner:', headers);
+    return null;
+  }
+
+  const grupperat = {
+    ordforande:   [],
+    ledamoter:    [],
+    suppleanter:  [],
+    revisorer:    [],
+    valberedning: [],
+  };
+
+  for (const row of rows.slice(1)) {
+    const roll   = (row[rollCol]   || '').trim();
+    const namn   = (row[namnCol]   || '').trim();
+    const mandat = mandatCol !== -1 ? (row[mandatCol] || '').trim() : '';
+    if (!roll || !namn) continue;
+
+    const rl = roll.toLowerCase();
+    const entry = { name: namn, term: mandat };
+
+    if (rl.includes('ordför'))         grupperat.ordforande.push(entry);
+    else if (rl.includes('ledamot'))   grupperat.ledamoter.push(entry);
+    else if (rl.includes('suppleant')) grupperat.suppleanter.push(entry);
+    else if (rl.includes('revisor'))   grupperat.revisorer.push({ name: namn, role: roll, term: mandat });
+    else if (rl.includes('valbered'))  grupperat.valberedning.push(entry);
+    else console.warn(`  ⚠️  Okänd roll: "${roll}" (rad med ${namn})`);
+  }
+
+  return grupperat;
+}
+
+async function syncStyrelse(rootEntries) {
+  // Leta efter en Google Sheet i rot-mappen med "styrelse" i namnet
+  const sheet = rootEntries.find(
+    (f) => f.mimeType === SHEET_MIME && /styrelse/i.test(f.name)
+  );
+  if (!sheet) {
+    console.log('  (ingen Styrelse-sheet hittades i rot-mappen)');
+    return;
+  }
+  console.log(`👥  Hittade styrelse-sheet: "${sheet.name}"`);
+  try {
+    const rows = await fetchSheetValues(sheet.id);
+    const parsed = parseStyrelseSheet(rows);
+    if (!parsed) return;
+
+    const total = parsed.ordforande.length + parsed.ledamoter.length
+      + parsed.suppleanter.length + parsed.revisorer.length + parsed.valberedning.length;
+    console.log(`     ${total} personer parsade (${parsed.ordforande.length} ordförande, ${parsed.ledamoter.length} ledamöter, ${parsed.suppleanter.length} suppleanter, ${parsed.revisorer.length} revisorer, ${parsed.valberedning.length} valberedning)`);
+
+    const output = {
+      lastUpdated: new Date().toISOString(),
+      sourceSheet: sheet.name,
+      sourceUrl: `https://docs.google.com/spreadsheets/d/${sheet.id}/edit`,
+      ...parsed,
+    };
+    await mkdir(dirname(STYRELSE_OUTPUT), { recursive: true });
+    await writeFile(STYRELSE_OUTPUT, JSON.stringify(output, null, 2) + '\n', 'utf8');
+    console.log(`     Skrev ${STYRELSE_OUTPUT}`);
+  } catch (err) {
+    console.error(`  ❌  Styrelse-sync misslyckades: ${err.message}`);
+  }
+}
+
 async function syncAvgifter(rootEntries) {
   // Leta efter en Google Sheet i rot-mappen med "avgift" i namnet
   const sheet = rootEntries.find(
@@ -290,8 +372,9 @@ async function main() {
   const rootFolders = rootEntries.filter((e) => e.mimeType === FOLDER_MIME);
   const rootPdfs    = rootEntries.filter((e) => ALLOWED_MIME_TYPES.has(e.mimeType)).map(toDoc);
 
-  // Avgifter-sync körs parallellt med dokument-sync
+  // Avgifter + styrelse synkas från Sheets i rot-mappen
   await syncAvgifter(rootEntries);
+  await syncStyrelse(rootEntries);
 
   // Plana PDF:er direkt i rot-mappen → övriga
   if (rootPdfs.length > 0) {
