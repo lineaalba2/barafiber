@@ -1,64 +1,64 @@
 {
-  "lastUpdated": "2026-05-19T20:04:56.766Z",
+  "lastUpdated": "2026-05-19T20:10:31.581Z",
   "sourceSheet": "Styrelse",
   "sourceUrl": "https://docs.google.com/spreadsheets/d/1YSwFUIuNb5sduxuV0tkCm3EVH0FdvaprdBt0CMDSkoE/edit",
   "ordforande": [
     {
       "name": "Daniel Fröler",
-      "term": "1 år (2026)"
+      "term": "2026"
     }
   ],
   "ledamoter": [
     {
-      "name": "NAMN",
-      "term": "2026-2027"
+      "name": "Filippa Jakobsson",
+      "term": "2026–2027"
     },
     {
-      "name": "NAMN",
-      "term": "2026-2027"
-    },
-    {
-      "name": "NAMN",
+      "name": "Cliff Odervall",
       "term": "2026"
+    },
+    {
+      "name": "Martin Neckmar",
+      "term": "2026–2027"
     }
   ],
   "suppleanter": [
     {
-      "name": "NAMN",
-      "term": "2026-2027"
-    },
-    {
-      "name": "NAMN",
+      "name": "Sulejman Topalovic",
       "term": "2026"
     },
     {
-      "name": "NAMN",
-      "term": "2026"
+      "name": "Helene Lindell-Quelhas",
+      "term": "2026–2027"
     },
     {
-      "name": "NAMN",
-      "term": "2026-2027"
+      "name": "Arben Krasniqi",
+      "term": "2026–2027"
+    },
+    {
+      "name": "Qin Palmgren",
+      "term": "2026"
     }
   ],
   "revisorer": [
     {
-      "name": "NAMN",
+      "name": "Lennart Svensson",
       "role": "Lekmannarevisor",
       "term": "2026"
     },
     {
-      "name": "NAMN",
+      "name": "Bengt R Andersson",
       "role": "Auktoriserad revisor",
       "term": "2026"
     }
   ],
   "valberedning": [
     {
-      "name": "NAMN",
+      "name": "Robert Oldén",
       "term": "2026"
     },
     {
-      "name": "NAMN",
+      "name": "Anto Novacic",
       "term": "2026"
     }
   ]
