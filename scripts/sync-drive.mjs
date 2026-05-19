@@ -232,9 +232,11 @@ function parseAvgifterSheet(rows) {
     }
     return -1;
   };
-  const avgiftCol  = findCol('avgift', 'avgiftstyp', 'typ', 'namn', 'beskrivning');
-  const beloppCol  = findCol('belopp', 'pris', 'kostnad', 'summa');
-  const noteringCol = findCol('notering', 'kommentar', 'info', 'anmarkning');
+  const avgiftCol    = findCol('avgift', 'avgiftstyp', 'typ', 'namn', 'beskrivning', 'paket');
+  const beloppCol    = findCol('belopp', 'pris', 'kostnad', 'summa', 'medlemspris');
+  const noteringCol  = findCol('notering', 'kommentar', 'info', 'anmarkning');
+  const kategoriCol  = findCol('kategori', 'sektion', 'grupp');
+  const ordinarieCol = findCol('ordinariepris', 'ordinariepriss', 'ordinarie', 'jamforpris', 'fullprice');
 
   if (avgiftCol === -1 || beloppCol === -1) {
     console.warn('  ⚠️  Kunde inte hitta kolumnerna "Avgift" och "Belopp" i Sheeten.');
@@ -244,9 +246,11 @@ function parseAvgifterSheet(rows) {
 
   return rows.slice(1)
     .map((row) => ({
-      avgift:  (row[avgiftCol]  || '').trim(),
-      belopp:  (row[beloppCol]  || '').trim(),
-      notering: noteringCol !== -1 ? (row[noteringCol] || '').trim() : '',
+      avgift:        (row[avgiftCol]    || '').trim(),
+      belopp:        (row[beloppCol]    || '').trim(),
+      notering:      noteringCol  !== -1 ? (row[noteringCol]  || '').trim() : '',
+      kategori:      kategoriCol  !== -1 ? (row[kategoriCol]  || '').trim() : '',
+      ordinariePris: ordinarieCol !== -1 ? (row[ordinarieCol] || '').trim() : '',
     }))
     .filter((r) => r.avgift && r.belopp);
 }

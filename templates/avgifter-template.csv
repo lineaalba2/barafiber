@@ -1,6 +1,8 @@
-Avgift,Belopp,Notering
-Halvårsavgift,1 320 kr,"Faktureras i mars och september (totalt 2 640 kr/år)"
-Förseningsavgift vid sen betalning,60 kr,
-Påminnelseavgift,60 kr,
-Administrationsavgift vid felaktig inbetalning,150 kr,
-Återanslutningsavgift för fiberkoppling,500 kr,Tas ut när fibern har stängts av p.g.a. obetald avgift
+Avgift,Belopp,Notering,Kategori,Ordinarie pris
+Halvårsavgift,1 320 kr,"Faktureras i mars och september (totalt 2 640 kr/år)",Medlemsavgift,
+Förseningsavgift vid sen betalning,60 kr,,Övrigt,
+Påminnelseavgift,60 kr,,Övrigt,
+Administrationsavgift vid felaktig inbetalning,150 kr,,Övrigt,
+Återanslutningsavgift för fiberkoppling,500 kr,Tas ut när fibern har stängts av p.g.a. obetald avgift,Övrigt,
+Flex,149 kr/mån,Medlemspris,TV-paket,299 kr/mån
+Stor,249 kr/mån,Medlemspris,TV-paket,399 kr/mån

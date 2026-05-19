@@ -1,13 +1,16 @@
 /**
- * Renders avgifter from data/avgifter.json.
+ * Renders avgifter from data/avgifter.json into elements with id:
+ *  - #avgifter-table         → vanlig avgiftstabell (alla utom TV-paket)
+ *  - #tv-paket-table         → TV-paket som jämförelsetabell
+ *  - eller med data-kategori="X" → endast rader med den kategorin
  *
- * Datan synkas automatiskt från Google Sheet:en "Avgifter" i föreningens
- * Drive — uppdaterar styrelsen Sheeten så ändras sajten nästa dygn.
+ * Datan synkas automatiskt från Google Sheet:en "Avgifter" i Drive.
  */
 
 (async function () {
-  const el = document.getElementById('avgifter-table');
-  if (!el) return;
+  const generalEl = document.getElementById('avgifter-table');
+  const tvPaketEl = document.getElementById('tv-paket-table');
+  if (!generalEl && !tvPaketEl) return;
 
   let data;
   try {
@@ -15,46 +18,97 @@
     if (!res.ok) throw new Error('HTTP ' + res.status);
     data = await res.json();
   } catch (err) {
-    el.innerHTML = `
-      <div class="notice warning">
-        <strong>Kunde inte ladda avgifter.</strong> Visar inget — kontrollera att Avgifter-Sheeten finns i Drive.
-      </div>`;
+    showError(generalEl);
+    showError(tvPaketEl);
     console.error('Failed to load avgifter.json:', err);
     return;
   }
 
-  if (!data.items || data.items.length === 0) {
-    el.innerHTML = `<p class="text-muted">Avgifter laddas in från Google Sheet inom kort.</p>`;
-    return;
+  const items = Array.isArray(data.items) ? data.items : [];
+
+  if (generalEl) {
+    const exclude = (generalEl.dataset.exclude || 'TV-paket').toLowerCase();
+    const filtered = items.filter(
+      (i) => (i.kategori || '').toLowerCase() !== exclude
+    );
+    renderStandardTable(generalEl, filtered);
   }
 
-  const hasNotering = data.items.some((i) => i.notering);
+  if (tvPaketEl) {
+    const filtered = items.filter(
+      (i) => (i.kategori || '').toLowerCase() === 'tv-paket'
+    );
+    renderTvPaketTable(tvPaketEl, filtered);
+  }
 
-  const rows = data.items.map((item) => `
-    <tr>
-      <td><strong>${escapeHtml(item.avgift)}</strong></td>
-      <td>${escapeHtml(item.belopp)}</td>
-      ${hasNotering ? `<td class="text-muted" style="font-size:0.9375rem;">${escapeHtml(item.notering)}</td>` : ''}
-    </tr>
-  `).join('');
+  // -------------------------------------------------------------------------
 
-  el.innerHTML = `
-    <div class="table-wrapper">
-      <table>
-        <thead>
-          <tr>
-            <th>Avgift</th>
-            <th>Belopp</th>
-            ${hasNotering ? '<th>Notering</th>' : ''}
-          </tr>
-        </thead>
-        <tbody>${rows}</tbody>
-      </table>
-    </div>
-  `;
+  function renderStandardTable(el, rows) {
+    if (rows.length === 0) {
+      el.innerHTML = `<p class="text-muted">Avgifter laddas in från Google Sheet inom kort.</p>`;
+      return;
+    }
+    const hasNotering = rows.some((r) => r.notering);
+    el.innerHTML = `
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Avgift</th>
+              <th>Belopp</th>
+              ${hasNotering ? '<th>Notering</th>' : ''}
+            </tr>
+          </thead>
+          <tbody>
+            ${rows.map((r) => `
+              <tr>
+                <td><strong>${esc(r.avgift)}</strong></td>
+                <td>${esc(r.belopp)}</td>
+                ${hasNotering ? `<td class="text-muted" style="font-size:0.9375rem;">${esc(r.notering)}</td>` : ''}
+              </tr>`).join('')}
+          </tbody>
+        </table>
+      </div>`;
+  }
 
-  function escapeHtml(s) {
-    return String(s)
+  function renderTvPaketTable(el, rows) {
+    if (rows.length === 0) {
+      el.innerHTML = `<p class="text-muted">TV-paketinformation laddas in inom kort.</p>`;
+      return;
+    }
+    const hasOrdinarie = rows.some((r) => r.ordinariePris);
+    el.innerHTML = `
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Paket</th>
+              <th>Medlemspris</th>
+              ${hasOrdinarie ? '<th>Ordinarie pris</th>' : ''}
+            </tr>
+          </thead>
+          <tbody>
+            ${rows.map((r) => `
+              <tr>
+                <td><strong>${esc(r.avgift)}</strong></td>
+                <td>${esc(r.belopp)}</td>
+                ${hasOrdinarie ? `<td class="text-muted">${esc(r.ordinariePris)}</td>` : ''}
+              </tr>`).join('')}
+          </tbody>
+        </table>
+      </div>`;
+  }
+
+  function showError(el) {
+    if (!el) return;
+    el.innerHTML = `
+      <div class="notice warning">
+        <strong>Kunde inte ladda avgifter.</strong> Kontrollera att Avgifter-Sheeten finns i Drive.
+      </div>`;
+  }
+
+  function esc(s) {
+    return String(s || '')
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
