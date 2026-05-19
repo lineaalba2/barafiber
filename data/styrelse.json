@@ -1,0 +1,27 @@
+{
+  "lastUpdated": "Årsstämma 2024-03-24",
+  "source": "Punkt 12 i Protokoll årsstämma 2024",
+  "note": "Uppdatera denna fil efter varje årsstämma. Hämta uppgifterna från punkt 'Val av styrelse, ordförande och suppleanter' i protokollet.",
+  "ordforande": [
+    { "name": "Daniel Fröler", "term": "1 år (2024)" }
+  ],
+  "ledamoter": [
+    { "name": "Martin Neckmar", "term": "2024–2025" },
+    { "name": "Jonas Nordström", "term": "2024–2025" },
+    { "name": "Cliff Odervall", "term": "2024" }
+  ],
+  "suppleanter": [
+    { "name": "Helene Lindell-Quelhas", "term": "2024–2025" },
+    { "name": "Sulejamn Topalovic", "term": "2024" },
+    { "name": "Filippa Jakobsson", "term": "2024" },
+    { "name": "Abdel Ajouz", "term": "2024–2025" }
+  ],
+  "revisorer": [
+    { "name": "Lena Arndt", "role": "Lekmannarevisor", "term": "2024" },
+    { "name": "Bengt R Andersson", "role": "Auktoriserad revisor", "term": "2024" }
+  ],
+  "valberedning": [
+    { "name": "Robert Oldén", "term": "2024" },
+    { "name": "Anto Novacic", "term": "2024" }
+  ]
+}

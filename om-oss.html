@@ -69,9 +69,16 @@
 
       <h2 id="styrelse">Styrelsen</h2>
       <p>
-        Styrelsen väljs på ordinarie årsstämma. Aktuell sammansättning framgår av senaste årsstämmoprotokollet
-        (se <a href="#dokument">Dokument</a>).
+        Styrelsen väljs på ordinarie årsstämma. Aktuell sammansättning hämtas från senaste protokollet —
+        se <a href="#dokument">Dokument</a> för att läsa protokollet i sin helhet.
       </p>
+
+      <div id="styrelse-list" class="board-grid"></div>
+
+      <h3 style="margin-top:2rem;">Revisorer</h3>
+      <div id="revisorer-list" class="board-grid"></div>
+
+      <p class="text-muted" id="styrelse-footnote" style="font-size:0.875rem; margin-top:1rem;"></p>
 
       <div class="notice">
         <strong>Vill du engagera dig?</strong> Föreningen söker löpande personer som vill bidra till styrelse,
@@ -81,16 +88,7 @@
       <h2 id="valberedning">Valberedning</h2>
       <p>Valberedningens uppgift är att föreslå kandidater till föreningens förtroendeuppdrag — styrelseledamot, revisor m.fl.</p>
 
-      <div class="board-grid">
-        <div class="board-member">
-          <div class="board-member-role">Valberedningen</div>
-          <div class="board-member-name">Robert Oldén</div>
-        </div>
-        <div class="board-member">
-          <div class="board-member-role">Valberedningen</div>
-          <div class="board-member-name">Anto Novacic</div>
-        </div>
-      </div>
+      <div id="valberedning-list" class="board-grid"></div>
 
       <p class="mt-2">
         E-post: <a href="mailto:valberedningen@barafiber.se">valberedningen@barafiber.se</a>
@@ -168,6 +166,7 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+<script src="js/styrelse.js"></script>
 <script src="js/documents.js"></script>
 
 </body>
