@@ -113,20 +113,31 @@ GitHub Action `sync-drive.yml` kör automatiskt:
 
 Workflowen commitar förändringar till `data/documents.json` om något ändrats.
 
-## Deployment till Netlify
+## Deployment
 
-1. Skapa ett konto på [netlify.com](https://netlify.com) (gratis).
-2. "Add new site" → "Import from Git" → välj `lineaalba2/barafiber`-repot.
-3. Build settings: lämna tomma (det finns ingen build). Publish directory: `.` (rot).
-4. Deploy.
-5. Lägg till domänen `barafiber.se`:
-   - Site settings → Domain management → Add custom domain → `barafiber.se`.
-   - Följ instruktionerna för DNS — antingen ändra namnservers hos one.com till Netlify, eller behåll one.com som DNS-leverantör och peka A/CNAME-record till Netlify.
+Sajten är en ren statisk hemsida — fungerar på vilken statisk-hosting som helst.
+Repot innehåller config för både Vercel (`vercel.json`) och Netlify (`netlify.toml`).
+Använd det du har anslutet — den andra filen ignoreras.
+
+### Vercel (nuvarande deployment)
+
+Aktuell deployment: **https://bara-fiber.vercel.app**
+
+- Vercel deployar automatiskt vid varje commit till den anslutna branchen.
+- Inga build-kommandon krävs (Output directory: `.` / rot).
+- För att lägga till `barafiber.se` som custom domain: Vercel-projektet → Settings → Domains → Add → följ DNS-instruktionerna (peka A-record eller CNAME hos one.com till Vercel).
+
+### Netlify (alternativ)
+
+Om ni byter till Netlify istället:
+1. [netlify.com](https://netlify.com) → "Add new site" → "Import from Git" → välj repot.
+2. Build settings: tomma. Publish directory: `.`
+3. Deploy.
 
 ### Migrera bort från one.com:s WebsiteBuilder
 
-- Hemsidan flyttas till Netlify. Behåll one.com endast för det du faktiskt behöver där (t.ex. mejlhantering).
-- DNS-pekningen för `barafiber.se` ändras så att webben pekar på Netlify istället för one.com.
+- Hemsidan flyttas till Vercel/Netlify. Behåll one.com endast för det ni faktiskt behöver där (t.ex. mejlhantering).
+- DNS-pekningen för `barafiber.se` ändras så att webben pekar på den nya hosten istället för one.com.
 
 ## Innehåll uppdatering
 
