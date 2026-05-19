@@ -1,11 +1,11 @@
 name: Sync Google Drive documents
 
 on:
-  # Kör var 15:e minut så att nya dokument i Drive dyker upp på sajten
-  # inom ca 15-30 minuter (GitHub Actions schemalagda jobb kan fördröjas
+  # Kör var 5:e minut så att nya dokument i Drive dyker upp på sajten
+  # inom ca 5-10 minuter (GitHub Actions schemalagda jobb kan fördröjas
   # något under hög belastning).
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '*/5 * * * *'
   # Kan också köras manuellt från Actions-fliken
   workflow_dispatch:
 
