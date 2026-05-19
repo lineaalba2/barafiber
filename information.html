@@ -107,7 +107,7 @@
       <p>
         Om medlemsavgiften inte betalas trots påminnelse <strong>kopplas fibern ur</strong> och ärendet skickas
         vidare till inkasso eller Kronofogdemyndigheten. För att återansluta tillkommer en återanslutningsavgift
-        på 500 kr utöver utestående belopp.
+        på <span data-avgift="återanslutning">500 kr</span> utöver utestående belopp.
       </p>
 
       <h2 id="natkartor">Nätkartor</h2>
@@ -178,6 +178,7 @@
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 <script src="js/avgifter.js"></script>
+<script src="js/dynamic-text.js"></script>
 
 </body>
 </html>

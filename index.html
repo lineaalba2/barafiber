@@ -88,7 +88,7 @@
       <a href="/information.html#avgifter" class="card card-link">
         <div class="card-icon">💳</div>
         <h3>Avgifter</h3>
-        <p>Halvårsavgift 1 320 kr, faktureras i mars och september. Detaljer om förseningsavgifter och e-faktura.</p>
+        <p>Halvårsavgift <span data-avgift="halvår">1 320 kr</span>, faktureras i mars och september. Detaljer om förseningsavgifter och e-faktura.</p>
         <span class="card-arrow">Se priser →</span>
       </a>
       <a href="/om-oss.html#dokument" class="card card-link">
@@ -117,7 +117,7 @@
     </p>
     <p>
       Som lagfaren ägare av en ansluten fastighet är du automatiskt medlem — medlemskapet följer fastigheten
-      och kan inte sägas upp. Avgiften (1 320 kr) faktureras halvårsvis i mars och september och täcker både
+      och kan inte sägas upp. Avgiften (<span data-avgift="halvår">1 320 kr</span>) faktureras halvårsvis i mars och september och täcker både
       drift av nätet och tjänsteleveransen.
     </p>
     <div class="btn-group mt-2">
@@ -167,6 +167,7 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+<script src="js/dynamic-text.js"></script>
 
 </body>
 </html>
