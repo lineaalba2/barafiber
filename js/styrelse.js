@@ -72,6 +72,14 @@
   // Footer-info (vilket protokoll uppgifterna kommer från)
   const footnote = document.getElementById('styrelse-footnote');
   if (footnote && data.lastUpdated) {
-    footnote.textContent = `Uppgifter från ${data.lastUpdated}.`;
+    // Om lastUpdated är ett ISO-datum (från Sheet-sync), formatera till
+    // svensk kort form. Annars (manuellt fritext-värde) visa som det är.
+    const iso = data.lastUpdated;
+    const d = new Date(iso);
+    const isValidIso = !isNaN(d.getTime()) && /\d{4}-\d{2}-\d{2}/.test(iso);
+    const formatted = isValidIso
+      ? d.toLocaleDateString('sv-SE', { year: 'numeric', month: 'long', day: 'numeric' })
+      : iso;
+    footnote.textContent = `Uppgifter från ${formatted}.`;
   }
 })();
