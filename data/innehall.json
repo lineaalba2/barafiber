@@ -1,10 +1,18 @@
 {
-  "lastUpdated": "2026-05-19T20:41:28.009Z",
+  "lastUpdated": "2026-05-19T20:44:11.990Z",
   "sourceSheet": "Innehåll",
   "sourceUrl": "https://docs.google.com/spreadsheets/d/1xPp7gD68CHgoZrO-MxpxRsQBp-4GwNnfKUOXPcoCdSQ/edit",
   "values": {
     "antal_hushåll": "723",
     "gratiskanaler": "SVT1, SVT2, TV4, TV6, Barnkanalen, Kunskapskanalen",
-    "basutbud_antal_kanaler": "ca 20"
+    "basutbud_antal_kanaler": "ca 20",
+    "internet_hastighet": "1000/1000",
+    "support_ownit_vardagar": "08–22",
+    "support_ownit_helger": "10–19",
+    "support_telenor_vardagar": "08–21",
+    "support_telenor_helger": "10–19",
+    "tjänstefördelare_modell": "Inteno EG300",
+    "serviceavtal_partner": "Installations Companiet",
+    "mesh_partner": "Kjell & Company"
   }
 }
