@@ -1,4 +1,32 @@
 {
-  "lastUpdated": null,
-  "items": []
+  "lastUpdated": "2026-05-19T19:32:11.773Z",
+  "sourceSheet": "Avgifter",
+  "sourceUrl": "https://docs.google.com/spreadsheets/d/1tMJTzCL7ghbZzN1UCNKdgGWXJExJWmZzhTJWRDxo_ug/edit",
+  "items": [
+    {
+      "avgift": "Halvårsavgift",
+      "belopp": "1 320 kr",
+      "notering": "Faktureras i mars och september (totalt 2 640 kr/år)"
+    },
+    {
+      "avgift": "Förseningsavgift vid sen betalning",
+      "belopp": "60kr",
+      "notering": ""
+    },
+    {
+      "avgift": "Påminnelseavgift",
+      "belopp": "60kr",
+      "notering": ""
+    },
+    {
+      "avgift": "Administrationsavgift vid felaktig inbetalning",
+      "belopp": "150kr",
+      "notering": ""
+    },
+    {
+      "avgift": "Återanslutningsavgift för fiberkoppling",
+      "belopp": "500kr",
+      "notering": "Tas ut när fibern har stängts av p.g.a. obetald avgift"
+    }
+  ]
 }
