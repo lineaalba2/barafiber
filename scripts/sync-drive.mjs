@@ -139,6 +139,24 @@ function isArsstammaFilename(filename) {
   return /årsstäm|årsmöt|\bstämma\b|protokoll.*stamma/i.test(filename);
 }
 
+// Mappar namngivna som datum (t.ex. "2026-01-13") representerar
+// ett specifikt styrelsemöte med PDF:er, dagordning, bilagor inuti.
+function isDateFolderName(name) {
+  return /^20\d{2}[-_./]\d{2}[-_./]\d{2}/.test(name.trim());
+}
+
+// I en datum-mapp vill vi visa den signerade PDF:en om den finns,
+// annars den huvudsakliga styrelseprotokoll-PDF:en. Inte alla bilagor.
+function pickProtokollFromDateFolder(pdfs) {
+  if (pdfs.length === 0) return [];
+  const signed = pdfs.find((f) => /_sign\.pdf$/i.test(f.name));
+  if (signed) return [signed];
+  const styrelseprotokoll = pdfs.find((f) => /^styrelseprotokoll/i.test(f.name));
+  if (styrelseprotokoll) return [styrelseprotokoll];
+  // Fallback: visa alla
+  return pdfs;
+}
+
 async function processYearFolder(yearFolder) {
   const year = yearFolder.name;
   console.log(`  📅 ${year}`);
@@ -164,7 +182,18 @@ async function processYearFolder(yearFolder) {
   const subfolders = entries.filter((f) => f.mimeType === FOLDER_MIME);
   for (const sub of subfolders) {
     const subPdfs = await listPdfsFlat(sub.id);
-    if (subPdfs.length === 0) continue;
+    if (subPdfs.length === 0) {
+      console.log(`     → ${sub.name} (tom enligt API — kontrollera sharing-permissions)`);
+      continue;
+    }
+
+    // Datum-mappar (t.ex. "2026-01-13") = en mapp per styrelsemöte
+    if (isDateFolderName(sub.name)) {
+      const filesToAdd = pickProtokollFromDateFolder(subPdfs);
+      console.log(`     → ${sub.name} (${filesToAdd.length}/${subPdfs.length} PDF → styrelseprotokoll)`);
+      addToGroup('styrelseprotokoll', year, year, filesToAdd);
+      continue;
+    }
 
     const cat = categorizeName(sub.name);
     console.log(`     → ${sub.name} (${subPdfs.length} st → ${cat})`);
