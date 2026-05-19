@@ -31,10 +31,10 @@ jobs:
         run: |
           git config user.name "barafiber-bot"
           git config user.email "bot@barafiber.se"
-          git add data/documents.json
+          git add data/documents.json data/avgifter.json
           if git diff --staged --quiet; then
             echo "Inga förändringar att committa."
           else
-            git commit -m "chore: sync Drive documents ($(date -u +%Y-%m-%d))"
+            git commit -m "chore: sync Drive ($(date -u +%Y-%m-%d))"
             git push
           fi
