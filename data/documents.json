@@ -1,11 +1,24 @@
 {
-  "lastUpdated": "2026-05-19T20:50:02.637Z",
+  "lastUpdated": "2026-05-19T20:59:40.729Z",
   "sections": [
     {
       "key": "styrelseprotokoll",
       "label": "Styrelseprotokoll",
       "icon": "🗒️",
       "groups": [
+        {
+          "label": "2026",
+          "files": [
+            {
+              "id": "1aJ2SWKqujAI2H5Xf0nme9UlgMo1jDwOU",
+              "name": "Styrelseprotokoll_2026-01-13_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-04-27T21:27:40.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1aJ2SWKqujAI2H5Xf0nme9UlgMo1jDwOU/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1aJ2SWKqujAI2H5Xf0nme9UlgMo1jDwOU&export=download"
+            }
+          ]
+        },
         {
           "label": "2024",
           "files": [
