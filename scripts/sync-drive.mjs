@@ -56,8 +56,9 @@ const SECTION_DEFS = [
 
 function categorizeName(name) {
   const n = name.trim();
-  if (/årsstäm|årsmöt|\bstämm/i.test(n))   return 'arsstamma';
-  if (/stadg/i.test(n))                    return 'stadgar';
+  // Matchar både "stämma" (med ä) och "stamma" (utan ä, i äldre filer)
+  if (/årsstäm|årsmöt|stämm|stamma/i.test(n))   return 'arsstamma';
+  if (/stadg/i.test(n))                          return 'stadgar';
   return 'ovriga';
 }
 
