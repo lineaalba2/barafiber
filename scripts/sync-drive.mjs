@@ -202,6 +202,7 @@ async function processTopLevelFolder(folder) {
 const SHEET_MIME = 'application/vnd.google-apps.spreadsheet';
 const AVGIFTER_OUTPUT = resolve(__dirname, '..', 'data', 'avgifter.json');
 const STYRELSE_OUTPUT = resolve(__dirname, '..', 'data', 'styrelse.json');
+const INNEHALL_OUTPUT = resolve(__dirname, '..', 'data', 'innehall.json');
 
 async function fetchSheetValues(spreadsheetId) {
   // Hämtar alla värden från första bladet (Sheet1 / Blad1).
@@ -337,6 +338,63 @@ async function syncStyrelse(rootEntries) {
   }
 }
 
+function parseInnehallSheet(rows) {
+  if (!rows || rows.length === 0) return {};
+  const headers = rows[0].map(normalizeHeader);
+  const findCol = (...candidates) => {
+    for (const c of candidates) {
+      const i = headers.indexOf(c);
+      if (i !== -1) return i;
+    }
+    return -1;
+  };
+  const nyckelCol = findCol('nyckel', 'key', 'namn', 'id');
+  const vardeCol  = findCol('varde', 'value', 'innehall', 'text');
+
+  if (nyckelCol === -1 || vardeCol === -1) {
+    console.warn('  ⚠️  Kunde inte hitta "Nyckel" och "Värde" i Innehåll-Sheeten.');
+    console.warn('     Hittade kolumner:', headers);
+    return {};
+  }
+
+  const out = {};
+  for (const row of rows.slice(1)) {
+    const nyckel = (row[nyckelCol] || '').trim();
+    const varde  = (row[vardeCol]  || '').trim();
+    if (!nyckel || !varde) continue;
+    out[nyckel] = varde;
+  }
+  return out;
+}
+
+async function syncInnehall(rootEntries) {
+  const sheet = rootEntries.find(
+    (f) => f.mimeType === SHEET_MIME && /innehåll|innehall|övrigt|ovrigt/i.test(f.name)
+  );
+  if (!sheet) {
+    console.log('  (ingen Innehåll-sheet hittades i rot-mappen)');
+    return;
+  }
+  console.log(`📝  Hittade innehåll-sheet: "${sheet.name}"`);
+  try {
+    const rows = await fetchSheetValues(sheet.id);
+    const parsed = parseInnehallSheet(rows);
+    const count = Object.keys(parsed).length;
+    console.log(`     ${count} nyckel/värde-par parsade`);
+    const output = {
+      lastUpdated: new Date().toISOString(),
+      sourceSheet: sheet.name,
+      sourceUrl: `https://docs.google.com/spreadsheets/d/${sheet.id}/edit`,
+      values: parsed,
+    };
+    await mkdir(dirname(INNEHALL_OUTPUT), { recursive: true });
+    await writeFile(INNEHALL_OUTPUT, JSON.stringify(output, null, 2) + '\n', 'utf8');
+    console.log(`     Skrev ${INNEHALL_OUTPUT}`);
+  } catch (err) {
+    console.error(`  ❌  Innehåll-sync misslyckades: ${err.message}`);
+  }
+}
+
 async function syncAvgifter(rootEntries) {
   // Leta efter en Google Sheet i rot-mappen med "avgift" i namnet
   const sheet = rootEntries.find(
@@ -372,9 +430,10 @@ async function main() {
   const rootFolders = rootEntries.filter((e) => e.mimeType === FOLDER_MIME);
   const rootPdfs    = rootEntries.filter((e) => ALLOWED_MIME_TYPES.has(e.mimeType)).map(toDoc);
 
-  // Avgifter + styrelse synkas från Sheets i rot-mappen
+  // Avgifter, styrelse, innehåll synkas från Sheets i rot-mappen
   await syncAvgifter(rootEntries);
   await syncStyrelse(rootEntries);
+  await syncInnehall(rootEntries);
 
   // Plana PDF:er direkt i rot-mappen → övriga
   if (rootPdfs.length > 0) {

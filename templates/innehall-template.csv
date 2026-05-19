@@ -1,0 +1,12 @@
+Nyckel,Värde,Notering
+antal_hushåll,723,Uppdatera efter verksamhetsberättelse varje år
+internet_hastighet,1000/1000,Mbit/s — symmetrisk
+basutbud_antal_kanaler,ca 20,Antal kanaler i digitalt basutbud (Telenor)
+gratiskanaler,"SVT1, SVT2, TV4, TV6, Barnkanalen, Kunskapskanalen",Kanaler som sänds okodade
+support_ownit_vardagar,08-22,
+support_ownit_helger,10-19,
+support_telenor_vardagar,08-21,
+support_telenor_helger,10-19,
+tjänstefördelare_modell,Inteno EG300,Med CATV-modul, router och Wi-Fi
+serviceavtal_partner,Installations Companiet,Reparation av fiberinfrastruktur
+mesh_partner,Kjell & Company,"Butiker: Burlöv Center och Emporia"
