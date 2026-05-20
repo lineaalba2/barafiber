@@ -36,6 +36,32 @@
     }
   };
 
+  // Försök extrahera datum från filnamn först (mer pålitligt än Drive-metadata)
+  // Returnerar formaterad sträng eller null om inget datum kunde utvinnas.
+  function extractDateFromName(name) {
+    if (!name) return null;
+    // YYYY-MM-DD (eller med _ . eller mellanslag som separator)
+    const full = name.match(/(20\d{2})[-_./ ](\d{2})[-_./ ](\d{2})/);
+    if (full) {
+      const d = new Date(`${full[1]}-${full[2]}-${full[3]}`);
+      if (!isNaN(d)) {
+        return d.toLocaleDateString('sv-SE', { year: 'numeric', month: 'long', day: 'numeric' });
+      }
+    }
+    // YYYY-MM
+    const yearMonth = name.match(/(20\d{2})[-_./ ](\d{2})\b/);
+    if (yearMonth) {
+      const d = new Date(`${yearMonth[1]}-${yearMonth[2]}-01`);
+      if (!isNaN(d)) {
+        return d.toLocaleDateString('sv-SE', { year: 'numeric', month: 'long' });
+      }
+    }
+    // Bara år
+    const year = name.match(/\b(20\d{2})\b/);
+    if (year) return year[1];
+    return null;
+  }
+
   let data;
   try {
     const res = await fetch('data/documents.json', { cache: 'no-cache' });
@@ -156,10 +182,11 @@
         name.textContent = f.name.replace(/\.pdf$/i, '');
         info.appendChild(name);
 
-        if (f.modifiedTime) {
+        const displayDate = extractDateFromName(f.name) || formatDate(f.modifiedTime);
+        if (displayDate) {
           const meta = document.createElement('div');
           meta.className = 'doc-meta';
-          meta.textContent = formatDate(f.modifiedTime);
+          meta.textContent = displayDate;
           info.appendChild(meta);
         }
 
