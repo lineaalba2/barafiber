@@ -417,7 +417,7 @@ function parseInnehallSheet(rows) {
 
 async function syncInnehall(rootEntries) {
   const sheet = rootEntries.find(
-    (f) => f.mimeType === SHEET_MIME && /innehåll|innehall|övrigt|ovrigt/i.test(f.name)
+    (f) => f.mimeType === SHEET_MIME && /innehål|innehal|övrigt|ovrigt/i.test(f.name)
   );
   if (!sheet) {
     console.log('  (ingen Innehåll-sheet hittades i rot-mappen)');
