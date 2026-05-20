@@ -78,11 +78,15 @@ function extractYear(name) {
 
 async function listFolder(folderId) {
   const q = encodeURIComponent(`'${folderId}' in parents and trashed = false`);
+  // supportsAllDrives + includeItemsFromAllDrives behövs för att läsa
+  // från Shared Drives (Team Drives) utöver personliga Drive-konton.
   const url = `https://www.googleapis.com/drive/v3/files`
     + `?q=${q}`
     + `&fields=${encodeURIComponent(FIELDS)}`
     + `&pageSize=1000`
     + `&orderBy=name`
+    + `&supportsAllDrives=true`
+    + `&includeItemsFromAllDrives=true`
     + `&key=${API_KEY}`;
   const res = await fetch(url);
   if (!res.ok) {
