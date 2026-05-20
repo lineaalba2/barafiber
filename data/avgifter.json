@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-20T07:27:41.182Z",
+  "lastUpdated": "2026-05-20T07:43:52.663Z",
   "sourceSheet": "Avgifter",
   "sourceUrl": "https://docs.google.com/spreadsheets/d/1tMJTzCL7ghbZzN1UCNKdgGWXJExJWmZzhTJWRDxo_ug/edit",
   "items": [
@@ -8,13 +8,6 @@
       "belopp": "1 290kr",
       "notering": "Faktureras i mars och september (215 kr/mån × 6, sänkt från 220 kr/mån 2025)",
       "kategori": "Medlemsavgift",
-      "ordinariePris": ""
-    },
-    {
-      "avgift": "Förseningsavgift vid sen betalning",
-      "belopp": "60kr",
-      "notering": "",
-      "kategori": "Övrigt",
       "ordinariePris": ""
     },
     {
