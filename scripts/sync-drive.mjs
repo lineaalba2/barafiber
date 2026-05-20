@@ -33,7 +33,7 @@ import { fileURLToPath } from 'node:url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUTPUT_PATH = resolve(__dirname, '..', 'data', 'documents.json');
 
-const ROOT_FOLDER_ID = '1sZ0YY0VrI3Db1PMjavwMtj6IELgKdk7l';
+const ROOT_FOLDER_ID = '1tXZ30C7zSx5G757Yj26j_yi3Y4ZsRKXp';
 
 const ALLOWED_MIME_TYPES = new Set(['application/pdf']);
 const FOLDER_MIME = 'application/vnd.google-apps.folder';

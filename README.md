@@ -41,7 +41,7 @@ python3 -m http.server 8080
 upptäcker automatiskt vad som ligger där. Mapp-ID:t hårdkodat i scriptet:
 
 ```
-ROOT_FOLDER_ID = '1sZ0YY0VrI3Db1PMjavwMtj6IELgKdk7l'
+ROOT_FOLDER_ID = '1tXZ30C7zSx5G757Yj26j_yi3Y4ZsRKXp'
 ```
 
 (byt här om ni flyttar mappen).
@@ -70,7 +70,7 @@ dyker upp på sajten nästa gång synken körs.
 
 **1. Rot-mappen måste vara publikt delad**
 
-Öppna [rot-mappen i Drive](https://drive.google.com/drive/folders/1sZ0YY0VrI3Db1PMjavwMtj6IELgKdk7l)
+Öppna [rot-mappen i Drive](https://drive.google.com/drive/folders/1tXZ30C7zSx5G757Yj26j_yi3Y4ZsRKXp)
 → Dela → Allmän åtkomst → välj **"Alla med länken"** (Visningsbehörighet).
 
 Den här inställningen ärvs automatiskt av alla undermappar.
