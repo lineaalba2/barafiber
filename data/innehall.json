@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-20T07:15:10.361Z",
+  "lastUpdated": "2026-05-20T07:27:41.716Z",
   "sourceSheet": "Innehåll",
   "sourceUrl": "https://docs.google.com/spreadsheets/d/1xPp7gD68CHgoZrO-MxpxRsQBp-4GwNnfKUOXPcoCdSQ/edit",
   "values": {
@@ -14,6 +14,6 @@
     "tjänstefördelare_modell": "Inteno EG300",
     "serviceavtal_partner": "Installations Companiet",
     "mesh_partner": "Kjell & Company",
-    "reparationskostnad_fiber": "5000-15000 kr"
+    "reparationskostnad_fiber": "5 000–15 000 kr"
   }
 }
