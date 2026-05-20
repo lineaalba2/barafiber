@@ -22,6 +22,12 @@
     textEls.length   > 0 ? loadJson('data/innehall.json') : null,
   ]);
 
+  // Normalisera belopp: ta bort whitespace mellan siffror så "1 320 kr"
+  // blir "1320 kr" (Sheets lägger ibland in tusen-separatorer automatiskt).
+  const normalizeAmount = (s) =>
+    String(s || '').replace(/(\d)[\s  ](\d)/g, '$1$2')
+                   .replace(/(\d)[\s  ](\d)/g, '$1$2');
+
   if (avgifter) {
     const items = avgifter.items || [];
     avgiftEls.forEach((el) => {
@@ -31,7 +37,7 @@
         (i.avgift || '').toLowerCase().includes(key)
       );
       if (match) {
-        el.textContent = match.belopp;
+        el.textContent = normalizeAmount(match.belopp);
       } else {
         console.warn(`dynamic-text: hittade ingen avgift som matchar "${key}"`);
       }
