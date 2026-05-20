@@ -710,57 +710,62 @@ tbody tr:hover { background: var(--color-bg-alt); }
 }
 
 /* Mobil: gör tabeller till kort-layout per rad istället för horisontell scroll */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .table-wrapper {
-    border: none;
-    background: transparent;
-    overflow: visible;
+    border: none !important;
+    background: transparent !important;
+    overflow: visible !important;
+    border-radius: 0 !important;
+    margin: 1rem 0 !important;
   }
   .table-wrapper table {
-    width: 100%;
+    width: 100% !important;
+    border-collapse: separate !important;
   }
   .table-wrapper thead {
-    display: none;
+    display: none !important;
   }
   .table-wrapper tbody {
-    display: block;
+    display: block !important;
   }
   .table-wrapper tr {
-    display: block;
-    margin-bottom: 0.75rem;
-    padding: 1rem 1.125rem;
-    background: var(--color-bg-card);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
+    display: block !important;
+    margin-bottom: 0.75rem !important;
+    padding: 1rem 1.125rem !important;
+    background: var(--color-bg-card) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--radius-md) !important;
   }
   .table-wrapper tr:hover {
-    background: var(--color-bg-card);
+    background: var(--color-bg-card) !important;
   }
   .table-wrapper td {
-    display: block;
-    padding: 0.125rem 0;
-    border: none;
+    display: block !important;
+    padding: 0.125rem 0 !important;
+    border: none !important;
+    text-align: left !important;
+    white-space: normal !important;
   }
   /* Första cellen (namn/etikett) blir stor och i primärfärg */
   .table-wrapper td:first-child {
-    font-size: 1.0625rem;
-    font-weight: 600;
-    color: var(--color-primary);
-    margin-bottom: 0.375rem;
+    font-size: 1.0625rem !important;
+    font-weight: 600 !important;
+    color: var(--color-primary) !important;
+    margin-bottom: 0.375rem !important;
   }
   /* Andra cellen (huvudbelopp) blir extra stor och bold */
   .table-wrapper td:nth-child(2) {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--color-text);
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: var(--color-text) !important;
   }
   /* Tredje cellen (notering/ordinarie pris) är liten och dämpad */
   .table-wrapper td:nth-child(3) {
-    font-size: 0.875rem;
-    color: var(--color-text-muted);
-    margin-top: 0.375rem;
+    font-size: 0.875rem !important;
+    color: var(--color-text-muted) !important;
+    margin-top: 0.375rem !important;
   }
-  /* Doc-items: lite mer padding och break på mobil */
+  /* Doc-items: lite mer padding och inget hover-translate på mobil */
   .doc-item {
     padding: 1rem;
   }
