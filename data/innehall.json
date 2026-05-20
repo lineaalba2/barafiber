@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2026-05-20T06:05:31.428Z",
+  "lastUpdated": "2026-05-20T07:09:19.756Z",
   "sourceSheet": "Innehåll",
   "sourceUrl": "https://docs.google.com/spreadsheets/d/1xPp7gD68CHgoZrO-MxpxRsQBp-4GwNnfKUOXPcoCdSQ/edit",
   "values": {
-    "antal_hushåll": "723",
+    "antal_hushåll": "720+",
     "gratiskanaler": "SVT1, SVT2, TV4, TV6, Barnkanalen, Kunskapskanalen",
     "basutbud_antal_kanaler": "ca 20",
     "internet_hastighet": "1000/1000",
@@ -13,6 +13,7 @@
     "support_telenor_helger": "10–19",
     "tjänstefördelare_modell": "Inteno EG300",
     "serviceavtal_partner": "Installations Companiet",
-    "mesh_partner": "Kjell & Company"
+    "mesh_partner": "Kjell & Company",
+    "reparationskostnad_fiber": "5000-15000 kr"
   }
 }
