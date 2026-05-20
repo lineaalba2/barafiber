@@ -22,11 +22,16 @@
     textEls.length   > 0 ? loadJson('data/innehall.json') : null,
   ]);
 
-  // Normalisera belopp: ta bort whitespace mellan siffror så "1 320 kr"
-  // blir "1320 kr" (Sheets lägger ibland in tusen-separatorer automatiskt).
+  // Normalisera belopp till konsekvent format:
+  //  - "1 290 kr" → "1290 kr"  (ta bort tusen-separator mellan siffror)
+  //  - "60kr"     → "60 kr"    (lägg till mellanslag före 'kr')
+  // Whitespace-klassen täcker vanligt mellanslag, non-breaking space och
+  // thin space (allt som Sheets kan auto-formatera in).
   const normalizeAmount = (s) =>
-    String(s || '').replace(/(\d)[\s  ](\d)/g, '$1$2')
-                   .replace(/(\d)[\s  ](\d)/g, '$1$2');
+    String(s || '')
+      .replace(/(\d)[\s  ](\d)/g, '$1$2')
+      .replace(/(\d)[\s  ](\d)/g, '$1$2')
+      .replace(/(\d)(kr)\b/gi, '$1 $2');
 
   if (avgifter) {
     const items = avgifter.items || [];
@@ -50,7 +55,9 @@
       const key = (el.dataset.text || '').trim();
       if (!key) return;
       if (values[key] !== undefined) {
-        el.textContent = values[key];
+        // Normalisera även text-värden — om de råkar innehålla belopp
+        // (t.ex. reparationskostnad_fiber) blir formatet konsekvent.
+        el.textContent = normalizeAmount(values[key]);
       } else {
         console.warn(`dynamic-text: hittade ingen innehållsnyckel "${key}"`);
       }

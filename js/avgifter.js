@@ -107,11 +107,17 @@
       </div>`;
   }
 
-  // Normalisera belopp: ta bort whitespace mellan siffror så "1 320 kr"
-  // blir "1320 kr". Sheets formaterar ofta automatiskt med tusen-separator.
+  // Normalisera belopp till konsekvent format:
+  //  - "1 290 kr" → "1290 kr"  (ta bort tusen-separator-mellanslag mellan siffror)
+  //  - "60kr"     → "60 kr"    (lägg till mellanslag före 'kr')
+  //  - "60 kr"    → "60 kr"    (oförändrad)
+  // Whitespace-klassen täcker vanligt mellanslag, non-breaking space och
+  // thin space (allt som Sheets kan auto-formatera in).
   function normalizeAmount(s) {
-    return String(s || '').replace(/(\d)[\s  ](\d)/g, '$1$2')
-                          .replace(/(\d)[\s  ](\d)/g, '$1$2');
+    return String(s || '')
+      .replace(/(\d)[\s  ](\d)/g, '$1$2')
+      .replace(/(\d)[\s  ](\d)/g, '$1$2')
+      .replace(/(\d)(kr)\b/gi, '$1 $2');
   }
 
   function esc(s) {
