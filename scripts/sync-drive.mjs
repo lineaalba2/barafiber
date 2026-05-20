@@ -37,7 +37,8 @@ const ROOT_FOLDER_ID = '1sZ0YY0VrI3Db1PMjavwMtj6IELgKdk7l';
 
 const ALLOWED_MIME_TYPES = new Set(['application/pdf']);
 const FOLDER_MIME = 'application/vnd.google-apps.folder';
-const FIELDS = 'files(id,name,mimeType,modifiedTime,webViewLink,webContentLink)';
+const SHORTCUT_MIME = 'application/vnd.google-apps.shortcut';
+const FIELDS = 'files(id,name,mimeType,modifiedTime,webViewLink,webContentLink,shortcutDetails)';
 
 const API_KEY = process.env.GOOGLE_API_KEY;
 if (!API_KEY) {
@@ -92,21 +93,38 @@ async function listFolder(folderId) {
   return data.files || [];
 }
 
+// Genvägar i Drive har egen mimeType. Resolva till den faktiska
+// måldatans mimeType och ID så att vi behandlar dem som filen de pekar på.
+function effectiveMimeType(f) {
+  if (f.mimeType === SHORTCUT_MIME && f.shortcutDetails?.targetMimeType) {
+    return f.shortcutDetails.targetMimeType;
+  }
+  return f.mimeType;
+}
+
+function effectiveId(f) {
+  if (f.mimeType === SHORTCUT_MIME && f.shortcutDetails?.targetId) {
+    return f.shortcutDetails.targetId;
+  }
+  return f.id;
+}
+
 function toDoc(f) {
   return {
-    id: f.id,
+    id: effectiveId(f),
     name: f.name,
-    mimeType: f.mimeType,
+    mimeType: effectiveMimeType(f),
     modifiedTime: f.modifiedTime,
     webViewLink: f.webViewLink,
     webContentLink: f.webContentLink,
   };
 }
 
-// Plana PDF:er i en mapp (inte rekursivt)
+// Plana PDF:er i en mapp (inte rekursivt). Genvägar till PDF:er
+// räknas som PDF:er.
 async function listPdfsFlat(folderId) {
   const entries = await listFolder(folderId);
-  return entries.filter((f) => ALLOWED_MIME_TYPES.has(f.mimeType)).map(toDoc);
+  return entries.filter((f) => ALLOWED_MIME_TYPES.has(effectiveMimeType(f))).map(toDoc);
 }
 
 // ---------------------------------------------------------------------------
@@ -163,7 +181,8 @@ async function processYearFolder(yearFolder) {
   const entries = await listFolder(yearFolder.id);
 
   // Plana PDF:er i år-mappen → dela upp: styrelseprotokoll vs årsstämma (per filnamn)
-  const flatPdfs = entries.filter((f) => ALLOWED_MIME_TYPES.has(f.mimeType));
+  // (inkluderar genvägar till PDF)
+  const flatPdfs = entries.filter((f) => ALLOWED_MIME_TYPES.has(effectiveMimeType(f)));
   const styrelseProtokoll = [];
   const arsstammaFiles = [];
   for (const f of flatPdfs) {
@@ -457,7 +476,7 @@ async function main() {
 
   const rootEntries = await listFolder(ROOT_FOLDER_ID);
   const rootFolders = rootEntries.filter((e) => e.mimeType === FOLDER_MIME);
-  const rootPdfs    = rootEntries.filter((e) => ALLOWED_MIME_TYPES.has(e.mimeType)).map(toDoc);
+  const rootPdfs    = rootEntries.filter((e) => ALLOWED_MIME_TYPES.has(effectiveMimeType(e))).map(toDoc);
 
   // Avgifter, styrelse, innehåll synkas från Sheets i rot-mappen
   await syncAvgifter(rootEntries);
