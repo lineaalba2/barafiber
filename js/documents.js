@@ -182,13 +182,8 @@
         name.textContent = f.name.replace(/\.pdf$/i, '');
         info.appendChild(name);
 
-        const displayDate = extractDateFromName(f.name) || formatDate(f.modifiedTime);
-        if (displayDate) {
-          const meta = document.createElement('div');
-          meta.className = 'doc-meta';
-          meta.textContent = displayDate;
-          info.appendChild(meta);
-        }
+        // Datum visas inte längre under filnamn — redundant eftersom filerna
+        // grupperas per år (rubriken) och filnamnet ofta innehåller datumet.
 
         const arrow = document.createElement('div');
         arrow.className = 'doc-arrow';
