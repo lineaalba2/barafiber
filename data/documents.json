@@ -1,4 +1,1722 @@
 {
-  "lastUpdated": "2026-05-20T11:51:22.151Z",
-  "sections": []
+  "lastUpdated": "2026-05-20T12:09:16.016Z",
+  "sections": [
+    {
+      "key": "styrelseprotokoll",
+      "label": "Styrelseprotokoll",
+      "icon": "🗒️",
+      "groups": [
+        {
+          "label": "2026",
+          "files": [
+            {
+              "id": "1R9-UwHAtj-OYN_DSRa_JExU5HZNpb-tJ",
+              "name": "Styrelseprotokoll_2026-01-13_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-04-27T12:27:40.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1R9-UwHAtj-OYN_DSRa_JExU5HZNpb-tJ/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1R9-UwHAtj-OYN_DSRa_JExU5HZNpb-tJ&export=download"
+            },
+            {
+              "id": "1uK1mXn81551FDzuxD4OrwrLOysNjpolz",
+              "name": "Styrelseprotokoll_2026-02-11_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-04-27T12:27:40.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1uK1mXn81551FDzuxD4OrwrLOysNjpolz/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1uK1mXn81551FDzuxD4OrwrLOysNjpolz&export=download"
+            },
+            {
+              "id": "1m-gMTLLs34q-czte2mU3YxJ9n1SwUa9B",
+              "name": "Styrelseprotokoll_2026-03-18_Konstituerande_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-04-27T12:27:40.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1m-gMTLLs34q-czte2mU3YxJ9n1SwUa9B/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1m-gMTLLs34q-czte2mU3YxJ9n1SwUa9B&export=download"
+            },
+            {
+              "id": "1RwQUGAyCm0gkLanz2LVRagBFZ67nGh2K",
+              "name": "Styrelseprotokoll_2026-04-13_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-05-11T09:52:24.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1RwQUGAyCm0gkLanz2LVRagBFZ67nGh2K/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1RwQUGAyCm0gkLanz2LVRagBFZ67nGh2K&export=download"
+            }
+          ]
+        },
+        {
+          "label": "2025",
+          "files": [
+            {
+              "id": "1n18fOiGoGcywIZpncpta7j06HYx3-7QN",
+              "name": "Styrelseprotokoll-2025-04-02 Konstituerande_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-04-27T12:27:42.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1n18fOiGoGcywIZpncpta7j06HYx3-7QN/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1n18fOiGoGcywIZpncpta7j06HYx3-7QN&export=download"
+            },
+            {
+              "id": "1QoKAzsHHWl7sIyH-dgdHzCvQOyvBwvNu",
+              "name": "Styrelseprotokoll_2025-01-09_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-04-27T12:27:42.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1QoKAzsHHWl7sIyH-dgdHzCvQOyvBwvNu/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1QoKAzsHHWl7sIyH-dgdHzCvQOyvBwvNu&export=download"
+            },
+            {
+              "id": "1DcoAtF49IJ3M_lzYAwLR4W0cQQ-xhfJ3",
+              "name": "Styrelseprotokoll_2025-02-12_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-04-27T12:27:42.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1DcoAtF49IJ3M_lzYAwLR4W0cQQ-xhfJ3/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1DcoAtF49IJ3M_lzYAwLR4W0cQQ-xhfJ3&export=download"
+            },
+            {
+              "id": "1lftQiAolI6mvqHgkAQ8zSXAIIm45Ha-C",
+              "name": "Styrelseprotokoll_2025-03-12_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-04-27T12:27:42.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1lftQiAolI6mvqHgkAQ8zSXAIIm45Ha-C/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1lftQiAolI6mvqHgkAQ8zSXAIIm45Ha-C&export=download"
+            },
+            {
+              "id": "16Gw4rvnXEhJbjCJ7lXBpXlUhJdTaxjNR",
+              "name": "Styrelseprotokoll_2025-04-02_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-04-27T12:27:42.000Z",
+              "webViewLink": "https://drive.google.com/file/d/16Gw4rvnXEhJbjCJ7lXBpXlUhJdTaxjNR/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=16Gw4rvnXEhJbjCJ7lXBpXlUhJdTaxjNR&export=download"
+            },
+            {
+              "id": "1KOGtIHPlLYSyyz8idN2vp7q9671vGnQs",
+              "name": "Styrelseprotokoll_2025-05-13_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-04-27T12:27:42.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1KOGtIHPlLYSyyz8idN2vp7q9671vGnQs/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1KOGtIHPlLYSyyz8idN2vp7q9671vGnQs&export=download"
+            },
+            {
+              "id": "1KvphPLR8jrvgVnb2cnlFdeCVTKtYcAaD",
+              "name": "Styrelseprotokoll_2025-06-12_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-04-27T12:27:42.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1KvphPLR8jrvgVnb2cnlFdeCVTKtYcAaD/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1KvphPLR8jrvgVnb2cnlFdeCVTKtYcAaD&export=download"
+            },
+            {
+              "id": "1AyjF-8Ej6947R21XZ6O-Uql7Sr67s-EA",
+              "name": "Styrelseprotokoll_2025-08-19_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-04-27T12:27:42.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1AyjF-8Ej6947R21XZ6O-Uql7Sr67s-EA/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1AyjF-8Ej6947R21XZ6O-Uql7Sr67s-EA&export=download"
+            },
+            {
+              "id": "1Z7_0Z-dJfleCJV-Kvra3W9PfPwTnGGk5",
+              "name": "Styrelseprotokoll_2025-10-09_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-04-27T12:27:42.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1Z7_0Z-dJfleCJV-Kvra3W9PfPwTnGGk5/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1Z7_0Z-dJfleCJV-Kvra3W9PfPwTnGGk5&export=download"
+            },
+            {
+              "id": "1RXiwrCYYkxRZiyPchbPpFRBL_uHM0o2V",
+              "name": "Styrelseprotokoll_2025-11-04_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-04-27T12:27:42.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1RXiwrCYYkxRZiyPchbPpFRBL_uHM0o2V/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1RXiwrCYYkxRZiyPchbPpFRBL_uHM0o2V&export=download"
+            },
+            {
+              "id": "1NqRtEwJ5L0ez3fOSPmYYwIFTA4uz-Clq",
+              "name": "Styrelseprotokoll_2025-12-11_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-04-27T12:27:42.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1NqRtEwJ5L0ez3fOSPmYYwIFTA4uz-Clq/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1NqRtEwJ5L0ez3fOSPmYYwIFTA4uz-Clq&export=download"
+            }
+          ]
+        },
+        {
+          "label": "2024",
+          "files": [
+            {
+              "id": "1kS518mDnkhf076CTDJoIByFKtpBwLwij",
+              "name": "Styrelseprotokoll-2024-01-09_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2024-01-28T11:34:42.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1kS518mDnkhf076CTDJoIByFKtpBwLwij/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1kS518mDnkhf076CTDJoIByFKtpBwLwij&export=download"
+            },
+            {
+              "id": "1UXf75ghRjPQqON2J_rsSHdJ2_Na5Ro2F",
+              "name": "Styrelseprotokoll-2024-02-06_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2024-03-01T01:33:26.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1UXf75ghRjPQqON2J_rsSHdJ2_Na5Ro2F/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1UXf75ghRjPQqON2J_rsSHdJ2_Na5Ro2F&export=download"
+            },
+            {
+              "id": "1NgeZ_1LpGSYEZ3IAecuLFjlY3etP0xof",
+              "name": "Styrelseprotokoll-2024-05-06_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2024-05-31T21:08:06.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1NgeZ_1LpGSYEZ3IAecuLFjlY3etP0xof/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1NgeZ_1LpGSYEZ3IAecuLFjlY3etP0xof&export=download"
+            },
+            {
+              "id": "1wcLFT4q_AhupHB4zCi_pzL0CF8K9lVjE",
+              "name": "Styrelseprotokoll_2024-02-28_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2024-03-09T01:41:56.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1wcLFT4q_AhupHB4zCi_pzL0CF8K9lVjE/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1wcLFT4q_AhupHB4zCi_pzL0CF8K9lVjE&export=download"
+            }
+          ]
+        },
+        {
+          "label": "2023",
+          "files": [
+            {
+              "id": "1TnVAOJqMHFXWnnAweOeHP9Ttb1M3F29Y",
+              "name": "Styrelseprotokoll 2023-01-09.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2023-01-13T06:57:44.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1TnVAOJqMHFXWnnAweOeHP9Ttb1M3F29Y/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1TnVAOJqMHFXWnnAweOeHP9Ttb1M3F29Y&export=download"
+            },
+            {
+              "id": "18jzHYPeO8xPzdN1edeJpplcNZfMngZ99",
+              "name": "Styrelseprotokoll 2023-03-29_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2023-07-05T10:02:44.000Z",
+              "webViewLink": "https://drive.google.com/file/d/18jzHYPeO8xPzdN1edeJpplcNZfMngZ99/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=18jzHYPeO8xPzdN1edeJpplcNZfMngZ99&export=download"
+            },
+            {
+              "id": "1_BSFIkHI_VDhKjKpYgxFTMxpI3KzFJJL",
+              "name": "Styrelseprotokoll-2023-02-02.docx.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2023-02-26T03:40:38.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1_BSFIkHI_VDhKjKpYgxFTMxpI3KzFJJL/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1_BSFIkHI_VDhKjKpYgxFTMxpI3KzFJJL&export=download"
+            },
+            {
+              "id": "1KBRMMoZzSuSNg1VXzs3jgZMab5G1FLpT",
+              "name": "Styrelseprotokoll-2023-03-01.docx.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2023-03-11T02:57:26.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1KBRMMoZzSuSNg1VXzs3jgZMab5G1FLpT/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1KBRMMoZzSuSNg1VXzs3jgZMab5G1FLpT&export=download"
+            },
+            {
+              "id": "1ql07i8oKZ0Sv8P46v_7rXaUc3EHE4-ER",
+              "name": "Styrelseprotokoll-2023-04-17_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2023-07-05T10:00:32.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1ql07i8oKZ0Sv8P46v_7rXaUc3EHE4-ER/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1ql07i8oKZ0Sv8P46v_7rXaUc3EHE4-ER&export=download"
+            },
+            {
+              "id": "1xXxq9SVstlLc4ZAEEeagw6BUzH3RRlT5",
+              "name": "Styrelseprotokoll-2023-05-15_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2023-07-05T10:01:00.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1xXxq9SVstlLc4ZAEEeagw6BUzH3RRlT5/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1xXxq9SVstlLc4ZAEEeagw6BUzH3RRlT5&export=download"
+            },
+            {
+              "id": "14Y3i56-08dC8qZMSh7U7d1RDS_94gUK5",
+              "name": "Styrelseprotokoll-2023-06-19_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2023-08-28T08:32:00.000Z",
+              "webViewLink": "https://drive.google.com/file/d/14Y3i56-08dC8qZMSh7U7d1RDS_94gUK5/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=14Y3i56-08dC8qZMSh7U7d1RDS_94gUK5&export=download"
+            },
+            {
+              "id": "1hkvr-vCL11RXFoc94h1yrZA2QmWz1JzT",
+              "name": "Styrelseprotokoll-2023-08-22_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2023-10-18T11:15:56.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1hkvr-vCL11RXFoc94h1yrZA2QmWz1JzT/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1hkvr-vCL11RXFoc94h1yrZA2QmWz1JzT&export=download"
+            },
+            {
+              "id": "1wPkZmzvkMLhUhkHRCoMtl06CUJ43tekd",
+              "name": "Styrelseprotokoll-2023-09-19_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2023-10-15T09:11:08.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1wPkZmzvkMLhUhkHRCoMtl06CUJ43tekd/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1wPkZmzvkMLhUhkHRCoMtl06CUJ43tekd&export=download"
+            },
+            {
+              "id": "1uUlPWJVeu2fTqikMf2SjHJxyP2bJn-uq",
+              "name": "Styrelseprotokoll-2023-10-17_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2023-12-14T10:28:12.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1uUlPWJVeu2fTqikMf2SjHJxyP2bJn-uq/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1uUlPWJVeu2fTqikMf2SjHJxyP2bJn-uq&export=download"
+            },
+            {
+              "id": "10vBwlryaePCfV3CNWa7dRuucxRByqpr3",
+              "name": "Styrelseprotokoll-2023-11-09_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2023-12-14T10:28:36.000Z",
+              "webViewLink": "https://drive.google.com/file/d/10vBwlryaePCfV3CNWa7dRuucxRByqpr3/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=10vBwlryaePCfV3CNWa7dRuucxRByqpr3&export=download"
+            },
+            {
+              "id": "1fYzXCpMAsm0L2RSXptif42LzVsyDQUwN",
+              "name": "Styrelseprotokoll-2023-12-18_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2024-01-28T11:39:24.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1fYzXCpMAsm0L2RSXptif42LzVsyDQUwN/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1fYzXCpMAsm0L2RSXptif42LzVsyDQUwN&export=download"
+            }
+          ]
+        },
+        {
+          "label": "2022",
+          "files": [
+            {
+              "id": "1039yytiqDirSCFCK0BjMhrtoh98co0Fx",
+              "name": "Styrelseprotokoll 2022-12-15.docx.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-05-20T08:22:52.450Z",
+              "webViewLink": "https://drive.google.com/file/d/1039yytiqDirSCFCK0BjMhrtoh98co0Fx/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1039yytiqDirSCFCK0BjMhrtoh98co0Fx&export=download"
+            },
+            {
+              "id": "1g_I-dvf1MmdGxxB3m1h4ea9ozcMnBl8z",
+              "name": "Styrelseprotokoll-2022-01-10.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2022-01-12T14:38:43.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1g_I-dvf1MmdGxxB3m1h4ea9ozcMnBl8z/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1g_I-dvf1MmdGxxB3m1h4ea9ozcMnBl8z&export=download"
+            },
+            {
+              "id": "1W1KE2H4sBkeWqYX8e02Tc_v6qoS3gpJE",
+              "name": "Styrelseprotokoll-2022-02-16.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2022-03-01T18:51:02.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1W1KE2H4sBkeWqYX8e02Tc_v6qoS3gpJE/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1W1KE2H4sBkeWqYX8e02Tc_v6qoS3gpJE&export=download"
+            },
+            {
+              "id": "1z-YGHo71_oKKMw3ruZGORzIrIVbXfijz",
+              "name": "Styrelseprotokoll-2022-03-07.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2022-03-11T22:51:31.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1z-YGHo71_oKKMw3ruZGORzIrIVbXfijz/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1z-YGHo71_oKKMw3ruZGORzIrIVbXfijz&export=download"
+            },
+            {
+              "id": "1ZC-B7uNe0EGXoxMG3L1uN_mGwmrO6HMV",
+              "name": "Styrelseprotokoll-2022-04-11.docx.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-05-20T08:22:46.934Z",
+              "webViewLink": "https://drive.google.com/file/d/1ZC-B7uNe0EGXoxMG3L1uN_mGwmrO6HMV/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1ZC-B7uNe0EGXoxMG3L1uN_mGwmrO6HMV&export=download"
+            },
+            {
+              "id": "1EBul_x_gEdHUm6CA0vT3dasW3z860NC7",
+              "name": "Styrelseprotokoll-2022-04-11.docx.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2022-04-21T20:47:07.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1EBul_x_gEdHUm6CA0vT3dasW3z860NC7/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1EBul_x_gEdHUm6CA0vT3dasW3z860NC7&export=download"
+            },
+            {
+              "id": "10ExUlHfgUr4MCB5EPhQonEf6qmG7xpDh",
+              "name": "Styrelseprotokoll-2022-05-23.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2022-06-02T17:45:42.000Z",
+              "webViewLink": "https://drive.google.com/file/d/10ExUlHfgUr4MCB5EPhQonEf6qmG7xpDh/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=10ExUlHfgUr4MCB5EPhQonEf6qmG7xpDh&export=download"
+            },
+            {
+              "id": "1RvHE3TIAZsz8BgE9aW7hIsNiyR0NDq4I",
+              "name": "Styrelseprotokoll-2022-06-08.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2022-06-18T17:04:10.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1RvHE3TIAZsz8BgE9aW7hIsNiyR0NDq4I/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1RvHE3TIAZsz8BgE9aW7hIsNiyR0NDq4I&export=download"
+            },
+            {
+              "id": "1ecB71new0xZOO0CkjwAJSLWLo9Z0Qwfm",
+              "name": "Styrelseprotokoll-2022-07-05.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2022-07-26T17:53:22.964Z",
+              "webViewLink": "https://drive.google.com/file/d/1ecB71new0xZOO0CkjwAJSLWLo9Z0Qwfm/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1ecB71new0xZOO0CkjwAJSLWLo9Z0Qwfm&export=download"
+            },
+            {
+              "id": "1uuFwr8_GfmjZU_TsQl-U2OG3B_1NY4ym",
+              "name": "Styrelseprotokoll-2022-08-02.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2022-08-31T16:07:18.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1uuFwr8_GfmjZU_TsQl-U2OG3B_1NY4ym/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1uuFwr8_GfmjZU_TsQl-U2OG3B_1NY4ym&export=download"
+            },
+            {
+              "id": "1smkhFoXYbmm-r9XXUIEZ4RVu52QvUAL0",
+              "name": "Styrelseprotokoll-2022-09-05.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2022-10-03T10:10:45.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1smkhFoXYbmm-r9XXUIEZ4RVu52QvUAL0/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1smkhFoXYbmm-r9XXUIEZ4RVu52QvUAL0&export=download"
+            },
+            {
+              "id": "1eHn4gUCAxjqETKTp4MX_blNJbjTHf66x",
+              "name": "Styrelseprotokoll-2022-10-03.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2022-10-13T17:06:37.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1eHn4gUCAxjqETKTp4MX_blNJbjTHf66x/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1eHn4gUCAxjqETKTp4MX_blNJbjTHf66x&export=download"
+            },
+            {
+              "id": "1G5caapFXVKF1pFj6_MS8RMga131117Oa",
+              "name": "Styrelseprotokoll-2022-10-26",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2022-10-27T21:04:05.509Z",
+              "webViewLink": "https://drive.google.com/file/d/1G5caapFXVKF1pFj6_MS8RMga131117Oa/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1G5caapFXVKF1pFj6_MS8RMga131117Oa&export=download"
+            },
+            {
+              "id": "1pguRgrYFElviGbPmShmmB-OY9pyh-TpO",
+              "name": "Styrelseprotokoll-2022-11-16.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-05-20T08:22:40.693Z",
+              "webViewLink": "https://drive.google.com/file/d/1pguRgrYFElviGbPmShmmB-OY9pyh-TpO/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1pguRgrYFElviGbPmShmmB-OY9pyh-TpO&export=download"
+            },
+            {
+              "id": "19nsLM_JHIpAAJuwGY7vQZ5-dvejBAFb0",
+              "name": "Styrelseprotokoll-2022-11-28.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-05-20T08:22:35.062Z",
+              "webViewLink": "https://drive.google.com/file/d/19nsLM_JHIpAAJuwGY7vQZ5-dvejBAFb0/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=19nsLM_JHIpAAJuwGY7vQZ5-dvejBAFb0&export=download"
+            }
+          ]
+        },
+        {
+          "label": "2021",
+          "files": [
+            {
+              "id": "1mXD9Mw39CXa1URosaRa7kcnvrqe9nYlr",
+              "name": "Förhållningsregler.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2021-03-09T18:04:31.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1mXD9Mw39CXa1URosaRa7kcnvrqe9nYlr/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1mXD9Mw39CXa1URosaRa7kcnvrqe9nYlr&export=download"
+            },
+            {
+              "id": "1k9H7Ztwnx0b1fsn2BSkO6DTRwPLKjahw",
+              "name": "Styrelseprotokoll 2021-01-11.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2021-01-25T19:15:29.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1k9H7Ztwnx0b1fsn2BSkO6DTRwPLKjahw/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1k9H7Ztwnx0b1fsn2BSkO6DTRwPLKjahw&export=download"
+            },
+            {
+              "id": "1ADNZ3pn4dT7uIVoDxKiKMtFvG0rItK1z",
+              "name": "Styrelseprotokoll 2021-02-15.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2021-03-01T09:13:59.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1ADNZ3pn4dT7uIVoDxKiKMtFvG0rItK1z/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1ADNZ3pn4dT7uIVoDxKiKMtFvG0rItK1z&export=download"
+            },
+            {
+              "id": "13d20ifEP_uKJsssGhq-hOFhSs1Fwra8f",
+              "name": "Styrelseprotokoll 2021-03-22.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2021-04-07T07:52:07.000Z",
+              "webViewLink": "https://drive.google.com/file/d/13d20ifEP_uKJsssGhq-hOFhSs1Fwra8f/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=13d20ifEP_uKJsssGhq-hOFhSs1Fwra8f&export=download"
+            },
+            {
+              "id": "1Bn0GJc_9nGCMNoQRsiPISc1XoISiJhdf",
+              "name": "Styrelseprotokoll-2021-04-26.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2021-04-29T14:17:58.173Z",
+              "webViewLink": "https://drive.google.com/file/d/1Bn0GJc_9nGCMNoQRsiPISc1XoISiJhdf/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1Bn0GJc_9nGCMNoQRsiPISc1XoISiJhdf&export=download"
+            },
+            {
+              "id": "1ZRXHkJRQATx7vNoW4O9u2bYcpcjotiTb",
+              "name": "Styrelseprotokoll-2021-05-31.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2021-06-22T12:38:27.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1ZRXHkJRQATx7vNoW4O9u2bYcpcjotiTb/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1ZRXHkJRQATx7vNoW4O9u2bYcpcjotiTb&export=download"
+            },
+            {
+              "id": "1AK2Q4RPPd5JxoSUjZlkomDk9It2Z7nmx",
+              "name": "Styrelseprotokoll-2021-06-22.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2021-08-02T10:46:29.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1AK2Q4RPPd5JxoSUjZlkomDk9It2Z7nmx/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1AK2Q4RPPd5JxoSUjZlkomDk9It2Z7nmx&export=download"
+            },
+            {
+              "id": "1QqW0HlOw2zd35SmF-js9QHQ-ZWhNv74j",
+              "name": "Styrelseprotokoll-2021-08-16.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2021-08-30T13:42:05.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1QqW0HlOw2zd35SmF-js9QHQ-ZWhNv74j/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1QqW0HlOw2zd35SmF-js9QHQ-ZWhNv74j&export=download"
+            },
+            {
+              "id": "19TMdXzHZdwymA5N71q77FE1Y0yEI-8aq",
+              "name": "Styrelseprotokoll-2021-09-20.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2021-10-11T09:01:48.000Z",
+              "webViewLink": "https://drive.google.com/file/d/19TMdXzHZdwymA5N71q77FE1Y0yEI-8aq/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=19TMdXzHZdwymA5N71q77FE1Y0yEI-8aq&export=download"
+            },
+            {
+              "id": "1XFJJhCA6nYbSAk8zRoH9u4-Xv8dEYmSI",
+              "name": "Styrelseprotokoll-2021-09-23_extrainsatt.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2021-10-11T09:24:22.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1XFJJhCA6nYbSAk8zRoH9u4-Xv8dEYmSI/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1XFJJhCA6nYbSAk8zRoH9u4-Xv8dEYmSI&export=download"
+            },
+            {
+              "id": "11r2__Vq0XE4IHQuwf_ucZChAOb05wKop",
+              "name": "Styrelseprotokoll-2021-10-18.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2021-11-29T09:03:41.000Z",
+              "webViewLink": "https://drive.google.com/file/d/11r2__Vq0XE4IHQuwf_ucZChAOb05wKop/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=11r2__Vq0XE4IHQuwf_ucZChAOb05wKop&export=download"
+            },
+            {
+              "id": "1gs5i4LczgKmv4lKzL-udKGX7bv8UkeCi",
+              "name": "Styrelseprotokoll-2021-11-22.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2021-11-29T09:10:07.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1gs5i4LczgKmv4lKzL-udKGX7bv8UkeCi/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1gs5i4LczgKmv4lKzL-udKGX7bv8UkeCi&export=download"
+            }
+          ]
+        },
+        {
+          "label": "2020",
+          "files": [
+            {
+              "id": "1rTvIxiroewnAAOocYKVpwIgLwIB2vqET",
+              "name": "Flera TV apparater.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-09-24T13:31:52.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1rTvIxiroewnAAOocYKVpwIgLwIB2vqET/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1rTvIxiroewnAAOocYKVpwIgLwIB2vqET&export=download"
+            },
+            {
+              "id": "11R-Rwa-fkqY8o-1Va0e9xGQKcphlB4P_",
+              "name": "Protokoll Bara Fiber styrelsemöte 2020-04-20.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-05-06T19:29:04.782Z",
+              "webViewLink": "https://drive.google.com/file/d/11R-Rwa-fkqY8o-1Va0e9xGQKcphlB4P_/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=11R-Rwa-fkqY8o-1Va0e9xGQKcphlB4P_&export=download"
+            },
+            {
+              "id": "1RRpMvOS5yGUP9cCHIqp27ShhX1B_5LXv",
+              "name": "Styrelsemöte Fiber 27 jan 2020.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-02-12T20:06:18.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1RRpMvOS5yGUP9cCHIqp27ShhX1B_5LXv/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1RRpMvOS5yGUP9cCHIqp27ShhX1B_5LXv&export=download"
+            },
+            {
+              "id": "14BZfMqO4_CVH-ZbSx-h86RsB3lcC5N1a",
+              "name": "Styrelsemöte Fiber 9 mars 2020.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-03-27T15:04:23.574Z",
+              "webViewLink": "https://drive.google.com/file/d/14BZfMqO4_CVH-ZbSx-h86RsB3lcC5N1a/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=14BZfMqO4_CVH-ZbSx-h86RsB3lcC5N1a&export=download"
+            },
+            {
+              "id": "1z70E1Aj_5qIOLDaloRWuGJZRxJ1PTLul",
+              "name": "Styrelseprotokoll 2020-05-18.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-06-16T10:44:17.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1z70E1Aj_5qIOLDaloRWuGJZRxJ1PTLul/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1z70E1Aj_5qIOLDaloRWuGJZRxJ1PTLul&export=download"
+            },
+            {
+              "id": "1dr-IKFZ3FqMYaxOUWgH320E77cVcSmEt",
+              "name": "Styrelseprotokoll 2020-06-15.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-07-30T11:43:55.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1dr-IKFZ3FqMYaxOUWgH320E77cVcSmEt/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1dr-IKFZ3FqMYaxOUWgH320E77cVcSmEt&export=download"
+            },
+            {
+              "id": "1UAOg0OMwooA81qidjw_bE8NeKHtPT_Mw",
+              "name": "Styrelseprotokoll 2020-08-17.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-09-07T16:11:21.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1UAOg0OMwooA81qidjw_bE8NeKHtPT_Mw/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1UAOg0OMwooA81qidjw_bE8NeKHtPT_Mw&export=download"
+            },
+            {
+              "id": "11uG0wj75j_asnbHL59GHVn6J30oidvHD",
+              "name": "Styrelseprotokoll 2020-09-21.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-10-19T20:01:43.000Z",
+              "webViewLink": "https://drive.google.com/file/d/11uG0wj75j_asnbHL59GHVn6J30oidvHD/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=11uG0wj75j_asnbHL59GHVn6J30oidvHD&export=download"
+            },
+            {
+              "id": "1wTWVLmiM7IyZywIBZIiWhsA7rptGgH2z",
+              "name": "Styrelseprotokoll 2020-10-19.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-10-19T20:54:49.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1wTWVLmiM7IyZywIBZIiWhsA7rptGgH2z/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1wTWVLmiM7IyZywIBZIiWhsA7rptGgH2z&export=download"
+            },
+            {
+              "id": "1PqsvnD586DNYvyUxogrUKd4OavjxE7wF",
+              "name": "Styrelseprotokoll 2020-11-23.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-05-20T08:20:57.395Z",
+              "webViewLink": "https://drive.google.com/file/d/1PqsvnD586DNYvyUxogrUKd4OavjxE7wF/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1PqsvnD586DNYvyUxogrUKd4OavjxE7wF&export=download"
+            }
+          ]
+        },
+        {
+          "label": "2019",
+          "files": [
+            {
+              "id": "17ImcejEcwHaHLlIc8dXPRtxA4D2cLj5o",
+              "name": "Bara Fiber Bokslut 2018.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-03-08T11:38:38.000Z",
+              "webViewLink": "https://drive.google.com/file/d/17ImcejEcwHaHLlIc8dXPRtxA4D2cLj5o/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=17ImcejEcwHaHLlIc8dXPRtxA4D2cLj5o&export=download"
+            },
+            {
+              "id": "1vYqnVerT424MNIGovJZDpYLzJPxtpa7G",
+              "name": "Föreningen infobrev.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-01-04T02:22:40.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1vYqnVerT424MNIGovJZDpYLzJPxtpa7G/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1vYqnVerT424MNIGovJZDpYLzJPxtpa7G&export=download"
+            },
+            {
+              "id": "1loiZqhxnW7I5cMPxmpBSk_kNVdvdN9NE",
+              "name": "Inkoppling av TV.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-09-24T03:32:24.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1loiZqhxnW7I5cMPxmpBSk_kNVdvdN9NE/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1loiZqhxnW7I5cMPxmpBSk_kNVdvdN9NE&export=download"
+            },
+            {
+              "id": "1vQ9e6oXOUD1acWxJue1n2n5Ytzm2Z3ms",
+              "name": "Kanalplan analog.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-02-28T22:09:10.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1vQ9e6oXOUD1acWxJue1n2n5Ytzm2Z3ms/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1vQ9e6oXOUD1acWxJue1n2n5Ytzm2Z3ms&export=download"
+            },
+            {
+              "id": "1-bIeuhCijaZyMp2TISoBADerquSA_vBc",
+              "name": "Kopia av Bara Fiber Bokslut 2018.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-03-08T10:34:12.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1-bIeuhCijaZyMp2TISoBADerquSA_vBc/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1-bIeuhCijaZyMp2TISoBADerquSA_vBc&export=download"
+            },
+            {
+              "id": "1ImVKTmR7IW7wOy2S2vEFkupH7tlJwc4e",
+              "name": "Ordningsregler för Samfällighetsföreningen Bara Fiber.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-03-20T22:29:44.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1ImVKTmR7IW7wOy2S2vEFkupH7tlJwc4e/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1ImVKTmR7IW7wOy2S2vEFkupH7tlJwc4e&export=download"
+            },
+            {
+              "id": "1GUkeXZqq2NBJ3er8IHuCYnM6QR4JXMZj",
+              "name": "RB 190315 Samfällighetsföreningen Bara Fiber.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-03-17T02:00:10.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1GUkeXZqq2NBJ3er8IHuCYnM6QR4JXMZj/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1GUkeXZqq2NBJ3er8IHuCYnM6QR4JXMZj&export=download"
+            },
+            {
+              "id": "13onPThn2ctZX7SMz2m_TmDwUui2uGSen",
+              "name": "Styr.möte Fiber 4 mars 2019.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-03-12T00:48:16.000Z",
+              "webViewLink": "https://drive.google.com/file/d/13onPThn2ctZX7SMz2m_TmDwUui2uGSen/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=13onPThn2ctZX7SMz2m_TmDwUui2uGSen&export=download"
+            },
+            {
+              "id": "116hdVLr4synCMBE_DGmKjs1BFp_fgzW_",
+              "name": "Styrelsemöte Bara Fiber 16 mars 2019.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-03-21T04:48:38.000Z",
+              "webViewLink": "https://drive.google.com/file/d/116hdVLr4synCMBE_DGmKjs1BFp_fgzW_/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=116hdVLr4synCMBE_DGmKjs1BFp_fgzW_&export=download"
+            },
+            {
+              "id": "1yIIWiq-KqROO-dlq7M9Yq4L7ysmuuniz",
+              "name": "Styrelsemöte Bara Fiber 19 augusti 2019.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-08-29T06:04:20.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1yIIWiq-KqROO-dlq7M9Yq4L7ysmuuniz/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1yIIWiq-KqROO-dlq7M9Yq4L7ysmuuniz&export=download"
+            },
+            {
+              "id": "1jxceGURa909exM-vjA1amvdYairUzNbK",
+              "name": "Styrelsemöte Bara Fiber 20 maj 2019.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-05-30T21:57:22.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1jxceGURa909exM-vjA1amvdYairUzNbK/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1jxceGURa909exM-vjA1amvdYairUzNbK&export=download"
+            },
+            {
+              "id": "1u8a-vMsI9RgN1eG-ukGS5H9XlPr14fYb",
+              "name": "Styrelsemöte Fiber 16 dec 2019.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-12-26T22:39:20.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1u8a-vMsI9RgN1eG-ukGS5H9XlPr14fYb/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1u8a-vMsI9RgN1eG-ukGS5H9XlPr14fYb&export=download"
+            },
+            {
+              "id": "1JlIZ1p6LQO1orTbc3V54Wqer0E68n6TM",
+              "name": "Styrelsemöte Fiber 23 september 2019.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-10-08T08:20:48.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1JlIZ1p6LQO1orTbc3V54Wqer0E68n6TM/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1JlIZ1p6LQO1orTbc3V54Wqer0E68n6TM&export=download"
+            },
+            {
+              "id": "1sp5XdN6BRBr-melqAB9E6KiRFDux1hNY",
+              "name": "Styrelsemöte Fiber 4 november 2019 .pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-11-15T21:06:30.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1sp5XdN6BRBr-melqAB9E6KiRFDux1hNY/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1sp5XdN6BRBr-melqAB9E6KiRFDux1hNY&export=download"
+            },
+            {
+              "id": "1ycWBO3Dl99UVcZ_jCDhVAuAeLb4yp_Qk",
+              "name": "Styrelsemöte Fiber 9 april 2019.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-04-23T01:36:24.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1ycWBO3Dl99UVcZ_jCDhVAuAeLb4yp_Qk/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1ycWBO3Dl99UVcZ_jCDhVAuAeLb4yp_Qk&export=download"
+            },
+            {
+              "id": "1ZMSP2fH9WRwQSxQAklZ1wMgHRgFYQiNP",
+              "name": "Styrelsemöte 21 jan 2019.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-01-28T21:07:50.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1ZMSP2fH9WRwQSxQAklZ1wMgHRgFYQiNP/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1ZMSP2fH9WRwQSxQAklZ1wMgHRgFYQiNP&export=download"
+            },
+            {
+              "id": "1hxVRqx4LhSAZAQBdlhXTS4gBgo4LCc5G",
+              "name": "Styrelsens verksamhetsberättelse 2018.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-03-08T10:33:36.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1hxVRqx4LhSAZAQBdlhXTS4gBgo4LCc5G/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1hxVRqx4LhSAZAQBdlhXTS4gBgo4LCc5G&export=download"
+            },
+            {
+              "id": "1KVTJgsKhLic4l0CrIB_Z3gDAApuX8dgK",
+              "name": "Telenor infobrev.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-01-04T02:23:20.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1KVTJgsKhLic4l0CrIB_Z3gDAApuX8dgK/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1KVTJgsKhLic4l0CrIB_Z3gDAApuX8dgK&export=download"
+            },
+            {
+              "id": "1RjqkVVMppFZlXgE5JTBqTUAvOwjwMGUn",
+              "name": "Tjänsteöversikt.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-03-08T06:23:22.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1RjqkVVMppFZlXgE5JTBqTUAvOwjwMGUn/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1RjqkVVMppFZlXgE5JTBqTUAvOwjwMGUn&export=download"
+            },
+            {
+              "id": "1oEx74BNuy4m0jwTRC0hUi6oW3fWyl92J",
+              "name": "Utgifts-inkomststat 2019-2020.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-03-11T07:41:38.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1oEx74BNuy4m0jwTRC0hUi6oW3fWyl92J/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1oEx74BNuy4m0jwTRC0hUi6oW3fWyl92J&export=download"
+            },
+            {
+              "id": "1jvn04Rbcez9ht-rZQ0ZPVRJRWNlFF970",
+              "name": "Villkor efteranslutning.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-09-23T13:00:56.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1jvn04Rbcez9ht-rZQ0ZPVRJRWNlFF970/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1jvn04Rbcez9ht-rZQ0ZPVRJRWNlFF970&export=download"
+            },
+            {
+              "id": "1yfl-EGIsGsbQWUautj5nzCiIrvD8Vxgz",
+              "name": "välja källa.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-02-28T22:00:26.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1yfl-EGIsGsbQWUautj5nzCiIrvD8Vxgz/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1yfl-EGIsGsbQWUautj5nzCiIrvD8Vxgz&export=download"
+            }
+          ]
+        },
+        {
+          "label": "2018",
+          "files": [
+            {
+              "id": "1rg8Myl-04JcaONaE8se07E8FXLxLkTWX",
+              "name": "Bara Fiber Bokslut 2017 ny.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2018-09-29T15:00:49.146Z",
+              "webViewLink": "https://drive.google.com/file/d/1rg8Myl-04JcaONaE8se07E8FXLxLkTWX/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1rg8Myl-04JcaONaE8se07E8FXLxLkTWX&export=download"
+            },
+            {
+              "id": "1BvoHwUA7wpXzo0ICwb5RCpSFHWtQqyqN",
+              "name": "Bara Fiber info till mäklare.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-01-08T07:39:22.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1BvoHwUA7wpXzo0ICwb5RCpSFHWtQqyqN/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1BvoHwUA7wpXzo0ICwb5RCpSFHWtQqyqN&export=download"
+            },
+            {
+              "id": "1DtkjnLTXFQX79YJrSmx9AWnFK8sFTl5e",
+              "name": "Kopia av Kontaktinformation.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-05-20T08:17:07.273Z",
+              "webViewLink": "https://drive.google.com/file/d/1DtkjnLTXFQX79YJrSmx9AWnFK8sFTl5e/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1DtkjnLTXFQX79YJrSmx9AWnFK8sFTl5e&export=download"
+            },
+            {
+              "id": "1ybdAID2BqbFlEWDoMocKncQT6w9ppJ1u",
+              "name": "Sammanfattning av tjänster.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-05-20T08:17:29.109Z",
+              "webViewLink": "https://drive.google.com/file/d/1ybdAID2BqbFlEWDoMocKncQT6w9ppJ1u/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1ybdAID2BqbFlEWDoMocKncQT6w9ppJ1u&export=download"
+            },
+            {
+              "id": "1ok-6PQCHkgIFiMg9WykHJiCD47gPIJpK",
+              "name": "Styrelsemöte 1 okt 2018.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2018-10-09T19:46:46.689Z",
+              "webViewLink": "https://drive.google.com/file/d/1ok-6PQCHkgIFiMg9WykHJiCD47gPIJpK/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1ok-6PQCHkgIFiMg9WykHJiCD47gPIJpK&export=download"
+            },
+            {
+              "id": "1lYZlLWZwG-eg9mgT3uSMfER0EyPF4h_e",
+              "name": "Styrelsemöte 10 december 2018.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2018-12-14T10:17:24.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1lYZlLWZwG-eg9mgT3uSMfER0EyPF4h_e/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1lYZlLWZwG-eg9mgT3uSMfER0EyPF4h_e&export=download"
+            },
+            {
+              "id": "1eejLJdywijqqahXUHLhvmXVhCiK9ThGW",
+              "name": "Styrelsemöte 11 januari 2018.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2018-09-29T21:12:34.822Z",
+              "webViewLink": "https://drive.google.com/file/d/1eejLJdywijqqahXUHLhvmXVhCiK9ThGW/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1eejLJdywijqqahXUHLhvmXVhCiK9ThGW&export=download"
+            },
+            {
+              "id": "1bMb3FlzdPKZ6Aa8xbQ84s-vVTlUONQNc",
+              "name": "Styrelsemöte 12 november 2018.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-05-20T08:17:39.796Z",
+              "webViewLink": "https://drive.google.com/file/d/1bMb3FlzdPKZ6Aa8xbQ84s-vVTlUONQNc/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1bMb3FlzdPKZ6Aa8xbQ84s-vVTlUONQNc&export=download"
+            },
+            {
+              "id": "1F8z4quyRKpJZetcAhFNrhzV08zzOZrqg",
+              "name": "Styrelsemöte 16 aug 2018.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2018-09-29T21:14:17.950Z",
+              "webViewLink": "https://drive.google.com/file/d/1F8z4quyRKpJZetcAhFNrhzV08zzOZrqg/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1F8z4quyRKpJZetcAhFNrhzV08zzOZrqg&export=download"
+            },
+            {
+              "id": "1ZEpxaP4jxMF0DVHdmzum71gcYRik9fA4",
+              "name": "Styrelsemöte 31 maj 2018 .pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2018-09-29T21:13:57.451Z",
+              "webViewLink": "https://drive.google.com/file/d/1ZEpxaP4jxMF0DVHdmzum71gcYRik9fA4/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1ZEpxaP4jxMF0DVHdmzum71gcYRik9fA4&export=download"
+            },
+            {
+              "id": "1SBr_y-aQcB0Nj7jk8053nOLFcxX5F7Lx",
+              "name": "Styrelsemöte 5 april 2018.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2018-09-29T21:13:41.110Z",
+              "webViewLink": "https://drive.google.com/file/d/1SBr_y-aQcB0Nj7jk8053nOLFcxX5F7Lx/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1SBr_y-aQcB0Nj7jk8053nOLFcxX5F7Lx&export=download"
+            },
+            {
+              "id": "1svZTlaXRFtnn5kTTyEeeR8C9CDFhI0ii",
+              "name": "Styrelsemöte Bara Fiber 2018-02-12.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2018-09-29T21:13:20.338Z",
+              "webViewLink": "https://drive.google.com/file/d/1svZTlaXRFtnn5kTTyEeeR8C9CDFhI0ii/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1svZTlaXRFtnn5kTTyEeeR8C9CDFhI0ii&export=download"
+            },
+            {
+              "id": "1-VgYKkhZWAi_47nDp1e2nEyh5TCzc9xX",
+              "name": "Utgifts-inkomststat 18-19 Ny.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2018-09-29T15:00:58.404Z",
+              "webViewLink": "https://drive.google.com/file/d/1-VgYKkhZWAi_47nDp1e2nEyh5TCzc9xX/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1-VgYKkhZWAi_47nDp1e2nEyh5TCzc9xX&export=download"
+            }
+          ]
+        },
+        {
+          "label": "2017",
+          "files": [
+            {
+              "id": "1Jk0ziCBtzL7eSYcsuVsjwUq6hASOirMj",
+              "name": "Bara Fiber Bokslut 2016 slutgiltig (1).pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2018-09-29T15:00:56.058Z",
+              "webViewLink": "https://drive.google.com/file/d/1Jk0ziCBtzL7eSYcsuVsjwUq6hASOirMj/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1Jk0ziCBtzL7eSYcsuVsjwUq6hASOirMj&export=download"
+            },
+            {
+              "id": "1WZ_5RE8_ZkZl0XDetqJBm7S4Yq0MVHTS",
+              "name": "Extra styr.möte Fiber 12 juli 2017 .pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2018-09-29T21:11:32.220Z",
+              "webViewLink": "https://drive.google.com/file/d/1WZ_5RE8_ZkZl0XDetqJBm7S4Yq0MVHTS/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1WZ_5RE8_ZkZl0XDetqJBm7S4Yq0MVHTS&export=download"
+            },
+            {
+              "id": "1BOKRZXJZYps9irnSQNGph_qEyJcoKFJ7",
+              "name": "Kallelse ordinarie stämma mars 2017.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2018-09-29T21:16:03.648Z",
+              "webViewLink": "https://drive.google.com/file/d/1BOKRZXJZYps9irnSQNGph_qEyJcoKFJ7/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1BOKRZXJZYps9irnSQNGph_qEyJcoKFJ7&export=download"
+            },
+            {
+              "id": "19hH8pHKFQQVzSr8SLaX25YmVO2e7sKR6",
+              "name": "Protokoll stämma mars 2017.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2018-09-29T21:15:42.396Z",
+              "webViewLink": "https://drive.google.com/file/d/19hH8pHKFQQVzSr8SLaX25YmVO2e7sKR6/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=19hH8pHKFQQVzSr8SLaX25YmVO2e7sKR6&export=download"
+            },
+            {
+              "id": "1Fr8JYcANlquR8w2I4UjVagSpI7S1QqIg",
+              "name": "Styr.möte Fiber 1 juni 2017 .pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2018-09-29T21:10:11.839Z",
+              "webViewLink": "https://drive.google.com/file/d/1Fr8JYcANlquR8w2I4UjVagSpI7S1QqIg/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1Fr8JYcANlquR8w2I4UjVagSpI7S1QqIg&export=download"
+            },
+            {
+              "id": "1MTRpj-s-wy-oTqNABPEqcfY5cEhK5oO-",
+              "name": "Styr.möte Fiber 12 mars 2017.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2018-09-29T21:09:36.320Z",
+              "webViewLink": "https://drive.google.com/file/d/1MTRpj-s-wy-oTqNABPEqcfY5cEhK5oO-/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1MTRpj-s-wy-oTqNABPEqcfY5cEhK5oO-&export=download"
+            },
+            {
+              "id": "1xPKrQcy7027p6FyEL2JIlaqZcr9E4Zhp",
+              "name": "Styr.möte Fiber 5 september 2017   kopia.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2018-09-29T21:11:50.994Z",
+              "webViewLink": "https://drive.google.com/file/d/1xPKrQcy7027p6FyEL2JIlaqZcr9E4Zhp/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1xPKrQcy7027p6FyEL2JIlaqZcr9E4Zhp&export=download"
+            },
+            {
+              "id": "1B_qUGHMGxocWl_DAc9Tbiipa6PgPZaNi",
+              "name": "Styr.möte Fiber 14 november 2017.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2018-09-29T21:12:12.249Z",
+              "webViewLink": "https://drive.google.com/file/d/1B_qUGHMGxocWl_DAc9Tbiipa6PgPZaNi/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1B_qUGHMGxocWl_DAc9Tbiipa6PgPZaNi&export=download"
+            },
+            {
+              "id": "1p5o-qc_xYN8gc8lU4bsGw7wXI-W-CJbl",
+              "name": "styrelsemöte Fiber 17-01-2017.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2018-09-29T21:10:58.193Z",
+              "webViewLink": "https://drive.google.com/file/d/1p5o-qc_xYN8gc8lU4bsGw7wXI-W-CJbl/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1p5o-qc_xYN8gc8lU4bsGw7wXI-W-CJbl&export=download"
+            },
+            {
+              "id": "1SSqkc2RcGOlrIIn57FFFKnUSTZp5U1Q9",
+              "name": "Utgifts-inkomststat 17-18.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2018-09-29T15:01:03.372Z",
+              "webViewLink": "https://drive.google.com/file/d/1SSqkc2RcGOlrIIn57FFFKnUSTZp5U1Q9/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1SSqkc2RcGOlrIIn57FFFKnUSTZp5U1Q9&export=download"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "arsstamma",
+      "label": "Årsstämma",
+      "icon": "📋",
+      "groups": [
+        {
+          "label": "2026",
+          "files": [
+            {
+              "id": "1wew0crlhShA_UwSU29I1qfMsSCJvXBtz",
+              "name": "Protokoll årsstämma 2026_inkl_bilagor_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-04-27T12:18:22.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1wew0crlhShA_UwSU29I1qfMsSCJvXBtz/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1wew0crlhShA_UwSU29I1qfMsSCJvXBtz&export=download"
+            }
+          ]
+        },
+        {
+          "label": "2025",
+          "files": [
+            {
+              "id": "1t-5T_agYehGpzrzWL7exWf4ohsdLKjEi",
+              "name": "Kopia av 2025 Fullmakt för ombud.docx.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-04-27T12:18:22.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1t-5T_agYehGpzrzWL7exWf4ohsdLKjEi/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1t-5T_agYehGpzrzWL7exWf4ohsdLKjEi&export=download"
+            },
+            {
+              "id": "1IjmSP8cy0_qoK3v-HUVCs-7qsRhSAnkk",
+              "name": "Kopia av AR 241231 Samfällighetsföreningen Bara Fiber.pades.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-04-27T12:18:22.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1IjmSP8cy0_qoK3v-HUVCs-7qsRhSAnkk/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1IjmSP8cy0_qoK3v-HUVCs-7qsRhSAnkk&export=download"
+            },
+            {
+              "id": "1WitR7QVy8PdBgLdCyQ6uu2dpHW3zY9rQ",
+              "name": "Kopia av Dagordning Årsstämma 2024-2025.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-04-27T12:18:22.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1WitR7QVy8PdBgLdCyQ6uu2dpHW3zY9rQ/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1WitR7QVy8PdBgLdCyQ6uu2dpHW3zY9rQ&export=download"
+            },
+            {
+              "id": "1hBYE_ztBgJ6UP45k4jzjW5x636ynwJWG",
+              "name": "Kopia av Debiteringslängd 2025-2026_maskad.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-04-27T12:18:22.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1hBYE_ztBgJ6UP45k4jzjW5x636ynwJWG/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1hBYE_ztBgJ6UP45k4jzjW5x636ynwJWG&export=download"
+            },
+            {
+              "id": "1On1GdgsIOPThZeTcVMhQ_XI8qsOf05iU",
+              "name": "Kopia av SU 250226 Samfällighetsföreningen Bara Fiber.pades.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-04-27T12:18:22.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1On1GdgsIOPThZeTcVMhQ_XI8qsOf05iU/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1On1GdgsIOPThZeTcVMhQ_XI8qsOf05iU&export=download"
+            },
+            {
+              "id": "1YYGmOFkKbcjP63a_IrtDuhacTAPPDV4U",
+              "name": "Kopia av Verksamhetsberättelse 2024 Bara Fiber.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-04-27T12:18:22.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1YYGmOFkKbcjP63a_IrtDuhacTAPPDV4U/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1YYGmOFkKbcjP63a_IrtDuhacTAPPDV4U&export=download"
+            }
+          ]
+        },
+        {
+          "label": "2024",
+          "files": [
+            {
+              "id": "1Ltq5K9Y7KOlb7MH1_VQrnvVjGmCSz7uU",
+              "name": "Protokoll årsstämma 2024_sign.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2024-04-11T08:16:26.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1Ltq5K9Y7KOlb7MH1_VQrnvVjGmCSz7uU/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1Ltq5K9Y7KOlb7MH1_VQrnvVjGmCSz7uU&export=download"
+            },
+            {
+              "id": "1Nqka4fgxqIacQd0ZbyeWfTt7Jgt4c4LF",
+              "name": "1. Verksamhetsberättelse 2023 Bara Fiber.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2024-03-09T08:37:54.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1Nqka4fgxqIacQd0ZbyeWfTt7Jgt4c4LF/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1Nqka4fgxqIacQd0ZbyeWfTt7Jgt4c4LF&export=download"
+            },
+            {
+              "id": "1YhGbs1FdipB5yqx0X0_xTDawopp36BKA",
+              "name": "10. Presentation Temperaturmätning 2023.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2024-03-09T08:54:02.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1YhGbs1FdipB5yqx0X0_xTDawopp36BKA/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1YhGbs1FdipB5yqx0X0_xTDawopp36BKA&export=download"
+            },
+            {
+              "id": "1mnDb4Z35APwwZYfGaIja5lMcskxyhh66",
+              "name": "2. Årsredovisning o revisionsberättelse för Samfällighetsföreningen Bara Fiber 2023.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2024-03-09T08:39:46.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1mnDb4Z35APwwZYfGaIja5lMcskxyhh66/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1mnDb4Z35APwwZYfGaIja5lMcskxyhh66&export=download"
+            },
+            {
+              "id": "1iuBnYngGCOkSlWh3NOXTiZsZW-1Z2okp",
+              "name": "3. Detaljerad redovisning av rörelsekostnader (årsredovisning) 2023.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2024-03-17T07:43:58.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1iuBnYngGCOkSlWh3NOXTiZsZW-1Z2okp/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1iuBnYngGCOkSlWh3NOXTiZsZW-1Z2okp&export=download"
+            },
+            {
+              "id": "1IPVR31ISeUt5lnV6br-QDSv-ViJy4GL_",
+              "name": "4. Motion Årsmöte 2024.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2024-03-09T08:43:58.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1IPVR31ISeUt5lnV6br-QDSv-ViJy4GL_/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1IPVR31ISeUt5lnV6br-QDSv-ViJy4GL_&export=download"
+            },
+            {
+              "id": "1d0lbtsaXjszQn1BPJmGHWHj94nAwYguW",
+              "name": "5. Ersättning till styrelse och revisorer 2024.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2024-03-09T08:26:12.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1d0lbtsaXjszQn1BPJmGHWHj94nAwYguW/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1d0lbtsaXjszQn1BPJmGHWHj94nAwYguW&export=download"
+            },
+            {
+              "id": "1fX8qy5jE_O9DPTSsa-uXXoigOZPLMCJf",
+              "name": "6. Förslag till utgifts- och inkomststat 2024 och 2025.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2024-03-17T07:45:34.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1fX8qy5jE_O9DPTSsa-uXXoigOZPLMCJf/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1fX8qy5jE_O9DPTSsa-uXXoigOZPLMCJf&export=download"
+            },
+            {
+              "id": "13R2g49b2xyOIDot7GLRhAk1aK6Ru0D-d",
+              "name": "7. Debiteringslängd 2024-2025_maskad.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2024-03-09T08:40:54.000Z",
+              "webViewLink": "https://drive.google.com/file/d/13R2g49b2xyOIDot7GLRhAk1aK6Ru0D-d/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=13R2g49b2xyOIDot7GLRhAk1aK6Ru0D-d&export=download"
+            },
+            {
+              "id": "1biPkzsiWm-T_TcBYagdPsLWSMOYnBVFB",
+              "name": "8. Information och Ordningsregler för Samfällighetsföreningen Bara Fiber 2024.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2024-03-09T08:40:30.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1biPkzsiWm-T_TcBYagdPsLWSMOYnBVFB/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1biPkzsiWm-T_TcBYagdPsLWSMOYnBVFB&export=download"
+            },
+            {
+              "id": "1Dy81d328Ehs_LjDAnvccSIvTmyjmV2o_",
+              "name": "9. Valberedningens förslag 2024-2025.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2024-03-09T09:18:44.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1Dy81d328Ehs_LjDAnvccSIvTmyjmV2o_/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1Dy81d328Ehs_LjDAnvccSIvTmyjmV2o_&export=download"
+            },
+            {
+              "id": "1NG-F1lDv4yG0oaklD_4Jc1Z5FqooN5LM",
+              "name": "Dagordning Årsstämma 2024.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2024-03-09T09:25:56.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1NG-F1lDv4yG0oaklD_4Jc1Z5FqooN5LM/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1NG-F1lDv4yG0oaklD_4Jc1Z5FqooN5LM&export=download"
+            },
+            {
+              "id": "1evXUmR7n_dy1kv_qdQHx3a7yb9gvR5dJ",
+              "name": "Fullmakt för ombud.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2024-03-09T08:47:04.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1evXUmR7n_dy1kv_qdQHx3a7yb9gvR5dJ/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1evXUmR7n_dy1kv_qdQHx3a7yb9gvR5dJ&export=download"
+            }
+          ]
+        },
+        {
+          "label": "2023",
+          "files": [
+            {
+              "id": "1c67UK3Vf6Youk-TalHTseZapYkDT9fIn",
+              "name": "Bilaga 2 - Årssredovisning och revisionsberättelse.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2023-03-11T03:13:08.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1c67UK3Vf6Youk-TalHTseZapYkDT9fIn/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1c67UK3Vf6Youk-TalHTseZapYkDT9fIn&export=download"
+            },
+            {
+              "id": "1rtUq6FZh17UR5eURJXNPoZeiKZ4Mfeqh",
+              "name": "Bilaga 3 - Detaljerad redovisning av rörelsekostnader(årsredovisning).pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2023-10-18T08:40:00.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1rtUq6FZh17UR5eURJXNPoZeiKZ4Mfeqh/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1rtUq6FZh17UR5eURJXNPoZeiKZ4Mfeqh&export=download"
+            },
+            {
+              "id": "1VAN-ZSaSyR3gOFar1aO2DUS00TMeavhM",
+              "name": "Bilaga 5 - Ersättning till styrelse och revisorer.docx (1).pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2023-10-18T08:40:12.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1VAN-ZSaSyR3gOFar1aO2DUS00TMeavhM/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1VAN-ZSaSyR3gOFar1aO2DUS00TMeavhM&export=download"
+            },
+            {
+              "id": "1iq6dBCp9CMlKndxTCVwd9mhH8uErsTfk",
+              "name": "Bilaga 6 - Inkomst- utgiftsstat budget 2023-2024.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2023-10-18T08:40:58.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1iq6dBCp9CMlKndxTCVwd9mhH8uErsTfk/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1iq6dBCp9CMlKndxTCVwd9mhH8uErsTfk&export=download"
+            },
+            {
+              "id": "1H3GSUH3j8oaQxbwwBhZumLnkHxCy0zCI",
+              "name": "Bilaga 9 - Förslag på Styrelse 2023.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2023-10-18T08:41:10.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1H3GSUH3j8oaQxbwwBhZumLnkHxCy0zCI/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1H3GSUH3j8oaQxbwwBhZumLnkHxCy0zCI&export=download"
+            },
+            {
+              "id": "1PlckEpmnEH4U_7mgCGVkra7zlZrQZ4nP",
+              "name": "Dagordning Årsstämma 2022.docx (1).pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2023-02-12T04:34:52.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1PlckEpmnEH4U_7mgCGVkra7zlZrQZ4nP/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1PlckEpmnEH4U_7mgCGVkra7zlZrQZ4nP&export=download"
+            },
+            {
+              "id": "1Q5-5q5yiZ4m2bcVUx6KZLpdiyMJ9L8pN",
+              "name": "Debiteringslängd 2023-2024 - Blad1.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2023-03-28T21:41:50.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1Q5-5q5yiZ4m2bcVUx6KZLpdiyMJ9L8pN/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1Q5-5q5yiZ4m2bcVUx6KZLpdiyMJ9L8pN&export=download"
+            },
+            {
+              "id": "1jIbV2Gpa4NUscgv6B27gopFjdpNgtNFr",
+              "name": "Fullmakt för ombud.docx.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2023-02-12T04:31:08.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1jIbV2Gpa4NUscgv6B27gopFjdpNgtNFr/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1jIbV2Gpa4NUscgv6B27gopFjdpNgtNFr&export=download"
+            },
+            {
+              "id": "1cyt8X9mMxkIaHqk6mAWwueNhDz8tlYWp",
+              "name": "Motioner 2023.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2023-10-18T08:41:30.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1cyt8X9mMxkIaHqk6mAWwueNhDz8tlYWp/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1cyt8X9mMxkIaHqk6mAWwueNhDz8tlYWp&export=download"
+            },
+            {
+              "id": "1--6B_GVuDSvkvlH8dtBOjJBsVUXi57Kn",
+              "name": "Ordningsregler för Samfällighetsföreningen Bara Fiber_20220112.docx.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2023-02-12T05:01:32.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1--6B_GVuDSvkvlH8dtBOjJBsVUXi57Kn/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1--6B_GVuDSvkvlH8dtBOjJBsVUXi57Kn&export=download"
+            },
+            {
+              "id": "14OkU3v3z4k5TCVtkkIt-wzMbB0w6dHHu",
+              "name": "Presentation Temperaturmätning 2022.pptx.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2023-10-18T08:41:52.000Z",
+              "webViewLink": "https://drive.google.com/file/d/14OkU3v3z4k5TCVtkkIt-wzMbB0w6dHHu/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=14OkU3v3z4k5TCVtkkIt-wzMbB0w6dHHu&export=download"
+            },
+            {
+              "id": "14FiyhyFrhl0wuP_8ZiCxzN9wwZnO5PqA",
+              "name": "Protokoll årsstämma 2023 - signerat.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2023-05-24T08:48:34.000Z",
+              "webViewLink": "https://drive.google.com/file/d/14FiyhyFrhl0wuP_8ZiCxzN9wwZnO5PqA/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=14FiyhyFrhl0wuP_8ZiCxzN9wwZnO5PqA&export=download"
+            },
+            {
+              "id": "1VGKrE6U02uqkTUbVsdCyIWY7TWTxHVjK",
+              "name": "VERKSAMHETSBERÄTTELSE 2022.docx.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2023-02-12T04:36:40.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1VGKrE6U02uqkTUbVsdCyIWY7TWTxHVjK/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1VGKrE6U02uqkTUbVsdCyIWY7TWTxHVjK&export=download"
+            }
+          ]
+        },
+        {
+          "label": "2022",
+          "files": [
+            {
+              "id": "1R5jTVtkvGIVSlYaeVEmmOe4naW5k-yyG",
+              "name": "Bilaga 1 - styrelsens verksamhetsberättelse.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2022-03-11T22:58:11.311Z",
+              "webViewLink": "https://drive.google.com/file/d/1R5jTVtkvGIVSlYaeVEmmOe4naW5k-yyG/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1R5jTVtkvGIVSlYaeVEmmOe4naW5k-yyG&export=download"
+            },
+            {
+              "id": "1g8yFgg6ZqdGkALvyM8mIlvQWd2IAImPv",
+              "name": "Bilaga 2 - Årsredovisning och revisionsberättelse 2021.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2022-03-11T04:10:42.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1g8yFgg6ZqdGkALvyM8mIlvQWd2IAImPv/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1g8yFgg6ZqdGkALvyM8mIlvQWd2IAImPv&export=download"
+            },
+            {
+              "id": "1-4wiDt0vhjAXEMsJmjo4n8hG_a38UTXG",
+              "name": "Bilaga 3 - Årsredovisning spec av rörelsekostnader.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2022-03-11T04:10:58.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1-4wiDt0vhjAXEMsJmjo4n8hG_a38UTXG/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1-4wiDt0vhjAXEMsJmjo4n8hG_a38UTXG&export=download"
+            },
+            {
+              "id": "19eD9SKgerXE90mCFM2lbYHBo_MZRGWa4",
+              "name": "Bilaga 4 - motioner.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2022-03-11T04:45:16.000Z",
+              "webViewLink": "https://drive.google.com/file/d/19eD9SKgerXE90mCFM2lbYHBo_MZRGWa4/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=19eD9SKgerXE90mCFM2lbYHBo_MZRGWa4&export=download"
+            },
+            {
+              "id": "1ihYEbY21MIOyjDO3xFJYpqqP_LrVjbO_",
+              "name": "Bilaga 5 - ersättning till styrelse och revisorer.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2022-03-11T13:22:56.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1ihYEbY21MIOyjDO3xFJYpqqP_LrVjbO_/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1ihYEbY21MIOyjDO3xFJYpqqP_LrVjbO_&export=download"
+            },
+            {
+              "id": "1MSi7ZCnjCybsvd2i7n97kqEG9afQetBN",
+              "name": "Bilaga 6 - Inkomst utgiftstat 2022-2023.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2022-03-11T04:54:06.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1MSi7ZCnjCybsvd2i7n97kqEG9afQetBN/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1MSi7ZCnjCybsvd2i7n97kqEG9afQetBN&export=download"
+            },
+            {
+              "id": "1WRNj2TdhtfnTkWVRn7_k_QPiyjLoREXv",
+              "name": "Bilaga 8 - Ordningsregler för Samfällighetsföreningen Bara Fiber_20220311.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2022-03-11T04:54:26.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1WRNj2TdhtfnTkWVRn7_k_QPiyjLoREXv/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1WRNj2TdhtfnTkWVRn7_k_QPiyjLoREXv&export=download"
+            },
+            {
+              "id": "1ciYYR5JxbFkj9Tiai39DYMNmhOOSf8vj",
+              "name": "Bilaga 9 - Valberedningens förslag för 2022.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2022-03-11T04:54:40.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1ciYYR5JxbFkj9Tiai39DYMNmhOOSf8vj/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1ciYYR5JxbFkj9Tiai39DYMNmhOOSf8vj&export=download"
+            },
+            {
+              "id": "1WQBpGbImmwu8KbFiBD14Ql1qnLLP0Z6z",
+              "name": "Dagordning Årsstämma 2022.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2022-03-11T13:24:54.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1WQBpGbImmwu8KbFiBD14Ql1qnLLP0Z6z/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1WQBpGbImmwu8KbFiBD14Ql1qnLLP0Z6z&export=download"
+            },
+            {
+              "id": "1vrk2xr8VIw_oUIl3qenKpvl2KUcor1hl",
+              "name": "Fullmakt för ombud.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2022-03-11T10:20:36.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1vrk2xr8VIw_oUIl3qenKpvl2KUcor1hl/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1vrk2xr8VIw_oUIl3qenKpvl2KUcor1hl&export=download"
+            },
+            {
+              "id": "1I6vjzJ9kmf60LzOzP4XqfrrrNQKnypLs",
+              "name": "Kopia av Protokoll årsstämma 2022 - Signerat.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2022-04-09T06:27:37.369Z",
+              "webViewLink": "https://drive.google.com/file/d/1I6vjzJ9kmf60LzOzP4XqfrrrNQKnypLs/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1I6vjzJ9kmf60LzOzP4XqfrrrNQKnypLs&export=download"
+            }
+          ]
+        },
+        {
+          "label": "2021",
+          "files": [
+            {
+              "id": "1Wko-aUUe8HehYH2CUlMssaeOpDpFlu_1",
+              "name": "Bilaga 1 - Dagordning årsstämma 2021.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2021-03-31T02:23:56.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1Wko-aUUe8HehYH2CUlMssaeOpDpFlu_1/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1Wko-aUUe8HehYH2CUlMssaeOpDpFlu_1&export=download"
+            },
+            {
+              "id": "1DRi2yulNw7dZtx1sOk7XGN2309jTjTeR",
+              "name": "Bilaga 10 - resultat Temperaturmätning 2020.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2021-03-31T02:25:00.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1DRi2yulNw7dZtx1sOk7XGN2309jTjTeR/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1DRi2yulNw7dZtx1sOk7XGN2309jTjTeR&export=download"
+            },
+            {
+              "id": "1__Ss33IJSdue-5h7wwhcQjS0wO-UUlCG",
+              "name": "Bilaga 11 - målbeskrivning.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2021-03-31T02:25:00.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1__Ss33IJSdue-5h7wwhcQjS0wO-UUlCG/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1__Ss33IJSdue-5h7wwhcQjS0wO-UUlCG&export=download"
+            },
+            {
+              "id": "1JFVJW_9GWdP5qDd_w7FOMom3-kxk98MO",
+              "name": "Bilaga 12 - Ordningsregler för Samfällighetsföreningen Bara Fiber_20210328.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2021-03-31T02:25:00.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1JFVJW_9GWdP5qDd_w7FOMom3-kxk98MO/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1JFVJW_9GWdP5qDd_w7FOMom3-kxk98MO&export=download"
+            },
+            {
+              "id": "1eOJt4L0OZEt9JLDZ6bc3XrDDg0VoFrPl",
+              "name": "Bilaga 2 - Närvarolista.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2021-03-31T02:28:34.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1eOJt4L0OZEt9JLDZ6bc3XrDDg0VoFrPl/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1eOJt4L0OZEt9JLDZ6bc3XrDDg0VoFrPl&export=download"
+            },
+            {
+              "id": "1zw0SmW-ykd1IPkdjw64m2miY46uQvptx",
+              "name": "Bilaga 3 - Styrelsens verksamhetsberättelse 2020.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2021-03-31T02:25:00.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1zw0SmW-ykd1IPkdjw64m2miY46uQvptx/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1zw0SmW-ykd1IPkdjw64m2miY46uQvptx&export=download"
+            },
+            {
+              "id": "1FE0yoB6umSbZCaisVOaO2MqSFBN4Fmun",
+              "name": "Bilaga 4 - Revisionsberättelse 2020.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2021-03-31T02:25:00.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1FE0yoB6umSbZCaisVOaO2MqSFBN4Fmun/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1FE0yoB6umSbZCaisVOaO2MqSFBN4Fmun&export=download"
+            },
+            {
+              "id": "1OeoaHJstxGld6XvP1oAaP9fqGL_LLhoz",
+              "name": "Bilaga 5 - Årsredovisning 2020.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2021-03-31T02:25:02.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1OeoaHJstxGld6XvP1oAaP9fqGL_LLhoz/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1OeoaHJstxGld6XvP1oAaP9fqGL_LLhoz&export=download"
+            },
+            {
+              "id": "1rolsIvC6OqZJ-Uvb04fXFgqbLhGBJMkV",
+              "name": "Bilaga 6 - Specifikation av rörelsens kostnader.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2021-03-31T02:25:00.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1rolsIvC6OqZJ-Uvb04fXFgqbLhGBJMkV/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1rolsIvC6OqZJ-Uvb04fXFgqbLhGBJMkV&export=download"
+            },
+            {
+              "id": "1GPoWYGfZEghDeWBbPXsLzPdO80_8LA7T",
+              "name": "Bilaga 7 - ersättning till styrelse och revisorer.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2021-03-31T02:25:00.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1GPoWYGfZEghDeWBbPXsLzPdO80_8LA7T/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1GPoWYGfZEghDeWBbPXsLzPdO80_8LA7T&export=download"
+            },
+            {
+              "id": "1MtJOfpNyIezjqwnoP0pZ17ghzhxcrS9f",
+              "name": "Bilaga 8 - förslag utgifts - inkomststat 2021-2022.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2021-03-31T02:25:00.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1MtJOfpNyIezjqwnoP0pZ17ghzhxcrS9f/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1MtJOfpNyIezjqwnoP0pZ17ghzhxcrS9f&export=download"
+            },
+            {
+              "id": "1NAe-eVorpgUpBz2ld_w8KZkSRaIrgeIM",
+              "name": "Bilaga 9 - debiteringslängd 2021-2022_utan personuppgifter.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2021-03-31T02:27:06.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1NAe-eVorpgUpBz2ld_w8KZkSRaIrgeIM/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1NAe-eVorpgUpBz2ld_w8KZkSRaIrgeIM&export=download"
+            },
+            {
+              "id": "1xYd3v9ZRGSHFnbCEqjKBEugM__oFiyKB",
+              "name": "Protokoll-årsstämma-2021.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2023-10-18T17:42:12.084Z",
+              "webViewLink": "https://drive.google.com/file/d/1xYd3v9ZRGSHFnbCEqjKBEugM__oFiyKB/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1xYd3v9ZRGSHFnbCEqjKBEugM__oFiyKB&export=download"
+            }
+          ]
+        },
+        {
+          "label": "2020",
+          "files": [
+            {
+              "id": "1Eh9KwUe2TZQf2d7kTjNX_VvsMytoQ3KK",
+              "name": "Bilaga 1 - förslag valberedning.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-09-07T15:37:44.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1Eh9KwUe2TZQf2d7kTjNX_VvsMytoQ3KK/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1Eh9KwUe2TZQf2d7kTjNX_VvsMytoQ3KK&export=download"
+            },
+            {
+              "id": "1yWIF3_FrKgDuDV7dhZFJ1Vq9Rjh-Hgof",
+              "name": "Dagordning Extrainsatt Årsstämma sep 2020.docx.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-09-07T15:37:44.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1yWIF3_FrKgDuDV7dhZFJ1Vq9Rjh-Hgof/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1yWIF3_FrKgDuDV7dhZFJ1Vq9Rjh-Hgof&export=download"
+            },
+            {
+              "id": "1g3zpvegmK51lBwf0kApChKggv1h1_VA3",
+              "name": "Fullmakt för ombud.docx.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-09-07T16:02:02.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1g3zpvegmK51lBwf0kApChKggv1h1_VA3/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1g3zpvegmK51lBwf0kApChKggv1h1_VA3&export=download"
+            },
+            {
+              "id": "1EAybT0ZmDWi-9DuKXb77bjO1GipPZY9b",
+              "name": "Protokoll extra årsstämma 2020-09-28.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-10-08T09:01:08.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1EAybT0ZmDWi-9DuKXb77bjO1GipPZY9b/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1EAybT0ZmDWi-9DuKXb77bjO1GipPZY9b&export=download"
+            },
+            {
+              "id": "1S4zood3Luthi2RP5WlwN-vsjIrAW1EbX",
+              "name": "Bilaga - Debiteringslängd 2020-2021.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-03-14T21:46:18.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1S4zood3Luthi2RP5WlwN-vsjIrAW1EbX/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1S4zood3Luthi2RP5WlwN-vsjIrAW1EbX&export=download"
+            },
+            {
+              "id": "1Xojgs7NuoXVwsVlsk3nf_uAmq3czqOxI",
+              "name": "Bilaga - Ersättning till styrelse och revisorer.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-03-14T21:46:18.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1Xojgs7NuoXVwsVlsk3nf_uAmq3czqOxI/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1Xojgs7NuoXVwsVlsk3nf_uAmq3czqOxI&export=download"
+            },
+            {
+              "id": "1hicGhHbEKraK-4LMqjwwOBSXtRPdNu2M",
+              "name": "Bilaga - Förslag ersättning till valberedning.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-03-14T21:46:18.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1hicGhHbEKraK-4LMqjwwOBSXtRPdNu2M/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1hicGhHbEKraK-4LMqjwwOBSXtRPdNu2M&export=download"
+            },
+            {
+              "id": "1pqUGWu7QleJNdSdAOXDuLyo2_6MpUVZs",
+              "name": "Bilaga - Förslag styrelsens mandat att utöka gemensamhetsanläggningen.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-03-14T21:46:18.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1pqUGWu7QleJNdSdAOXDuLyo2_6MpUVZs/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1pqUGWu7QleJNdSdAOXDuLyo2_6MpUVZs&export=download"
+            },
+            {
+              "id": "1fEZecRU5v-7gWIO5eoloGJdsJnOQna5O",
+              "name": "Bilaga - Förslag uppdatering av föreningens stadgar.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-03-18T07:36:18.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1fEZecRU5v-7gWIO5eoloGJdsJnOQna5O/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1fEZecRU5v-7gWIO5eoloGJdsJnOQna5O&export=download"
+            },
+            {
+              "id": "1CNVXXvh15eEfChCffpbKshsdjLslGBO8",
+              "name": "Bilaga - Förslag utgifts- och inkomststat för 2020 och 2021.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-03-14T21:46:18.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1CNVXXvh15eEfChCffpbKshsdjLslGBO8/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1CNVXXvh15eEfChCffpbKshsdjLslGBO8&export=download"
+            },
+            {
+              "id": "1IVKj8qv7w1hvzHTIfTxRZKXyyRxpMONY",
+              "name": "Bilaga - Motioner från medlemmarna.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-03-14T21:46:18.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1IVKj8qv7w1hvzHTIfTxRZKXyyRxpMONY/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1IVKj8qv7w1hvzHTIfTxRZKXyyRxpMONY&export=download"
+            },
+            {
+              "id": "1hM7pmCF-f057T3OEvJTBdP-gtBfZCgia",
+              "name": "Bilaga - Ordningsregler för Samfällighetsföreningen Bara Fiber.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-03-14T21:46:18.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1hM7pmCF-f057T3OEvJTBdP-gtBfZCgia/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1hM7pmCF-f057T3OEvJTBdP-gtBfZCgia&export=download"
+            },
+            {
+              "id": "12mz-CHjDi1NFa9nD4o2yXPUvEFusb2H_",
+              "name": "Bilaga - Resultaträkning Specifikation av kostnader.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-03-15T14:19:36.000Z",
+              "webViewLink": "https://drive.google.com/file/d/12mz-CHjDi1NFa9nD4o2yXPUvEFusb2H_/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=12mz-CHjDi1NFa9nD4o2yXPUvEFusb2H_&export=download"
+            },
+            {
+              "id": "1VuHu9FUwITQgWE-E8cPoMzD4A0weS3Kw",
+              "name": "Bilaga - Revisionsberättelse.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-03-27T06:01:36.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1VuHu9FUwITQgWE-E8cPoMzD4A0weS3Kw/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1VuHu9FUwITQgWE-E8cPoMzD4A0weS3Kw&export=download"
+            },
+            {
+              "id": "1edw5ucbFiIhHSEsPkCzfGlt2vMoe_ZKw",
+              "name": "Bilaga - Styrelsens verksamhetsberättelse 2019.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-03-14T21:46:18.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1edw5ucbFiIhHSEsPkCzfGlt2vMoe_ZKw/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1edw5ucbFiIhHSEsPkCzfGlt2vMoe_ZKw&export=download"
+            },
+            {
+              "id": "1p0Fkf6Y-_wMWWvObTGES-oAfPqNFn-xe",
+              "name": "Bilaga - Årsredovisning 2019.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-03-27T06:01:32.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1p0Fkf6Y-_wMWWvObTGES-oAfPqNFn-xe/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1p0Fkf6Y-_wMWWvObTGES-oAfPqNFn-xe&export=download"
+            },
+            {
+              "id": "1E-wjAy49ike4jO3BSVAscNG3PbXHfz_P",
+              "name": "Dagordning Årsstämma 2020.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-03-14T21:51:58.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1E-wjAy49ike4jO3BSVAscNG3PbXHfz_P/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1E-wjAy49ike4jO3BSVAscNG3PbXHfz_P&export=download"
+            },
+            {
+              "id": "13peVhGOy9VPQ9aZFP7c06dyNqJLx0Fyi",
+              "name": "Fullmakt för ombud.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-03-27T14:38:36.000Z",
+              "webViewLink": "https://drive.google.com/file/d/13peVhGOy9VPQ9aZFP7c06dyNqJLx0Fyi/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=13peVhGOy9VPQ9aZFP7c06dyNqJLx0Fyi&export=download"
+            }
+          ]
+        },
+        {
+          "label": "2019",
+          "files": [
+            {
+              "id": "1rcZR1M1m71cbAfYGUzTriszBL-w-iGeS",
+              "name": "Dagordning Årsstämma 2019.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-03-08T10:29:50.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1rcZR1M1m71cbAfYGUzTriszBL-w-iGeS/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1rcZR1M1m71cbAfYGUzTriszBL-w-iGeS&export=download"
+            },
+            {
+              "id": "1IypckEae9rjOYZPcpl-ctml8HyASid1G",
+              "name": "Bilaga 1.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-03-08T10:29:50.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1IypckEae9rjOYZPcpl-ctml8HyASid1G/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1IypckEae9rjOYZPcpl-ctml8HyASid1G&export=download"
+            },
+            {
+              "id": "1_lszOQJsStDw_cfaews6ZOO_hKsbryDP",
+              "name": "Bilaga 2.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-04-05T12:06:40.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1_lszOQJsStDw_cfaews6ZOO_hKsbryDP/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1_lszOQJsStDw_cfaews6ZOO_hKsbryDP&export=download"
+            },
+            {
+              "id": "1MLDDGVLQY7FQSbdYvd4dZYtij_x3juxS",
+              "name": "Bilaga 3.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-04-05T12:07:02.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1MLDDGVLQY7FQSbdYvd4dZYtij_x3juxS/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1MLDDGVLQY7FQSbdYvd4dZYtij_x3juxS&export=download"
+            },
+            {
+              "id": "1PPaTUTbnhjJxspG2kgC35tz3Z5OCEuqB",
+              "name": "Bilaga 4.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-03-17T01:58:40.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1PPaTUTbnhjJxspG2kgC35tz3Z5OCEuqB/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1PPaTUTbnhjJxspG2kgC35tz3Z5OCEuqB&export=download"
+            },
+            {
+              "id": "12gtN2OKBaajL9pY6sQJqNC1KbOkhMXxK",
+              "name": "Bilaga 5.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-03-08T11:38:38.000Z",
+              "webViewLink": "https://drive.google.com/file/d/12gtN2OKBaajL9pY6sQJqNC1KbOkhMXxK/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=12gtN2OKBaajL9pY6sQJqNC1KbOkhMXxK&export=download"
+            },
+            {
+              "id": "1Fk1DeQuVhp-WfffNah3FkndXFrT9sBEU",
+              "name": "Bilaga 6.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-03-11T07:38:36.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1Fk1DeQuVhp-WfffNah3FkndXFrT9sBEU/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1Fk1DeQuVhp-WfffNah3FkndXFrT9sBEU&export=download"
+            },
+            {
+              "id": "1_ebZYCkVWvgHZjz-wI5nH4lXK7Boe3MH",
+              "name": "Bilaga 7.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-04-05T11:53:08.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1_ebZYCkVWvgHZjz-wI5nH4lXK7Boe3MH/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1_ebZYCkVWvgHZjz-wI5nH4lXK7Boe3MH&export=download"
+            },
+            {
+              "id": "1Di6XNeE8oxt1959gGgHQDt7qqy9EIqox",
+              "name": "Bilaga 8.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-04-05T11:57:08.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1Di6XNeE8oxt1959gGgHQDt7qqy9EIqox/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1Di6XNeE8oxt1959gGgHQDt7qqy9EIqox&export=download"
+            },
+            {
+              "id": "1SasjZHhXQ3X72Xk6xBcFbqxoh1w9qaZ9",
+              "name": "Bilaga 9.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-04-05T12:08:48.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1SasjZHhXQ3X72Xk6xBcFbqxoh1w9qaZ9/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1SasjZHhXQ3X72Xk6xBcFbqxoh1w9qaZ9&export=download"
+            },
+            {
+              "id": "1ThbPtt6gOvnfzmexlrtAtW0wumQWwpFg",
+              "name": "Protokoll stämma mars 2019.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2019-04-05T11:58:32.000Z",
+              "webViewLink": "https://drive.google.com/file/d/1ThbPtt6gOvnfzmexlrtAtW0wumQWwpFg/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1ThbPtt6gOvnfzmexlrtAtW0wumQWwpFg&export=download"
+            }
+          ]
+        },
+        {
+          "label": "2018",
+          "files": [
+            {
+              "id": "1tjVp-TtKN6W72FZHN4r55veyJai0BN2k",
+              "name": "Dagordning Årsstämma2018.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2018-09-29T21:16:51.178Z",
+              "webViewLink": "https://drive.google.com/file/d/1tjVp-TtKN6W72FZHN4r55veyJai0BN2k/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1tjVp-TtKN6W72FZHN4r55veyJai0BN2k&export=download"
+            },
+            {
+              "id": "1VKQa7OAY-O-oAHoDpsxjWRop9-rx3Dle",
+              "name": "Protokoll stämma mars 2018.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2020-02-23T12:36:54.389Z",
+              "webViewLink": "https://drive.google.com/file/d/1VKQa7OAY-O-oAHoDpsxjWRop9-rx3Dle/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1VKQa7OAY-O-oAHoDpsxjWRop9-rx3Dle&export=download"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
