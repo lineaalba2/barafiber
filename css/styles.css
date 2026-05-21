@@ -709,6 +709,30 @@ tbody tr:hover { background: var(--color-bg-alt); }
   line-height: 1.4;
 }
 
+/* Google My Maps embed — responsiv höjd */
+.map-embed-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 1.5rem 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-bg-alt);
+}
+
+.map-embed-wrapper iframe {
+  display: block;
+  width: 100%;
+  height: 480px;
+  border: 0;
+}
+
+@media (max-width: 640px) {
+  .map-embed-wrapper iframe {
+    height: 360px;
+  }
+}
+
 /* Mobil: gör tabeller till kort-layout per rad istället för horisontell scroll */
 @media (max-width: 768px) {
   .table-wrapper {
