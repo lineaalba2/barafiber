@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-26T21:03:22.808Z",
+  "lastUpdated": "2026-05-26T21:07:02.715Z",
   "sections": [
     {
       "key": "styrelseprotokoll",
@@ -783,22 +783,6 @@
           "label": "2017",
           "files": [
             {
-              "id": "1BOKRZXJZYps9irnSQNGph_qEyJcoKFJ7",
-              "name": "Kallelse ordinarie stämma mars 2017.pdf",
-              "mimeType": "application/pdf",
-              "modifiedTime": "2018-09-29T21:16:03.648Z",
-              "webViewLink": "https://drive.google.com/file/d/1BOKRZXJZYps9irnSQNGph_qEyJcoKFJ7/view?usp=drivesdk",
-              "webContentLink": "https://drive.google.com/uc?id=1BOKRZXJZYps9irnSQNGph_qEyJcoKFJ7&export=download"
-            },
-            {
-              "id": "1Fr8JYcANlquR8w2I4UjVagSpI7S1QqIg",
-              "name": "Styr.möte Fiber 1 juni 2017 .pdf",
-              "mimeType": "application/pdf",
-              "modifiedTime": "2018-09-29T21:10:11.839Z",
-              "webViewLink": "https://drive.google.com/file/d/1Fr8JYcANlquR8w2I4UjVagSpI7S1QqIg/view?usp=drivesdk",
-              "webContentLink": "https://drive.google.com/uc?id=1Fr8JYcANlquR8w2I4UjVagSpI7S1QqIg&export=download"
-            },
-            {
               "id": "1p5o-qc_xYN8gc8lU4bsGw7wXI-W-CJbl",
               "name": "Styrelseprotokoll 2017-01-17.pdf",
               "mimeType": "application/pdf",
@@ -813,6 +797,14 @@
               "modifiedTime": "2026-05-26T21:02:44.169Z",
               "webViewLink": "https://drive.google.com/file/d/1MTRpj-s-wy-oTqNABPEqcfY5cEhK5oO-/view?usp=drivesdk",
               "webContentLink": "https://drive.google.com/uc?id=1MTRpj-s-wy-oTqNABPEqcfY5cEhK5oO-&export=download"
+            },
+            {
+              "id": "1Fr8JYcANlquR8w2I4UjVagSpI7S1QqIg",
+              "name": "Styrelseprotokoll 2017-06-01.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-05-26T21:03:33.645Z",
+              "webViewLink": "https://drive.google.com/file/d/1Fr8JYcANlquR8w2I4UjVagSpI7S1QqIg/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1Fr8JYcANlquR8w2I4UjVagSpI7S1QqIg&export=download"
             },
             {
               "id": "1WZ_5RE8_ZkZl0XDetqJBm7S4Yq0MVHTS",
