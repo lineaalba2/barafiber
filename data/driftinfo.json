@@ -1,8 +1,10 @@
 {
-  "lastUpdated": null,
+  "lastUpdated": "2026-05-28T15:35:27.266Z",
+  "sourceSheet": "Driftinfo",
+  "sourceUrl": "https://docs.google.com/spreadsheets/d/1X2Q4wb7lb5jozMqKz19vONVynxgh6NluRDH8vA4Ke7M/edit",
   "values": {
     "rubrik": "Större fel i nätet",
     "text": "Vi har tyvärr ett större fel i vårt nät. En fiberkabel är avgrävd. Reparation pågår, prognos är att det ska vara åtgärdat i morgon, fredag 29 maj.",
-    "uppdaterad": "28 maj kl 17:01"
+    "uppdaterad": "28 maj"
   }
 }
