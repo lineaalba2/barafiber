@@ -33,7 +33,7 @@ jobs:
         run: |
           git config user.name "barafiber-bot"
           git config user.email "bot@barafiber.se"
-          git add data/documents.json data/avgifter.json data/styrelse.json data/innehall.json
+          git add data/documents.json data/avgifter.json data/styrelse.json data/innehall.json data/driftinfo.json
           if git diff --staged --quiet; then
             echo "Inga förändringar att committa."
           else

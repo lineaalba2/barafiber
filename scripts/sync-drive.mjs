@@ -255,6 +255,7 @@ const SHEET_MIME = 'application/vnd.google-apps.spreadsheet';
 const AVGIFTER_OUTPUT = resolve(__dirname, '..', 'data', 'avgifter.json');
 const STYRELSE_OUTPUT = resolve(__dirname, '..', 'data', 'styrelse.json');
 const INNEHALL_OUTPUT = resolve(__dirname, '..', 'data', 'innehall.json');
+const DRIFTINFO_OUTPUT = resolve(__dirname, '..', 'data', 'driftinfo.json');
 
 async function fetchSheetValues(spreadsheetId) {
   // Hämtar alla värden från första bladet (Sheet1 / Blad1).
@@ -447,6 +448,32 @@ async function syncInnehall(rootEntries) {
   }
 }
 
+async function syncDriftinfo(rootEntries) {
+  const sheet = rootEntries.find(
+    (f) => f.mimeType === SHEET_MIME && /driftinfo|drift/i.test(f.name)
+  );
+  if (!sheet) {
+    console.log('  (ingen Driftinfo-sheet hittades i rot-mappen)');
+    return;
+  }
+  console.log(`📢  Hittade driftinfo-sheet: "${sheet.name}"`);
+  try {
+    const rows = await fetchSheetValues(sheet.id);
+    const parsed = parseInnehallSheet(rows); // samma key/value-format
+    const output = {
+      lastUpdated: new Date().toISOString(),
+      sourceSheet: sheet.name,
+      sourceUrl: `https://docs.google.com/spreadsheets/d/${sheet.id}/edit`,
+      values: parsed,
+    };
+    await mkdir(dirname(DRIFTINFO_OUTPUT), { recursive: true });
+    await writeFile(DRIFTINFO_OUTPUT, JSON.stringify(output, null, 2) + '\n', 'utf8');
+    console.log(`     Skrev ${DRIFTINFO_OUTPUT}`);
+  } catch (err) {
+    console.error(`  ❌  Driftinfo-sync misslyckades: ${err.message}`);
+  }
+}
+
 async function syncAvgifter(rootEntries) {
   // Leta efter en Google Sheet i rot-mappen med "avgift" i namnet
   const sheet = rootEntries.find(
@@ -482,10 +509,11 @@ async function main() {
   const rootFolders = rootEntries.filter((e) => e.mimeType === FOLDER_MIME);
   const rootPdfs    = rootEntries.filter((e) => ALLOWED_MIME_TYPES.has(effectiveMimeType(e))).map(toDoc);
 
-  // Avgifter, styrelse, innehåll synkas från Sheets i rot-mappen
+  // Avgifter, styrelse, innehåll, driftinfo synkas från Sheets i rot-mappen
   await syncAvgifter(rootEntries);
   await syncStyrelse(rootEntries);
   await syncInnehall(rootEntries);
+  await syncDriftinfo(rootEntries);
 
   // Plana PDF:er direkt i rot-mappen → övriga
   if (rootPdfs.length > 0) {

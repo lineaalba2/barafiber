@@ -61,25 +61,10 @@
 </section>
 
 <!--
-  DRIFTINFORMATION — pågående avbrott.
-  Ta bort hela <section class="driftinfo-banner">…</section>-blocket när felet är åtgärdat.
+  DRIFTINFORMATION — fylls i dynamiskt av js/driftinfo.js från data/driftinfo.json.
+  Hanteras via Driftinfo-Sheet:en i Drive. Töm rubrik-cellen för att stänga av bannern.
 -->
-<section class="driftinfo-banner">
-  <div class="container">
-    <div class="driftinfo-card">
-      <div class="driftinfo-icon" aria-hidden="true">⚠️</div>
-      <div class="driftinfo-content">
-        <div class="driftinfo-label">Driftinformation</div>
-        <h2>Större fel i nätet</h2>
-        <p>
-          Vi har tyvärr ett större fel i vårt nät. En fiberkabel är avgrävd. Reparation
-          pågår, prognos är att det ska vara åtgärdat <strong>i morgon, fredag 29 maj</strong>.
-        </p>
-        <p class="driftinfo-updated">Senast uppdaterad: 28 maj kl 17:01</p>
-      </div>
-    </div>
-  </div>
-</section>
+<div id="driftinfo"></div>
 
 <section class="section">
   <div class="container">
@@ -189,6 +174,7 @@
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 <script src="js/dynamic-text.js"></script>
+<script src="js/driftinfo.js"></script>
 
 </body>
 </html>
