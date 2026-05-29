@@ -19,13 +19,22 @@ Om du ändrar kolumn-rubrikerna i arken slutar synken förstå datan. Dessa rubr
 
 ## Driftinfo — så hanterar du driftinformation
 
-Driftinfo-arket styr om en gul varnings-banner visas högst upp på förstasidan. Arket har tre rader, alla med en Nyckel-cell i kolumn A och en Värde-cell i kolumn B:
+Driftinfo-arket styr om en gul varnings-banner visas högst upp på förstasidan. Arket har upp till fyra rader, alla med en Nyckel-cell i kolumn A och en Värde-cell i kolumn B:
 
 | Nyckel | Värde |
 |---|---|
 | rubrik | T.ex. "Större fel i nätet" |
 | text | Brödtext med detaljer |
 | uppdaterad | T.ex. "28 maj kl 17:01" |
+| synlig_till | (Valfritt) Datum i formatet YYYY-MM-DD — bannern göms automatiskt efter det datumet |
+
+### synlig_till — automatisk borttagning efter X dagar
+
+Sätter du ett datum i `synlig_till` (t.ex. `2026-06-01`) försvinner bannern automatiskt dagen efter — ingen manuell rensning krävs. Bannern är synlig **hela** det datum du anger.
+
+Exempel: vill du att en banner ska visas i 72 timmar (3 dagar) från fredag → sätt `synlig_till` till måndagens datum.
+
+Lämnas `synlig_till` tomt fungerar det som tidigare: bannern visas tills någon manuellt tömmer `rubrik`-cellen.
 
 ### När det inte finns någon driftstörning (normalläget)
 

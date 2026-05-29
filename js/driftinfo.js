@@ -30,9 +30,26 @@
   const rubrik = (v.rubrik || '').trim();
   const text = (v.text || '').trim();
   const uppdaterad = (v.uppdaterad || '').trim();
+  const synligTill = (v.synlig_till || '').trim();
 
   // Ingen rubrik → inget banner
   if (!rubrik) return;
+
+  // Om synlig_till är satt (YYYY-MM-DD) och dagens datum är efter det → göm banner
+  if (synligTill) {
+    const m = synligTill.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (m) {
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const expiry = new Date(`${synligTill}T00:00:00`);
+      if (today > expiry) {
+        console.info(`driftinfo: synlig_till (${synligTill}) har passerats — banner döljs.`);
+        return;
+      }
+    } else {
+      console.warn(`driftinfo: synlig_till "${synligTill}" har fel format. Använd YYYY-MM-DD.`);
+    }
+  }
 
   container.innerHTML = `
     <section class="driftinfo-banner">
