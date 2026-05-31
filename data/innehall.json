@@ -7,14 +7,17 @@
     "gratiskanaler": "SVT1, SVT2, TV4, TV6, Barnkanalen, Kunskapskanalen",
     "basutbud_antal_kanaler": "ca 20",
     "internet_hastighet": "1000/1000",
-    "support_ownit_vardagar": "08–22",
-    "support_ownit_helger": "10–19",
-    "support_telenor_vardagar": "08–21",
-    "support_telenor_helger": "10–19",
+    "support_ownit_vardagar": "09–18",
+    "support_ownit_helger": "10–14",
+    "support_telenor_vardagar": "08–18",
+    "support_telenor_helger": "10–17",
     "tjänstefördelare_modell": "Technicolor 799VAC Xtream",
     "fiberkonverter_modell": "Genexis XG6846B",
     "serviceavtal_partner": "Installations Companiet",
     "mesh_partner": "Kjell & Company",
-    "reparationskostnad_fiber": "5 000–15 000 kr"
+    "reparationskostnad_fiber": "5 000–15 000 kr",
+    "ownit_telefon": "08-525 073 00",
+    "ownit_epost": "support@ownit.se",
+    "telenor_telefon": "020-222 222"
   }
 }

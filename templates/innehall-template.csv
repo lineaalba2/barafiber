@@ -3,12 +3,12 @@ antal_hushåll,723,Uppdatera efter verksamhetsberättelse varje år
 internet_hastighet,1000/1000,Mbit/s — symmetrisk
 basutbud_antal_kanaler,ca 20,Antal kanaler i digitalt basutbud (Telenor)
 gratiskanaler,"SVT1, SVT2, TV4, TV6, Barnkanalen, Kunskapskanalen",Kanaler som sänds okodade
-support_ownit_vardagar,08-22,
-support_ownit_helger,10-19,
-support_telenor_vardagar,08-21,
-support_telenor_helger,10-19,
+support_ownit_vardagar,09-18,Ownits supporttider vardagar
+support_ownit_helger,10-14,Ownits supporttider helger
+support_telenor_vardagar,08-18,Telenors supporttider vardagar
+support_telenor_helger,10-17,Telenors supporttider lördagar
 ownit_telefon,08-525 073 00,Ownits privatkund-support
-ownit_epost,kundservice@ownit.se,
+ownit_epost,support@ownit.se,
 telenor_telefon,020-222 222,Telenors privatkund-support
 fiberkonverter_modell,Genexis XG6846B,Omvandlar fibersignal till ethernet
 tjänstefördelare_modell,Technicolor 799VAC Xtream,"Router/CATV-modul, distribuerar internet/telefoni/TV"
