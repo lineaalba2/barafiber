@@ -7,6 +7,9 @@ support_ownit_vardagar,08-22,
 support_ownit_helger,10-19,
 support_telenor_vardagar,08-21,
 support_telenor_helger,10-19,
+ownit_telefon,08-525 073 00,Ownits privatkund-support
+ownit_epost,kundservice@ownit.se,
+telenor_telefon,020-222 222,Telenors privatkund-support
 fiberkonverter_modell,Genexis XG6846B,Omvandlar fibersignal till ethernet
 tjänstefördelare_modell,Technicolor 799VAC Xtream,"Router/CATV-modul, distribuerar internet/telefoni/TV"
 serviceavtal_partner,Installations Companiet,Reparation av fiberinfrastruktur
