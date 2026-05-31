@@ -252,12 +252,10 @@ async function processTopLevelFolder(folder) {
 // ---------------------------------------------------------------------------
 
 const SHEET_MIME = 'application/vnd.google-apps.spreadsheet';
-const DOC_MIME = 'application/vnd.google-apps.document';
 const AVGIFTER_OUTPUT = resolve(__dirname, '..', 'data', 'avgifter.json');
 const STYRELSE_OUTPUT = resolve(__dirname, '..', 'data', 'styrelse.json');
 const INNEHALL_OUTPUT = resolve(__dirname, '..', 'data', 'innehall.json');
 const DRIFTINFO_OUTPUT = resolve(__dirname, '..', 'data', 'driftinfo.json');
-const ORDNINGSREGLER_OUTPUT = resolve(__dirname, '..', 'data', 'ordningsregler.json');
 
 async function fetchSheetValues(spreadsheetId) {
   // Hämtar alla värden från första bladet (Sheet1 / Blad1).
@@ -450,82 +448,6 @@ async function syncInnehall(rootEntries) {
   }
 }
 
-// Städa upp HTML från Google Docs export.
-// Google:s export-HTML är full av inline styles, klassnamn och redirect-URL:er.
-// Vi vill ha ren semantisk HTML (h1-h3, p, ul/ol, a, strong, em) som passar
-// in i sajtens egen styling.
-function cleanGoogleDocsHtml(html) {
-  // Plocka ut innehållet i <body>
-  const bodyMatch = html.match(/<body[^>]*>([\s\S]*)<\/body>/i);
-  let body = bodyMatch ? bodyMatch[1] : html;
-
-  // Resolva Google:s redirect-URL:er ("/url?q=DEST&sa=...") tillbaka till destinationen
-  body = body.replace(
-    /href="https?:\/\/www\.google\.com\/url\?q=([^&"]+)[^"]*"/g,
-    (_m, url) => `href="${decodeURIComponent(url)}"`
-  );
-
-  // Ta bort alla inline-styles, klasser, id:n, dir-attribut
-  body = body.replace(/\s*style="[^"]*"/g, '');
-  body = body.replace(/\s*class="[^"]*"/g, '');
-  body = body.replace(/\s*id="[^"]*"/g, '');
-  body = body.replace(/\s*dir="ltr"/g, '');
-  body = body.replace(/\s*lang="[^"]*"/g, '');
-
-  // Kollapsa onödiga <span> och <font>-wrappers (kvar efter style-borttagning)
-  // Köra två gånger för att hantera nästlade fall
-  for (let i = 0; i < 2; i++) {
-    body = body.replace(/<span>([\s\S]*?)<\/span>/g, '$1');
-    body = body.replace(/<font[^>]*>([\s\S]*?)<\/font>/g, '$1');
-  }
-
-  // Ta bort tomma element
-  body = body.replace(/<p>\s*<\/p>/g, '');
-  body = body.replace(/<span><\/span>/g, '');
-
-  // Ta bort target="_blank" på vanliga interna länkar — låt JS lägga till om vi vill
-  // Lämna externa links med target
-
-  return body.trim();
-}
-
-async function syncOrdningsregler(rootEntries) {
-  const doc = rootEntries.find(
-    (f) => f.mimeType === DOC_MIME && /ordningsreg/i.test(f.name)
-  );
-  if (!doc) {
-    console.log('  (inget Ordningsregler-dokument hittades i rot-mappen)');
-    return;
-  }
-  console.log(`📜  Hittade ordningsregler-doc: "${doc.name}"`);
-  try {
-    // Drive API:t kan exportera Google Docs till olika format.
-    // text/html ger oss strukturerad HTML att rendera på sajten.
-    const url = `https://www.googleapis.com/drive/v3/files/${doc.id}/export`
-      + `?mimeType=${encodeURIComponent('text/html')}`
-      + `&supportsAllDrives=true`
-      + `&key=${API_KEY}`;
-    const res = await fetch(url);
-    if (!res.ok) {
-      const body = await res.text();
-      throw new Error(`Drive export ${res.status}: ${body}`);
-    }
-    const html = await res.text();
-    const clean = cleanGoogleDocsHtml(html);
-    const output = {
-      lastUpdated: new Date().toISOString(),
-      sourceDoc: doc.name,
-      sourceUrl: `https://docs.google.com/document/d/${doc.id}/edit`,
-      html: clean,
-    };
-    await mkdir(dirname(ORDNINGSREGLER_OUTPUT), { recursive: true });
-    await writeFile(ORDNINGSREGLER_OUTPUT, JSON.stringify(output, null, 2) + '\n', 'utf8');
-    console.log(`     Skrev ${ORDNINGSREGLER_OUTPUT} (${clean.length} tecken)`);
-  } catch (err) {
-    console.error(`  ❌  Ordningsregler-sync misslyckades: ${err.message}`);
-  }
-}
-
 async function syncDriftinfo(rootEntries) {
   const sheet = rootEntries.find(
     (f) => f.mimeType === SHEET_MIME && /driftinfo|drift/i.test(f.name)
@@ -592,9 +514,6 @@ async function main() {
   await syncStyrelse(rootEntries);
   await syncInnehall(rootEntries);
   await syncDriftinfo(rootEntries);
-
-  // Ordningsregler synkas från en Google Doc
-  await syncOrdningsregler(rootEntries);
 
   // Plana PDF:er direkt i rot-mappen → övriga
   if (rootPdfs.length > 0) {
