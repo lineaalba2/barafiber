@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-02T15:51:31.441Z",
+  "lastUpdated": "2026-06-02T19:38:13.053Z",
   "sourceSheet": "Avgifter",
   "sourceUrl": "https://docs.google.com/spreadsheets/d/1_0pZm_VBKUDNs-JCbka_x27yGg7obOcCSUS3W82u5RI/edit",
   "items": [
@@ -13,13 +13,6 @@
     {
       "avgift": "Påminnelseavgift",
       "belopp": "60kr",
-      "notering": "",
-      "kategori": "Övrigt",
-      "ordinariePris": ""
-    },
-    {
-      "avgift": "Administrationsavgift vid felaktig inbetalning",
-      "belopp": "150kr",
       "notering": "",
       "kategori": "Övrigt",
       "ordinariePris": ""
