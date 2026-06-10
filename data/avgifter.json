@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-10T01:29:37.914Z",
+  "lastUpdated": "2026-06-10T06:04:22.670Z",
   "sourceSheet": "Avgifter",
   "sourceUrl": "https://docs.google.com/spreadsheets/d/1_0pZm_VBKUDNs-JCbka_x27yGg7obOcCSUS3W82u5RI/edit",
   "items": [
@@ -25,18 +25,25 @@
       "ordinariePris": ""
     },
     {
-      "avgift": "Flex",
-      "belopp": "149 kr/mån",
+      "avgift": "TV Mellan",
+      "belopp": "299 kr/mån",
       "notering": "Medlemspris",
       "kategori": "TV-paket",
-      "ordinariePris": "299 kr/mån"
+      "ordinariePris": "449 kr/mån"
     },
     {
-      "avgift": "Stor",
-      "belopp": "249 kr/mån",
+      "avgift": "TV Stor",
+      "belopp": "399 kr/mån",
       "notering": "Medlemspris",
       "kategori": "TV-paket",
-      "ordinariePris": "399 kr/mån"
+      "ordinariePris": "549 kr/mån"
+    },
+    {
+      "avgift": "TV Premium",
+      "belopp": "749 kr/mån",
+      "notering": "Medlemspris",
+      "kategori": "TV-paket",
+      "ordinariePris": "899 kr/mån"
     }
   ]
 }
