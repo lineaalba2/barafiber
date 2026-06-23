@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1640 624" width="1640" height="624">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a3d62"/>
+      <stop offset="100%" stop-color="#052c4a"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0.85" cy="0.2" r="0.5">
+      <stop offset="0%" stop-color="#00b8a9" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#00b8a9" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.15" cy="0.85" r="0.4">
+      <stop offset="0%" stop-color="#00b8a9" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#00b8a9" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Bakgrund -->
+  <rect width="1640" height="624" fill="url(#bg)"/>
+  <rect width="1640" height="624" fill="url(#glow1)"/>
+  <rect width="1640" height="624" fill="url(#glow2)"/>
+
+  <!-- Nätverks-motiv till höger -->
+  <g opacity="0.5">
+    <!-- Central nod -->
+    <circle cx="1380" cy="312" r="14" fill="white"/>
+    <!-- Yttre noder -->
+    <circle cx="1240" cy="180" r="8" fill="#00b8a9"/>
+    <circle cx="1520" cy="180" r="8" fill="#00b8a9"/>
+    <circle cx="1240" cy="444" r="8" fill="#00b8a9"/>
+    <circle cx="1520" cy="444" r="8" fill="#00b8a9"/>
+    <circle cx="1380" cy="100" r="6" fill="#00b8a9" opacity="0.7"/>
+    <circle cx="1380" cy="524" r="6" fill="#00b8a9" opacity="0.7"/>
+    <circle cx="1140" cy="312" r="6" fill="#00b8a9" opacity="0.7"/>
+    <circle cx="1620" cy="312" r="6" fill="#00b8a9" opacity="0.7"/>
+    <!-- Linjer -->
+    <g stroke="#00b8a9" stroke-width="2" fill="none" opacity="0.6">
+      <line x1="1380" y1="312" x2="1240" y2="180"/>
+      <line x1="1380" y1="312" x2="1520" y2="180"/>
+      <line x1="1380" y1="312" x2="1240" y2="444"/>
+      <line x1="1380" y1="312" x2="1520" y2="444"/>
+      <line x1="1380" y1="312" x2="1380" y2="100"/>
+      <line x1="1380" y1="312" x2="1380" y2="524"/>
+      <line x1="1380" y1="312" x2="1140" y2="312"/>
+      <line x1="1380" y1="312" x2="1620" y2="312"/>
+    </g>
+  </g>
+
+  <!-- Huvudtitel -->
+  <text x="120" y="290"
+        font-family="Inter, -apple-system, Arial, sans-serif"
+        font-size="120"
+        font-weight="800"
+        fill="white"
+        letter-spacing="-2">Bara Fiber</text>
+
+  <!-- Tagline rad 1 -->
+  <text x="120" y="370"
+        font-family="Inter, -apple-system, Arial, sans-serif"
+        font-size="40"
+        font-weight="500"
+        fill="rgba(255,255,255,0.85)">Samfällighetsförening • Fiber till Bara</text>
+
+  <!-- Tagline rad 2 — tjänster med dot-separator -->
+  <text x="120" y="440"
+        font-family="Inter, -apple-system, Arial, sans-serif"
+        font-size="32"
+        font-weight="400"
+        fill="#00b8a9"
+        letter-spacing="4">INTERNET  •  TV  •  TELEFONI</text>
+
+  <!-- URL längst ner -->
+  <text x="120" y="540"
+        font-family="Inter, -apple-system, Arial, sans-serif"
+        font-size="28"
+        font-weight="500"
+        fill="rgba(255,255,255,0.6)"
+        letter-spacing="1">barafiber.se</text>
+</svg>
