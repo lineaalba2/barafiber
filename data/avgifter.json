@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-07-07T05:47:12.732Z",
+  "lastUpdated": "2026-07-07T05:50:42.456Z",
   "sourceSheet": "Avgifter",
   "sourceUrl": "https://docs.google.com/spreadsheets/d/1_0pZm_VBKUDNs-JCbka_x27yGg7obOcCSUS3W82u5RI/edit",
   "items": [
     {
       "avgift": "Halvårsavgift",
       "belopp": "1 290kr",
-      "notering": "Faktureras i mars och september (215 kr/mån × 6, sänkt från 220 kr/mån 2025)",
+      "notering": "Faktureras i mars och september (215 kr/mån × 6)",
       "kategori": "Medlemsavgift",
       "ordinariePris": ""
     },
