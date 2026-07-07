@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T01:27:08.989Z",
+  "lastUpdated": "2026-07-07T05:40:49.568Z",
   "sourceSheet": "Avgifter",
   "sourceUrl": "https://docs.google.com/spreadsheets/d/1_0pZm_VBKUDNs-JCbka_x27yGg7obOcCSUS3W82u5RI/edit",
   "items": [
@@ -44,6 +44,13 @@
       "notering": "Medlemspris",
       "kategori": "TV-paket",
       "ordinariePris": "899 kr/mån"
+    },
+    {
+      "avgift": "Anslutningsavgift",
+      "belopp": "28 825 kr",
+      "notering": "",
+      "kategori": "",
+      "ordinariePris": ""
     }
   ]
 }
