@@ -63,7 +63,7 @@
             ${rows.map((r) => `
               <tr>
                 <td><strong>${esc(r.avgift)}</strong></td>
-                <td>${esc(r.belopp)}</td>
+                <td style="white-space:nowrap;">${esc(r.belopp)}</td>
                 ${hasNotering ? `<td class="text-muted" style="font-size:0.9375rem;">${esc(r.notering)}</td>` : ''}
               </tr>`).join('')}
           </tbody>
@@ -91,8 +91,8 @@
             ${rows.map((r) => `
               <tr>
                 <td><strong>${esc(r.avgift)}</strong></td>
-                <td>${esc(r.belopp)}</td>
-                ${hasOrdinarie ? `<td class="text-muted">${esc(r.ordinariePris)}</td>` : ''}
+                <td style="white-space:nowrap;">${esc(r.belopp)}</td>
+                ${hasOrdinarie ? `<td class="text-muted" style="white-space:nowrap;">${esc(r.ordinariePris)}</td>` : ''}
               </tr>`).join('')}
           </tbody>
         </table>
