@@ -38,8 +38,10 @@
     avgiftEls.forEach((el) => {
       const key = (el.dataset.avgift || '').toLowerCase().trim();
       if (!key) return;
+      // Använd startsWith istället för includes så att t.ex. "anslutningsavgift"
+      // inte råkar matcha "Återanslutningsavgift..." (som börjar med "Åter").
       const match = items.find((i) =>
-        (i.avgift || '').toLowerCase().includes(key)
+        (i.avgift || '').toLowerCase().startsWith(key)
       );
       if (match) {
         el.textContent = normalizeAmount(match.belopp);
