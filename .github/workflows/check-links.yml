@@ -1,0 +1,31 @@
+name: Kontrollera länkar
+
+# Fångar trasiga externa länkar innan medlemmar gör det.
+#
+# Bakgrund: formulärlänkarna för nyanslutning och e-faktura låg nere i
+# flera veckor sommaren 2026 utan att någon märkte det — besökaren fick
+# ingen felruta, det såg bara ut som att ingenting hände när de klickade.
+#
+# Misslyckas jobbet skickar GitHub ett mejl till repots ägare.
+
+on:
+  # Måndagar kl 06:00 UTC (08:00 svensk sommartid)
+  schedule:
+    - cron: '0 6 * * 1'
+  # Kan köras manuellt från Actions-fliken
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Kontrollera externa länkar
+        run: node scripts/check-links.mjs
