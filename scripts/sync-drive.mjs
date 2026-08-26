@@ -26,7 +26,7 @@
  * Kräver miljövariabel GOOGLE_API_KEY (Google Drive API-nyckel).
  */
 
-import { writeFile, mkdir } from 'node:fs/promises';
+import { writeFile, readFile, mkdir } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -76,6 +76,57 @@ function extractYear(name) {
 // Drive API
 // ---------------------------------------------------------------------------
 
+// Hämtar en URL och gör om försöket vid övergående fel.
+//
+// GitHub-runnern tappar då och då anslutningen mot Google mitt i ett anrop
+// (ECONNRESET), vilket fällde hela synken 2026-08. Sådant går över av sig
+// självt — men bara om man försöker igen.
+//
+// Vi skiljer noga på vad som är värt att göra om:
+//
+//   Görs om:  nätverksfel, timeout, 429 (för många anrop), 5xx hos Google.
+//   Görs inte om:  401, 403, 404 m.fl. Är nyckeln fel eller mappen borttagen
+//                  blir svaret detsamma hur många gånger vi än frågar — då är
+//                  det bättre att felet syns direkt och tydligt.
+export async function fetchWithRetry(url, { label = 'API', attempts = 4 } = {}) {
+  let delay = 1000;
+
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 30000);
+
+    try {
+      const res = await fetch(url, { signal: controller.signal });
+
+      if (res.ok) return res;
+
+      const body = await res.text();
+      const retryable = res.status === 429 || res.status >= 500;
+
+      if (!retryable || attempt === attempts) {
+        throw new Error(`${label} ${res.status}: ${body}`);
+      }
+      console.log(`     ⚠️  ${label} svarade ${res.status}, försöker igen om ${delay} ms (${attempt}/${attempts - 1})`);
+    } catch (err) {
+      // Kastar vi själva ovan (icke-övergående fel) ska det inte fångas här.
+      if (err instanceof Error && err.message.startsWith(`${label} `)) throw err;
+
+      if (attempt === attempts) {
+        throw new Error(`${label}: ${err.name === 'AbortError' ? 'timeout efter 30 s' : err.message}`);
+      }
+      const reason = err.name === 'AbortError' ? 'timeout' : (err.cause?.code || err.message);
+      console.log(`     ⚠️  ${label} avbröts (${reason}), försöker igen om ${delay} ms (${attempt}/${attempts - 1})`);
+    } finally {
+      clearTimeout(timer);
+    }
+
+    // Exponentiell backoff med lite slump, så vi inte träffar samma
+    // överbelastade sekund igen: 1s, 2s, 4s (± 250 ms).
+    await new Promise((r) => setTimeout(r, delay + Math.random() * 250));
+    delay *= 2;
+  }
+}
+
 async function listFolder(folderId) {
   const q = encodeURIComponent(`'${folderId}' in parents and trashed = false`);
   // supportsAllDrives + includeItemsFromAllDrives behövs för att läsa
@@ -88,11 +139,7 @@ async function listFolder(folderId) {
     + `&supportsAllDrives=true`
     + `&includeItemsFromAllDrives=true`
     + `&key=${API_KEY}`;
-  const res = await fetch(url);
-  if (!res.ok) {
-    const body = await res.text();
-    throw new Error(`Drive API ${res.status}: ${body}`);
-  }
+  const res = await fetchWithRetry(url, { label: 'Drive API' });
   const data = await res.json();
   return data.files || [];
 }
@@ -261,11 +308,7 @@ async function fetchSheetValues(spreadsheetId) {
   // Hämtar alla värden från första bladet (Sheet1 / Blad1).
   // A1-notation utan blad-namn = första bladet.
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/A1:Z1000?key=${API_KEY}`;
-  const res = await fetch(url);
-  if (!res.ok) {
-    const body = await res.text();
-    throw new Error(`Sheets API ${res.status}: ${body}`);
-  }
+  const res = await fetchWithRetry(url, { label: 'Sheets API' });
   const data = await res.json();
   return data.values || [];
 }
@@ -547,17 +590,59 @@ async function main() {
     sections,
   };
 
-  await mkdir(dirname(OUTPUT_PATH), { recursive: true });
-  await writeFile(OUTPUT_PATH, JSON.stringify(result, null, 2) + '\n', 'utf8');
-
   const totalFiles = sections.reduce(
     (sum, s) => sum + s.groups.reduce((g, gr) => g + gr.files.length, 0), 0
   );
+
+  // Skydd mot att ett halvlyckat anrop tömmer dokumentlistan.
+  //
+  // Enskilda mappar som fallerar fångas längre upp och hoppas över, vilket
+  // är rätt — men om tillräckligt många gör det samtidigt skulle vi skriva
+  // en nästan tom fil över en komplett, och sajten visa "Inga dokument
+  // hittades" utan att någon märker det.
+  //
+  // Vi vägrar därför skriva om resultatet krympt dramatiskt. Hellre ett rött
+  // bygge och gårdagens korrekta lista än en tyst tömd sajt.
+  const previousCount = await countExistingDocuments();
+  if (previousCount > 0 && totalFiles < previousCount * 0.5) {
+    console.error(`\n💥  Avbryter: hittade bara ${totalFiles} dokument, förra körningen hade ${previousCount}.`);
+    console.error('    Det tyder på att anrop mot Drive fallerat, inte på att dokument raderats.');
+    console.error(`    ${OUTPUT_PATH} lämnas orörd så sajten behåller den fungerande listan.`);
+    console.error('    Är minskningen avsiktlig (t.ex. rensade mappar) går körningen igenom nästa gång');
+    console.error('    listan ligger stabilt, eller så kan filen redigeras för hand.');
+    process.exit(1);
+  }
+
+  await mkdir(dirname(OUTPUT_PATH), { recursive: true });
+  await writeFile(OUTPUT_PATH, JSON.stringify(result, null, 2) + '\n', 'utf8');
+
   console.log(`✅  ${totalFiles} dokument i ${sections.length} sektion${sections.length === 1 ? '' : 'er'}`);
   console.log(`    Skrev ${OUTPUT_PATH}`);
 }
 
-main().catch((err) => {
-  console.error('💥  Sync misslyckades:', err);
-  process.exit(1);
-});
+// Antal dokument i den redan sparade documents.json, för jämförelsen ovan.
+// Saknas eller är trasig filen returneras 0, vilket stänger av skyddet —
+// första körningen ska aldrig blockeras.
+async function countExistingDocuments() {
+  try {
+    const raw = await readFile(OUTPUT_PATH, 'utf8');
+    const data = JSON.parse(raw);
+    return (data.sections || []).reduce(
+      (sum, s) => sum + (s.groups || []).reduce((g, gr) => g + (gr.files || []).length, 0), 0
+    );
+  } catch {
+    return 0;
+  }
+}
+
+// Kör bara synken när skriptet startas direkt (`node scripts/sync-drive.mjs`).
+// Utan den här kontrollen drog en `import` av modulen igång en riktig synk
+// som sidoeffekt, vilket gjorde funktionerna omöjliga att testa var för sig.
+const startedDirectly = process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+
+if (startedDirectly) {
+  main().catch((err) => {
+    console.error('💥  Sync misslyckades:', err);
+    process.exit(1);
+  });
+}
