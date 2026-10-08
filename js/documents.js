@@ -178,8 +178,12 @@
         info.className = 'doc-info';
         const name = document.createElement('div');
         name.className = 'doc-name';
-        // Strip .pdf-ändelse för renare visning
-        name.textContent = f.name.replace(/\.pdf$/i, '');
+        // Strip filändelser för renare visning. Dokument som exporterats
+        // från Word får ofta dubbel ändelse ("...2024.docx.pdf"), så vi
+        // plockar bort både .pdf och ett eventuellt .docx/.doc/.odt bakom.
+        name.textContent = f.name
+          .replace(/\.pdf$/i, '')
+          .replace(/\.(docx?|odt)$/i, '');
         info.appendChild(name);
 
         // Datum visas inte längre under filnamn — redundant eftersom filerna
