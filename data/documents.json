@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-08T09:56:44.064Z",
+  "lastUpdated": "2026-10-08T12:11:59.967Z",
   "sections": [
     {
       "key": "styrelseprotokoll",
@@ -1006,6 +1006,26 @@
               "modifiedTime": "2026-05-26T21:01:05.265Z",
               "webViewLink": "https://drive.google.com/file/d/19hH8pHKFQQVzSr8SLaX25YmVO2e7sKR6/view?usp=drivesdk",
               "webContentLink": "https://drive.google.com/uc?id=19hH8pHKFQQVzSr8SLaX25YmVO2e7sKR6&export=download"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ovriga",
+      "label": "Övriga dokument",
+      "icon": "📎",
+      "groups": [
+        {
+          "label": null,
+          "files": [
+            {
+              "id": "1C0pvFwn79wniUhjIQTGNGfVKRM4eGY5i",
+              "name": "Ordningsregler för Samfällighetsföreningen Bara Fiber 2024.docx.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-10-08T10:29:17.836Z",
+              "webViewLink": "https://drive.google.com/file/d/1C0pvFwn79wniUhjIQTGNGfVKRM4eGY5i/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1C0pvFwn79wniUhjIQTGNGfVKRM4eGY5i&export=download"
             }
           ]
         }
