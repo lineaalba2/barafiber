@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-13T09:46:58.130Z",
+  "lastUpdated": "2026-10-13T17:10:17.296Z",
   "sections": [
     {
       "key": "styrelseprotokoll",
@@ -59,19 +59,27 @@
             },
             {
               "id": "1NQDnUANl74tW3Vz4KI8NsTZqfn6B5PG6",
-              "name": "Styrelseprotokoll_2026-06-23.pdf",
+              "name": "Styrelseprotokoll 2026-06-23.pdf",
               "mimeType": "application/pdf",
-              "modifiedTime": "2026-08-18T14:17:37.000Z",
+              "modifiedTime": "2026-10-13T14:12:18.859Z",
               "webViewLink": "https://drive.google.com/file/d/1NQDnUANl74tW3Vz4KI8NsTZqfn6B5PG6/view?usp=drivesdk",
               "webContentLink": "https://drive.google.com/uc?id=1NQDnUANl74tW3Vz4KI8NsTZqfn6B5PG6&export=download"
             },
             {
               "id": "1BYEruqWzQPQKoF2P6B4Of8irAJweB_ja",
-              "name": "Styrelseprotokoll_2026-08-18.pdf",
+              "name": "Styrelseprotokoll 2026-08-18.pdf",
               "mimeType": "application/pdf",
-              "modifiedTime": "2026-09-21T20:30:38.000Z",
+              "modifiedTime": "2026-10-13T14:12:29.896Z",
               "webViewLink": "https://drive.google.com/file/d/1BYEruqWzQPQKoF2P6B4Of8irAJweB_ja/view?usp=drivesdk",
               "webContentLink": "https://drive.google.com/uc?id=1BYEruqWzQPQKoF2P6B4Of8irAJweB_ja&export=download"
+            },
+            {
+              "id": "1OdSIIxNkBr1rawN5_QgkTSUqQvJdlQq5",
+              "name": "Styrelseprotokoll 2026-09-22.pdf",
+              "mimeType": "application/pdf",
+              "modifiedTime": "2026-10-13T14:09:21.219Z",
+              "webViewLink": "https://drive.google.com/file/d/1OdSIIxNkBr1rawN5_QgkTSUqQvJdlQq5/view?usp=drivesdk",
+              "webContentLink": "https://drive.google.com/uc?id=1OdSIIxNkBr1rawN5_QgkTSUqQvJdlQq5&export=download"
             }
           ]
         },
