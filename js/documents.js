@@ -18,7 +18,7 @@
  * }
  *
  * Varje grupp (år) renderas som en <details>-sektion som kan fällas ut/ihop.
- * Senaste året är öppet som default.
+ * Senaste året visas utfällt; övriga år ligger bakom knappen "Äldre år".
  */
 
 (async function () {
@@ -102,7 +102,7 @@
     return;
   }
 
-  sections.forEach((section) => {
+  sections.forEach((section, sectionIdx) => {
     const sectionEl = document.createElement('div');
     sectionEl.className = 'doc-category';
 
@@ -110,38 +110,79 @@
     heading.innerHTML = `<span>${section.icon || '📁'}</span> ${section.label}`;
     sectionEl.appendChild(heading);
 
-    section.groups.forEach((group, idx) => {
-      if (!group.files || group.files.length === 0) return;
+    const groups = (section.groups || []).filter((g) => g.files && g.files.length > 0);
 
-      if (group.label) {
-        // Fällbar år-grupp
-        const details = document.createElement('details');
-        details.className = 'doc-year';
-        if (idx === 0) details.open = true; // senaste året öppet som default
+    // Äldre årgrupper göms bakom en knapp. Med tio år per sektion blir
+    // sidan annars onödigt lång och man måste scrolla förbi alla årsrubriker
+    // för att nå nästa sektion.
+    const older = document.createElement('div');
+    older.className = 'doc-older';
+    older.id = `doc-older-${section.key || sectionIdx}`;
+    older.hidden = true;
 
-        const summary = document.createElement('summary');
-        summary.className = 'doc-year-summary';
-
-        const left = document.createElement('span');
-        left.className = 'doc-year-label';
-        left.textContent = group.label;
-
-        const count = document.createElement('span');
-        count.className = 'doc-year-count';
-        count.textContent = `${group.files.length} dokument`;
-
-        summary.appendChild(left);
-        summary.appendChild(count);
-        details.appendChild(summary);
-        details.appendChild(renderFileList(group.files));
-        sectionEl.appendChild(details);
-      } else {
+    groups.forEach((group, idx) => {
+      if (!group.label) {
         sectionEl.appendChild(renderFileList(group.files));
+        return;
       }
+      // Senaste året visas och är utfällt, resten hamnar bakom knappen.
+      const details = renderYearGroup(group, idx === 0);
+      (idx === 0 ? sectionEl : older).appendChild(details);
     });
+
+    const hiddenCount = older.childElementCount;
+    if (hiddenCount > 0) {
+      const toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.className = 'doc-older-toggle';
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-controls', older.id);
+
+      const syncLabel = () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.textContent = expanded
+          ? 'Dölj äldre år'
+          : `Äldre år (${hiddenCount})`;
+      };
+      syncLabel();
+
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        older.hidden = expanded;
+        syncLabel();
+      });
+
+      sectionEl.appendChild(toggle);
+      sectionEl.appendChild(older);
+    }
 
     container.appendChild(sectionEl);
   });
+
+  // Bygger en fällbar årsgrupp (<details>) för ett år.
+  function renderYearGroup(group, open) {
+    const details = document.createElement('details');
+    details.className = 'doc-year';
+    details.open = Boolean(open);
+
+    const summary = document.createElement('summary');
+    summary.className = 'doc-year-summary';
+
+    const left = document.createElement('span');
+    left.className = 'doc-year-label';
+    left.textContent = group.label;
+
+    const count = document.createElement('span');
+    count.className = 'doc-year-count';
+    count.textContent = `${group.files.length} dokument`;
+
+    summary.appendChild(left);
+    summary.appendChild(count);
+    details.appendChild(summary);
+    details.appendChild(renderFileList(group.files));
+    return details;
+  }
 
   // Hämtar datum YYYY-MM-DD ur filnamn för stabil sortering
   function dateKey(name) {
