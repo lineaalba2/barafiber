@@ -16,13 +16,18 @@
  *   ]
  * }
  *
- * Varje grupp (år) renderas som en <details>-sektion som kan fällas ut/ihop.
- * Senaste året visas utfällt; övriga år ligger bakom knappen "Äldre år".
+ * Varje grupp renderas som en <details>-sektion som kan fällas ut/ihop.
+ * Kronologiska sektioner (grupper som heter "2026" etc.) visar bara
+ * innevarande år, ihopfällt — övriga år ligger bakom knappen "Äldre år".
+ * Övriga sektioner, som grupperas på mappnamn, visas alltid utfällda.
  */
 
 (async function () {
   const container = document.getElementById('documents');
   if (!container) return;
+
+  // Ett gruppnamn som är ett årtal ("2026") markerar en kronologisk sektion.
+  const YEAR_LABEL = /^(19|20)\d{2}$/;
 
   let data;
   try {
@@ -65,6 +70,23 @@
 
     const groups = (section.groups || []).filter((g) => g.files && g.files.length > 0);
 
+    // Heter alla grupper något i stil med "2026" är sektionen kronologisk
+    // (styrelseprotokoll, årsstämmor) och ska fällas ihop. Sektioner som
+    // grupperas på mappnamn i stället (Stadgar, Övriga dokument) visas alltid
+    // utfällda — där finns inget "senaste år" att välja.
+    const chronological = groups.length > 0
+      && groups.every((g) => g.label && YEAR_LABEL.test(g.label));
+
+    if (!chronological) {
+      groups.forEach((group) => {
+        sectionEl.appendChild(
+          group.label ? renderGroup(group, true) : renderFileList(group.files)
+        );
+      });
+      container.appendChild(sectionEl);
+      return;
+    }
+
     // Äldre årgrupper göms bakom en knapp. Med tio år per sektion blir
     // sidan annars onödigt lång och man måste scrolla förbi alla årsrubriker
     // för att nå nästa sektion.
@@ -74,12 +96,8 @@
     older.hidden = true;
 
     groups.forEach((group, idx) => {
-      if (!group.label) {
-        sectionEl.appendChild(renderFileList(group.files));
-        return;
-      }
-      // Senaste året visas och är utfällt, resten hamnar bakom knappen.
-      const details = renderYearGroup(group, idx === 0);
+      // Innevarande år syns men är ihopfällt, resten hamnar bakom knappen.
+      const details = renderGroup(group, false);
       (idx === 0 ? sectionEl : older).appendChild(details);
     });
 
@@ -113,8 +131,8 @@
     container.appendChild(sectionEl);
   });
 
-  // Bygger en fällbar årsgrupp (<details>) för ett år.
-  function renderYearGroup(group, open) {
+  // Bygger en fällbar grupp (<details>) — ett år eller en namngiven mapp.
+  function renderGroup(group, open) {
     const details = document.createElement('details');
     details.className = 'doc-year';
     details.open = Boolean(open);
